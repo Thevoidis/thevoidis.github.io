@@ -1,0 +1,90 @@
+	body {
+		color: #ffffff;
+		background-color: #181a1b;
+	}
+	/* Dropdown Button */
+	.logo {
+		float: left;
+		border-radius: 100%;
+		width: 100px;
+	}
+
+	.dropbtn {
+		background-color:  rgb(44, 48, 50);
+		color: white; 
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+		position: relative;
+		display: inline-block;
+		border: ridge;
+		border-color: #222222;
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f1f1f1;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+		color : white;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {
+		background-color: #222;
+	}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+		display: block;
+		background-color: #111111;
+	}
+
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .dropbtn {
+		background-color: #3e8e41;
+	}
+
+	.blog_select_div:hover {
+		background-color: rgb(55, 56, 57);
+	}
+	.blog_select_div {
+		color : white;
+		background-color:  #181a1b;
+		border-color: #000000;
+		border: ridge;
+		width: 70%;
+	}
+	a {
+	color : #7788cc
+	}
+	.bloglink {
+		text-decoration: none;
+		color: black;
+	}
+
+	table {
+		width: 100%;
+	}
+	.blog_context {
+		font-size : 2vh;
+		padding: 16px;
+		background-color : #292a29 ;
+		border-radius: 1%;
+	}
+
+	
