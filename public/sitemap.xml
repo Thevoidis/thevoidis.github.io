@@ -3,15 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-23T22:57:37+05:30</lastmod>
+    <lastmod>2025-02-24T23:34:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/stories/</loc>
-    <lastmod>2025-02-23T22:57:37+05:30</lastmod>
+    <loc>http://localhost:1313/songs/</loc>
+    <lastmod>2025-02-24T23:34:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/stories/stories/</loc>
-    <lastmod>2025-02-23T22:57:37+05:30</lastmod>
+    <loc>http://localhost:1313/songs/songs/</loc>
+    <lastmod>2025-02-24T23:34:25+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/stories/theriverthatcarriesthesky/theriverthatcarriesthesky/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/stories/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>
