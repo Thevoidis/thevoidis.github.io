@@ -8,5 +8,8 @@
 	<link rel="stylesheet" href="/style.css">
 	<body>
 {{ partial "header.html" . }}
+		    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
 	</body>
 </html>

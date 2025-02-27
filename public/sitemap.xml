@@ -5,7 +5,13 @@
     <loc>https://example.org/blogs/</loc>
     <lastmod>2025-02-27T17:23:05+05:30</lastmod>
   </url><url>
+    <loc>https://example.org/tags/internet/</loc>
+    <lastmod>2025-02-27T17:23:05+05:30</lastmod>
+  </url><url>
     <loc>https://example.org/</loc>
+    <lastmod>2025-02-27T17:23:05+05:30</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/</loc>
     <lastmod>2025-02-27T17:23:05+05:30</lastmod>
   </url><url>
     <loc>https://example.org/blogs/the-reason-for-creating-another-blog/</loc>
@@ -16,7 +22,5 @@
     <loc>https://example.org/songs/</loc>
   </url><url>
     <loc>https://example.org/stories/</loc>
-  </url><url>
-    <loc>https://example.org/tags/</loc>
   </url>
 </urlset>

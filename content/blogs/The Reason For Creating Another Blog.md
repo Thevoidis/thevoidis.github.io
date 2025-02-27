@@ -1,6 +1,7 @@
 +++
 title = 'The Reason for Creating Another Blog'
 date = 2025-02-27T17:23:05+05:30
+tags = ['internet']
 +++
 
 Just to get this out of the picture. I already have another [site](https://devanand-pa.github.io)

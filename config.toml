@@ -1,3 +1,6 @@
 [params]
 favicon = "/favicon.ico"
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 

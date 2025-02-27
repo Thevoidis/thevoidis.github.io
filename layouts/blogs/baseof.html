@@ -11,14 +11,14 @@
 	<h2>Here are all the blogs :</h2>
 	<br>
 		{{ range where .Site.RegularPages "Section" "blogs" }}
+			<div class="bloginfo">
 	<a class="bloglink" href="{{ .RelPermalink }}">
 		<div class="blog_select_div">
-			<div class="bloginfo">
 				<h2>{{ .Title }}</h2>
-					{{ .Summary }}
+					{{ .Summary }}..
 			</div>
-		</div>
 	</a>
+		</div>
 	<br>
 
 {{ end }}

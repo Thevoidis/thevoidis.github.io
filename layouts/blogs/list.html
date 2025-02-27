@@ -1,11 +1,14 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{ range .Pages }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
+    <h1>{{ .Title }}</h1>
+    <ul>
+        {{ range .Pages }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <p>{{ .Summary }}</p>
+            </li>
+        {{ else }}
+            <p>No posts found.</p>
+        {{ end }}
+    </ul>
 {{ end }}
 

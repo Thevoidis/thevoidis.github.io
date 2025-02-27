@@ -6,6 +6,14 @@
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2025 17:23:05 +0530</lastBuildDate>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Internet</title>
+      <link>https://example.org/tags/internet/</link>
+      <pubDate>Thu, 27 Feb 2025 17:23:05 +0530</pubDate>
+      <guid>https://example.org/tags/internet/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
