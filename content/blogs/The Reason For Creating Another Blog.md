@@ -3,7 +3,7 @@ title = 'The Reason for Creating Another Blog'
 date = 2025-02-27T17:23:05+05:30
 +++
 
-Just to get this out of the picture. I already have another website at devanand-pa.github.io
+Just to get this out of the picture. I already have another [site](devanand-pa.github.io)
 
 However, that one was meant to be a personal portfolio of sorts. But now I realize that I have no use of a personal portfolio.
 It's not like I'm going to get a job anyway, so why bother with one. I don't think I'll live for long, so I decided to do whatever I liked until I died.
