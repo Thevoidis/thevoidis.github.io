@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>
+			Thevoidis Blog
+		</title>
+	</head>
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<link rel="stylesheet" href="/style.css">
+	<body>
+{{ partial "header.html" . }}
+
+	<h2> All of the songs below are under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal License</a>. For Those who don't know what that is, you are free to copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. </h2>
+        <table border="1">
+    <tr>
+        <th>Name</th>
+        <th>File Formats</th>
+    </tr>
+
+    {{ $storiesDir := "stories" }}
+    {{ $stories := readDir (printf "static/%s" $storiesDir) }}
+
+    {{ range $stories }}
+        {{ if .IsDir }}
+            {{ $storyName := .Name }}
+            {{ $folderPath := printf "%s/%s" $storiesDir $storyName }}
+            
+            {{ $files := readDir (printf "static/%s" $folderPath) }}
+            {{ $htmlFile := "" }}
+            {{ $pdfFile := "" }}
+
+            {{ range $files }}
+                {{ if findRE "\\.html$" .Name }}  {{ $htmlFile = printf "%s/%s" $folderPath .Name }} {{ end }}
+                {{ if findRE "\\.pdf$" .Name }}  {{ $pdfFile = printf "%s/%s" $folderPath .Name }} {{ end }}
+            {{ end }}
+
+            <tr>
+                <th>{{ $storyName }}</th>
+                <th>
+                    {{ if $htmlFile }}
+                        <a href="/{{ $htmlFile }}">[html]</a>
+                    {{ else }}
+                        No HTML
+                    {{ end }}
+                    {{ if $pdfFile }}
+                        <a href="/{{ $pdfFile }}">[pdf]</a>
+                    {{ else }}
+                        No PDF
+                    {{ end }}
+                </th>
+            </tr>
+        {{ end }}
+    {{ end }}
+</table>
+
+	</body>
+</html>
