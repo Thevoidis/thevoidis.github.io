@@ -15,7 +15,7 @@
     <tr>
         <th>Name</th>
         <th>Audio (mp3)</th>
-        <th>Video (mp4 with subtitles)</th>
+        <th>Video (webm with subtitles)</th>
     </tr>
 
     {{ $songsDir := "songs" }}
@@ -34,7 +34,7 @@
 
             {{ range $files }}
                 {{ if findRE "\\.mp3$" .Name }}  {{ $audio = printf "%s/%s" $folderPath .Name }} {{ end }}
-                {{ if findRE "\\.(mp4|mkv)$" .Name }}  {{ $video = printf "%s/%s" $folderPath .Name }} {{ end }}
+                {{ if findRE "\\.webm$" .Name }}  {{ $video = printf "%s/%s" $folderPath .Name }} {{ end }}
                 {{ if findRE "\\.(vtt|srt)$" .Name }}  {{ $subtitles = printf "%s/%s" $folderPath .Name }} {{ end }}
                 {{ if eq .Name "1.png" }}  {{ $poster = printf "%s/%s" $folderPath .Name }} {{ end }}
             {{ end }}
@@ -53,7 +53,7 @@
                 <th>
                     {{ if $video }}
                         <video controls preload="none" poster="/{{ $poster }}" width="400px" height="400px">
-                            <source src="/{{ $video }}" type="video/mp4">[mpv with subtitles]
+                            <source src="/{{ $video }}" type="video/webm">[webm with subtitles]
                             {{ if $subtitles }}
                                 <track src="/{{ $subtitles }}" kind="subtitles" srclang="en" label="English" default>
                             {{ end }}
