@@ -1,0 +1,44 @@
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>File Formats</th>
+    </tr>
+    
+    {{ $storiesDir := "stories" }}
+    {{ $stories := readDir (printf "static/%s" $storiesDir) }}
+
+    {{ range $stories }}
+        {{ if .IsDir }}
+            {{ $storyName := .Name }}
+            {{ $folderPath := printf "%s/%s" $storiesDir $storyName }}
+            {{ $files := readDir (printf "static/%s" $folderPath) }}
+            
+            {{ $htmlFile := "" }}
+            {{ $pdfFile := "" }}
+            {{ $description := "" }}
+
+            {{ range $files }}
+                {{ if findRE "\\.html$" .Name }}
+                    {{ $htmlFile = printf "%s/%s" $folderPath .Name }}
+                {{ end }}
+                {{ if findRE "\\.pdf$" .Name }}
+                    {{ $pdfFile = printf "%s/%s" $folderPath .Name }}
+                {{ end }}
+                {{ if eq .Name "description.txt" }}
+                    {{ $description = readFile (printf "static/%s/%s" $folderPath .Name) }}
+                {{ end }}
+            {{ end }}
+
+            <tr>
+                <th>{{ $storyName }}</th>
+                <td>{{ $description }}</td>
+                <th>
+                    {{ if $htmlFile }} <a href="/{{ $htmlFile }}">[html]</a> {{ else }} No HTML {{ end }}
+                    {{ if $pdfFile }} <a href="/{{ $pdfFile }}">[pdf]</a> {{ else }} No PDF {{ end }}
+                </th>
+            </tr>
+        {{ end }}
+    {{ end }}
+</table>
+

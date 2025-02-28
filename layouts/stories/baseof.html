@@ -27,14 +27,18 @@
             {{ $files := readDir (printf "static/%s" $folderPath) }}
             {{ $htmlFile := "" }}
             {{ $pdfFile := "" }}
+            {{ $description := "" }}
 
             {{ range $files }}
                 {{ if findRE "\\.html$" .Name }}  {{ $htmlFile = printf "%s/%s" $folderPath .Name }} {{ end }}
                 {{ if findRE "\\.pdf$" .Name }}  {{ $pdfFile = printf "%s/%s" $folderPath .Name }} {{ end }}
+                {{ if eq .Name "description.txt" }}
+                    {{ $description = readFile (printf "static/%s/%s" $folderPath .Name) }}
+                {{ end }}
             {{ end }}
 
             <tr>
-                <th>{{ $storyName }}</th>
+                <th style="font-weight: normal;width:60%;"><h3>{{ replaceRE "([a-z])([A-Z])" "${1} ${2}" $storyName }}</h1>{{ $description }}</th>
                 <th>
                     {{ if $htmlFile }}
                         <a href="/{{ $htmlFile }}">[html]</a>
