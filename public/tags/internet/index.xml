@@ -6,8 +6,15 @@
     <description>Recent content in Internet on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2025 17:23:05 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 02 Mar 2025 02:57:31 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Tracking People on the Web</title>
+      <link>http://localhost:1313/blogs/on-tracking-people-on-the-web/</link>
+      <pubDate>Sun, 02 Mar 2025 02:57:31 +0530</pubDate>
+      <guid>http://localhost:1313/blogs/on-tracking-people-on-the-web/</guid>
+      <description>I like to write stories. But sometimes, I am curious as to how many people actually read them. So for a brief moment, I thought- &amp;ldquo;how about I find out how many people read my stories ?&amp;rdquo; But to do so, I had to create some js tracker on my site (maybe github provides one by default, I don&amp;rsquo;t know), but wouldn&amp;rsquo;t that be stalking ? Why is it my business to know how many people visited my site.</description>
+    </item>
     <item>
       <title>The Reason for Creating Another Blog</title>
       <link>http://localhost:1313/blogs/the-reason-for-creating-another-blog/</link>

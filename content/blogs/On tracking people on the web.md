@@ -1,6 +1,7 @@
 +++
 title = 'On Tracking People on the Web'
 date = 2025-03-02T02:57:31+05:30
+tags = ['internet']
 +++
 
 I like to write stories.
