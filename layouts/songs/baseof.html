@@ -26,7 +26,10 @@
             {{ $songName := .Name }}
             {{ $folderPath := printf "%s/%s" $songsDir $songName }}
             
+            {{ $path := printf "songs/%s/" $songName }}
             {{ $files := readDir (printf "static/%s" $folderPath) }}
+            {{ $descriptionPath := printf "%sdescription.txt" $path }}
+            {{ $description := "" }}
             {{ $audio := "" }}
             {{ $video := "" }}
             {{ $subtitles := "" }}
@@ -39,8 +42,11 @@
                 {{ if eq .Name "1.png" }}  {{ $poster = printf "%s/%s" $folderPath .Name }} {{ end }}
             {{ end }}
 
+            {{ if (fileExists $descriptionPath) }}
+                {{ $description = readFile $descriptionPath }}
+            {{ end }}
             <tr>
-                <th>{{ $songName }}</th>
+                <th style="font-weight: normal;width:30%;"><h3>{{ $songName }}</h3>{{ $description }}</th>
                 <th>
                     {{ if $audio }}
                         <audio controls>
