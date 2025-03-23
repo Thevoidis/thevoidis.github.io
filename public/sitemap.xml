@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blogs/about-the-tao-teh-ching/</loc>
+    <lastmod>2025-03-14T21:15:17+05:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2025-03-04T20:46:06+05:30</lastmod>
+    <lastmod>2025-03-14T21:15:17+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-04T20:46:06+05:30</lastmod>
+    <lastmod>2025-03-14T21:15:17+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/why-am-i-so-interested-/</loc>
     <lastmod>2025-03-04T20:46:06+05:30</lastmod>
@@ -28,5 +31,7 @@
     <loc>http://localhost:1313/songs/</loc>
   </url><url>
     <loc>http://localhost:1313/stories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/webnovels/</loc>
   </url>
 </urlset>

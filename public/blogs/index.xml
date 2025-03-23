@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Mar 2025 20:46:06 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 21:15:17 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About the Tao Teh Ching</title>
+      <link>http://localhost:1313/blogs/about-the-tao-teh-ching/</link>
+      <pubDate>Fri, 14 Mar 2025 21:15:17 +0530</pubDate>
+      <guid>http://localhost:1313/blogs/about-the-tao-teh-ching/</guid>
+      <description>So I&amp;rsquo;ve read around five different translations of the Tao Teh Ching. One particular one, I&amp;rsquo;ve read around twenty times. I think that it is quite a nice book. It states too many things that are quite relevant, but it&amp;rsquo;s so damn cryptic that half the time I feel that I&amp;rsquo;m the one making up the meanings in the book. Actually , now that I think about it , that might be the case.</description>
+    </item>
     <item>
       <title>Why Am I So Interested ?</title>
       <link>http://localhost:1313/blogs/why-am-i-so-interested-/</link>
