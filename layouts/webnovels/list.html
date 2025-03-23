@@ -1,1 +1,17 @@
-This is another test
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+  {{ range sort .Pages "File.Path" }}
+
+		<div class="bloginfo">
+	<a class="bloglink" href="{{ .Permalink }}">
+		<div class="blog_select_div">
+				<h2>{{ .Title }}</h2>
+			</div>
+	</a>
+	<h3>Summary</h3>				
+					{{ .Summary }}
+		</div>
+<br>
+  {{ end }}
+{{ end }}

@@ -32,6 +32,8 @@
   </url><url>
     <loc>http://localhost:1313/stories/</loc>
   </url><url>
+    <loc>http://localhost:1313/webnovels/the-wizard-of-vanity/</loc>
+  </url><url>
     <loc>http://localhost:1313/webnovels/</loc>
   </url>
 </urlset>

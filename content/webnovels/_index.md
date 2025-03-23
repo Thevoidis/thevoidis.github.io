@@ -1,5 +1,3 @@
 ---
-title: "Webnovles"
-type: "webnovels"
-layout: "webnovels"
+title: "Welcome to the Webnovels Section"
 ---
