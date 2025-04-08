@@ -1,0 +1,9 @@
+(undo-tree-save-format-version . 1)
+"73ff9c9f1af03348ddb2206ae7e3fc7993d8197e"
+[nil nil nil nil (26612 55369 653473 767000) 0 nil]
+([nil nil ((23 . 24) (23 . 24) (t 26609 41982 727967 922000)) nil (26612 55369 653472 945000) 0 nil])
+([nil nil ((#("" 0 1 (markdown-yaml-metadata-section (5 25) fontified t)) . 23)) nil (26612 55369 653472 382000) 0 nil])
+([nil nil ((nil rear-nonsticky nil 55 . 56) (nil fontified nil 23 . 56) (23 . 56)) nil (26612 55369 653471 936000) 0 nil])
+([nil current ((#("
+" 0 1 (font-lock-multiline t markdown-yaml-metadata-section (5 57) fontified t)) . -55) (undo-tree-id0 . -1) 56) nil (26612 55369 653469 238000) 0 nil])
+nil

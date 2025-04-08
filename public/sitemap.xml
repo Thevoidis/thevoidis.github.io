@@ -28,6 +28,10 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/webnovels/dear-kafka/ch-0001/</loc>
+  </url><url>
+    <loc>http://localhost:1313/webnovels/dear-kafka/</loc>
+  </url><url>
     <loc>http://localhost:1313/songs/</loc>
   </url><url>
     <loc>http://localhost:1313/stories/</loc>
