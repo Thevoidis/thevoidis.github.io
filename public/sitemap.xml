@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/webnovels/dear-kafka/ch-0001/</loc>
-    <lastmod>2025-04-08T13:32:30+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/webnovels/dear-kafka/</loc>
     <lastmod>2025-04-08T13:32:30+05:30</lastmod>
   </url><url>
@@ -37,9 +34,13 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/webnovels/the-nature-saint/ch-00001/</loc>
+  </url><url>
     <loc>http://localhost:1313/songs/</loc>
   </url><url>
     <loc>http://localhost:1313/stories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/webnovels/the-nature-saint/</loc>
   </url><url>
     <loc>http://localhost:1313/webnovels/the-wizard-of-vanity/</loc>
   </url>

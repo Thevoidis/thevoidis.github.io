@@ -6,15 +6,8 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Apr 2025 13:32:30 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 21:15:17 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Chapter 1</title>
-      <link>http://localhost:1313/webnovels/dear-kafka/ch-0001/</link>
-      <pubDate>Tue, 08 Apr 2025 13:32:30 +0530</pubDate>
-      <guid>http://localhost:1313/webnovels/dear-kafka/ch-0001/</guid>
-      <description>Kyton The eyes were always there. Not real eyes, not reflections in a rain-slicked window or the passing glance of a stranger on the street. These were heavier. They pressed against the inside of his skull, a phantom weight behind his own gaze. Freedom? Freedom was a word for people who didn&amp;rsquo;t carry their own courtroom inside their head.&#xA;Kyton was a man who could disappear any day. No one would notice or care.</description>
-    </item>
     <item>
       <title>About the Tao Teh Ching</title>
       <link>http://localhost:1313/blogs/about-the-tao-teh-ching/</link>
@@ -42,6 +35,13 @@
       <pubDate>Thu, 27 Feb 2025 17:23:05 +0530</pubDate>
       <guid>http://localhost:1313/blogs/the-reason-for-creating-another-blog/</guid>
       <description>Just to get this out of the picture. I already have another site&#xA;However, that one was meant to be a personal portfolio of sorts. But now I realize that I have no use of a personal portfolio. It&amp;rsquo;s not like I&amp;rsquo;m going to get a job anyway, so why bother with one. I don&amp;rsquo;t think I&amp;rsquo;ll live for long, so I decided to do whatever I liked until I died.</description>
+    </item>
+    <item>
+      <title>Chapter 1</title>
+      <link>http://localhost:1313/webnovels/the-nature-saint/ch-00001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/webnovels/the-nature-saint/ch-00001/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
