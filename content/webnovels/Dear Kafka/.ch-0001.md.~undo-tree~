@@ -1,5 +1,5 @@
 (undo-tree-save-format-version . 1)
-"66e048557e4660085fda247cd50da7a0958b2058"
+"481c0286a0849c7579994a13f58ce445b5c3b5e9"
 [nil nil nil nil (26613 7969 287360 3000) 0 nil]
 ([nil nil ((2505 . 2506) (#("," 0 1 (fontified t)) . -2505) (undo-tree-id0 . -1) (undo-tree-id1 . -1) (undo-tree-id2 . -1) 2506 (2504 . 2506) (#("d" 0 1 (fontified t)) . -2504) (undo-tree-id3 . -1) (undo-tree-id4 . -1) (undo-tree-id5 . -1) (#("." 0 1 (fontified t)) . -2505) (undo-tree-id6 . -1) (undo-tree-id7 . -1) (undo-tree-id8 . -1) 2506 (2502 . 2506) (2481 . 2502) (2462 . 2481) (2460 . 2460) (2460 . 2462) (#("d" 0 1 (fontified t)) . -2460) (undo-tree-id9 . -1) (undo-tree-id10 . -1) (undo-tree-id11 . -1) (undo-tree-id12 . -1) (undo-tree-id13 . -1) 2461 (2460 . 2460) (2460 . 2461) (2455 . 2460) (2454 . 2455) (#("
 " 0 1 (fontified t)) . -2454) (undo-tree-id14 . -1) (undo-tree-id15 . -1) (undo-tree-id16 . -1) (undo-tree-id17 . -1) (undo-tree-id18 . -1) (undo-tree-id19 . -1) (undo-tree-id20 . -1) (undo-tree-id21 . -1) (undo-tree-id22 . -1) (undo-tree-id23 . -1) (undo-tree-id24 . -1) (undo-tree-id25 . -1) (undo-tree-id26 . -1) (undo-tree-id27 . -1) (undo-tree-id28 . -1) (undo-tree-id29 . -1) (undo-tree-id30 . -1) (undo-tree-id31 . -1) (undo-tree-id32 . -1) (undo-tree-id33 . -1) (undo-tree-id34 . -1) (undo-tree-id35 . -1) (undo-tree-id36 . -1) (undo-tree-id37 . -1) (undo-tree-id38 . -1) (undo-tree-id39 . -1) (undo-tree-id40 . -1) (undo-tree-id41 . -1) (undo-tree-id42 . -1) (undo-tree-id43 . -1) (undo-tree-id44 . -1) (undo-tree-id45 . -1) (undo-tree-id46 . -1) (undo-tree-id47 . -1) (undo-tree-id48 . -1) (undo-tree-id49 . -1) (undo-tree-id50 . -1) (undo-tree-id51 . -1) (undo-tree-id52 . -1) (undo-tree-id53 . -1) (undo-tree-id54 . -1) (undo-tree-id55 . -1) (undo-tree-id56 . -1) (undo-tree-id57 . -1) (undo-tree-id58 . -1) (undo-tree-id59 . -1) (undo-tree-id60 . -1) (undo-tree-id61 . -1) (undo-tree-id62 . -1) (undo-tree-id63 . -1) (undo-tree-id64 . -1) (undo-tree-id65 . -1) (undo-tree-id66 . -1) (undo-tree-id67 . -1) (undo-tree-id68 . -1) (undo-tree-id69 . -1) (undo-tree-id70 . -1) (undo-tree-id71 . -1) (undo-tree-id72 . -1) (undo-tree-id73 . -1) (undo-tree-id74 . -1) (undo-tree-id75 . -1) (undo-tree-id76 . -1) (undo-tree-id77 . -1) (undo-tree-id78 . -1) (undo-tree-id79 . -1) (undo-tree-id80 . -1) (undo-tree-id81 . -1) (undo-tree-id82 . -1) (undo-tree-id83 . -1) (undo-tree-id84 . -1) (undo-tree-id85 . -1) (undo-tree-id86 . -1) (undo-tree-id87 . -1) (undo-tree-id88 . -1) (undo-tree-id89 . -1) (undo-tree-id90 . -1) (#("N" 0 1 (fontified t)) . -2455) (undo-tree-id91 . -1) (undo-tree-id92 . -1) (#("o" 0 1 (fontified t)) . -2456) (undo-tree-id93 . -1) (undo-tree-id94 . -1) (#("t" 0 1 (fontified t)) . -2457) (undo-tree-id95 . -1) (undo-tree-id96 . -1) (#("h" 0 1 (fontified t)) . -2458) (undo-tree-id97 . -1) (undo-tree-id98 . -1) (#("i" 0 1 (fontified t)) . -2459) (undo-tree-id99 . -1) (undo-tree-id100 . -1) (#("n" 0 1 (fontified t)) . -2460) (undo-tree-id101 . -1) (undo-tree-id102 . -1) (#("g" 0 1 (fontified t)) . -2461) (undo-tree-id103 . -1) (undo-tree-id104 . -1) (#(" " 0 1 (fontified t)) . -2462) (undo-tree-id105 . -1) (undo-tree-id106 . -1) (#("m" 0 1 (fontified t)) . -2463) (undo-tree-id107 . -1) (undo-tree-id108 . -1) (#("u" 0 1 (fontified t)) . -2464) (undo-tree-id109 . -1) (undo-tree-id110 . -1) (#("c" 0 1 (fontified t)) . -2465) (undo-tree-id111 . -1) (undo-tree-id112 . -1) (#("h" 0 1 (fontified t)) . -2466) (undo-tree-id113 . -1) (undo-tree-id114 . -1) (#("," 0 1 (fontified t)) . -2467) (undo-tree-id115 . -1) (undo-tree-id116 . -1) (#(" " 0 1 (fontified t)) . -2468) (undo-tree-id117 . -1) 2469 (2467 . 2469) (2455 . 2455) (2455 . 2467) (t 26612 56817 691867 617000)) nil (26613 7969 287356 694000) 0 nil])
@@ -299,5 +299,381 @@ nil
 ([nil nil ((10166 . 10183) (#("f" 0 1 (fontified t)) . -10166) (undo-tree-id9717 . -1) (undo-tree-id9718 . -1) (undo-tree-id9719 . -1) (undo-tree-id9720 . -1) (undo-tree-id9721 . -1) (#(" " 0 1 (fontified t)) . -10167) (undo-tree-id9722 . -1) (undo-tree-id9723 . -1) 10168 (10165 . 10168) (10158 . 10158) (10158 . 10165) (10155 . 10158) (10152 . 10152) (10152 . 10155) (10151 . 10152) (t 26614 19576 63428 353000) 10150) nil (26614 19586 154521 658000) 0 nil])
 ([nil nil ((10227 . 10228) (#(" " 0 1 (fontified t)) . -10227) (undo-tree-id9724 . -1) (undo-tree-id9725 . -1) (undo-tree-id9726 . -1) 10228 (10215 . 10228) (#("l" 0 1 (fontified t)) . -10215) (undo-tree-id9727 . -1) (undo-tree-id9728 . -1) (undo-tree-id9729 . -1) (#("i" 0 1 (fontified t)) . -10216) (undo-tree-id9730 . -1) (undo-tree-id9731 . -1) (undo-tree-id9732 . -1) (#("e" 0 1 (fontified t)) . -10217) (undo-tree-id9733 . -1) (undo-tree-id9734 . -1) (undo-tree-id9735 . -1) (#("d" 0 1 (fontified t)) . -10218) (undo-tree-id9736 . -1) (undo-tree-id9737 . -1) (undo-tree-id9738 . -1) (#(" " 0 1 (fontified t)) . -10219) (undo-tree-id9739 . -1) (undo-tree-id9740 . -1) (undo-tree-id9741 . -1) (#("d" 0 1 (fontified t)) . -10220) (undo-tree-id9742 . -1) (undo-tree-id9743 . -1) (undo-tree-id9744 . -1) (#("o" 0 1 (fontified t)) . -10221) (undo-tree-id9745 . -1) (undo-tree-id9746 . -1) (undo-tree-id9747 . -1) (#("w" 0 1 (fontified t)) . -10222) (undo-tree-id9748 . -1) (undo-tree-id9749 . -1) (undo-tree-id9750 . -1) (#(" " 0 1 (fontified t)) . -10223) (undo-tree-id9751 . -1) (undo-tree-id9752 . -1) (undo-tree-id9753 . -1) 10224 (10215 . 10224) (10209 . 10215) (10206 . 10206) (10206 . 10209) (#("e" 0 1 (fontified t)) . -10206) (undo-tree-id9754 . -1) (undo-tree-id9755 . -1) (#("r" 0 1 (fontified t)) . -10207) (undo-tree-id9756 . -1) (undo-tree-id9757 . -1) 10208 (10207 . 10208) (#("o" 0 1 (fontified t)) . -10207) (undo-tree-id9758 . -1) (undo-tree-id9759 . -1) 10208 (10205 . 10208) (10202 . 10202) (10202 . 10205) (10184 . 10184) (10184 . 10202) (10183 . 10184) (t 26614 19586 153227 745000) 10182) nil (26614 19633 930827 830000) 0 nil])
 ([nil nil ((10246 . 10247) (10231 . 10231) (10231 . 10246) (#("s" 0 1 (fontified t)) . -10231) (undo-tree-id9760 . -1) (#("i" 0 1 (fontified t)) . -10232) (undo-tree-id9761 . -1) 10233 (10229 . 10233) (10228 . 10229) (t 26614 19633 927744 186000) 10227) nil (26614 19647 52197 201000) 0 nil])
-([nil current ((56 . 68) (55 . 56) (t 26614 19647 53350 81000) 23) nil (26617 23541 393043 391000) 0 nil])
+([nil nil ((56 . 68) (55 . 56) (t 26614 19647 53350 81000) 23) nil (26628 11758 269654 238000) 0 nil])
+([nil nil ((#("Kyton heard his personal courtroom in silence.
+That was how it was, his own panel of judges.
+Every day , there was a different panel.
+Sometimes his parents , his old teachers, his schoolmates, some police officers, some politicians, anyone.
+Anyone whom he met would show up in his head uninvited.
+He wondered if he should be charging rent for that.
+" 0 349 (fontified t)) . 714) (undo-tree-id29 . -297) (undo-tree-id30 . -297) (undo-tree-id31 . -348) (t 26617 23541 392420 954000)) nil (26628 11807 630543 914000) 0 nil] [nil nil ((#("Kyton heard his personal courtroom in silence.
+That was how it was, his own panel of judges.
+Every day , there was a different panel.
+Sometimes his parents , his old teachers, his schoolmates, some police officers, some politicians, anyone.
+Anyone whom he met would show up in his head uninvited.
+He wondered if he should be charging rent for that.
+
+That's how it was every time he sat in his office. But it was early morning. He could not go home now.
+If he did , he would not get any clients. Not that he ever did, but there wouldn't be a chance at all if he went home.
+What did he do to deserve this ?
+Who was to blame for him being like this ?
+Maybe himself ? But he had bankrupted himself by becoming a psychologist to fix himself, and that didn't work.
+Now he could claim to be doubly unemployed- both as a private investigator and as a psychologist.
+He wasn't getting clients from either profession.
+And he was almost a middle aged man now- he had turned thirty five a few months prior.
+No significant other. No stable source of income. Bad mental health. A broken home.
+The hallmark of a failure. He didn't even have distant family members he could talk to.
+All of them were dead. His parents. His first relatives.
+And he never bothered starting one of his own.
+Not that he could.
+He himself did not know which words were his and which were from the judges in his head.
+When would he be free of this torment ?
+
+
+Perhaps he should read something. Maybe that would help.
+He had not yet cancelled the newspapers to his office.
+Perhaps he should do it soon. There is nothing more than propoganda in it anyway.
+But he took the paper anyway.
+Glancing over the articles, he sighed.
+So much focus on murders ? Maybe that caught the people's attention ?
+He decided to read one of them to distract himself.
+
+\"More murders on the streets - is anyone safe anymore ?\"
+Was that supposed to be a catchphrase ?
+Why were people so concerned about thugs dying on the streets ?
+Kyton kept reading.
+\"Disabled man found dead on the alleyways.\"
+\"Three elderly women found dead at the riverside.\"
+\"Backlogs in courts all time high since the war.\"
+\"Are the streets safe for the poor anymore ?\"
+
+So many of them.
+It was as if the papers were being held at gunpoint to write about murders.
+He proceeded to flick to the next page.
+\"Is Tao coming back ?\"
+That was the only heading on that page.
+And Kyton could guess why.
+He decided to stop reading.
+There was no peace he would recieve from reading further.
+He had been poor for a good part of his life, and he was not much better off now.
+In fact, the expenses of maintaining the house were eating up the little earnings he got from the occasional clients.
+He had no time to worry about other people.
+Even more so if the people who were dying were mostly poor people.
+Or people who could not fight back.
+It was as if someone was deliberately picking on the weak.
+Killing them, to be exact.
+
+Kyton sighed.
+He did not want to think about this anymore.
+He knew of a drunkard who would worry about such things and led himself to ruin.
+Kyton did not want to end up like that, but judging by the way things were going, it looked like he would end up like that anyway.
+His entire profession was wrong.
+This was a city which needed neither detectives nor psychologists.
+The average person couldn't care less about a stranger dying in their backyard, and the burden of just being alive prevented people from caring about their mental state.
+They did not want to solve mysteries. They did not want anyone to listen to them. Just being alive was hard enough here.
+By all logical means , Kyton should have called it a loss and left for someplace else.
+He still had a home. It was worth something.
+He could still find a career elsewhere.
+But he did not want to leave this place.
+This was where his memoies were.
+This was where his past haunted him.
+And he couldn't imagine living without being haunted by that very past.
+Even today, in his head , he could not make out which voices were his and which were from his past.
+This panel of judges were his eternal trial, his peace and penance.
+
+But some days, they did get hard to handle, and today seemed to be one of those days.
+The people's mental state , huh ?
+Even if he did get clients, would he be any good ?
+He did learn forensics and law, but that did not make him intelligent.
+And psychology was like astrology which had the privilege to be taught in universities.
+Needless to say, Kyton was not proud of either of his professions.
+But then again , what option did he have ?
+He had experienced first hand what it felt like to be left on the streets, and the recent news reports seemed to suggest that it was getting worse.
+No, here he was again, overthinking things. All he had to do was get up and go home.
+He tried to get up from his chair. The muscles in his legs were refusing to get up.
+They were just as unmotivated as him.
+But he had to get up.
+He tried to push himself against the chair until his feet actually felt something.
+Good. There was some feeling there atleast.
+He tried shaking his legs. Maybe they had gone limp from sitting for too long ?
+But lately 'too long' was becoming something like 'five minutes' .
+Perhaps he should sit less ?
+He slapped both his cheeks.
+No more overthinking. He had to go home.
+No clients were coming.
+
+He cleared his table and picked up his bag.
+Perhaps he should get a rucksack instead ?
+He made sure that there was nothing left in the office and locked it.
+He hoped he would make it home alive.
+And maybe that he would get a client tomorrow.
+The cases in the news did interest him.
+But he wouldn't get payed for investigating those.
+What he needed now was work. Not just for money, but to prove himself.
+The judges were not as troublesome if he could prove himself a good detective.
+
+Slowly, he started to drag his legs down the streets.
+The streets were dusty as usual.
+Kyton preferred to keep his head low.
+He would have to meet less people that way.
+But it was work hour now.
+There wouldn't be anyone out on the streets anyway, except for the people who lived or worked on the streets.
+Not everyone had the luxury of leaving work anytime they wanted.
+Maybe he would be a bit richer if he too did not take such luxuries.
+Should he look for some other work ?
+
+Kyton sighed again. That was the only reaction he could give to his life.
+The city seemed to echo Kyton's sighs.
+The buildings. The shops. The police station. The parks. The road. The alleys. 
+All of them had this lifeless feel, the smell of blood and abandonment, something that should be kept away from.
+The city had always been like this.
+Gangs, murderers , theives, mafias.
+The products of a country whose economy wall falling off faster than the world economy did during the war more than three decades ago.
+The government never bothered to do anything to stop the fall, and many polititians even fled to other countries.
+Kyton couldn't remember a time when it was peaceful.
+He could vaguely remember his father talking about a time before the war when it was peaceful.
+Why was he remembering him now ?
+He was probably lying.
+The city was probably worse off before the war.
+Maybe he just wanted to sow hope.
+That's what he did.
+Mislead young people.
+Kyton didn't want to be like him.
+
+He hated how far his home was from his office.
+He did not own a vehicle, and did not want to be in one either.
+He preferred to walk.
+He walked for about hour throught the hot weather, kicking up dust and scraps of paper that were lying on the road.
+He turned a corner and proceeding to enter a small street, and halted at the third house. 
+He stared at the metal plate in front of the house.
+\"Kyton Nixot - Private Investigator and Psycholosgist\"
+He didn't know why he stared at the sign everyday.
+It was strange. For the last ten years , he had been seeing that sign, but it felt like it didn't belong there.
+He still expected a different sign, one that he had seen in childhood.
+He doesn't even see that in his dreams. Not that he had any dreams.
+Kyton shook his head.
+He opened the rusty
+Kyton shook his head.
+He opened the rusty gate.
+The house did have a good garden at one point in time, when his mother would maintain it.
+Ever since his parents died , it was unmaintained.
+All that was left was grass and weeds which he no longer bothered to clear.
+
+The door was just as rusty.
+He had to put some effort in opening the lock.
+The inside of the house was as unkept as it could get.
+The floor was full of drawings. Hundreds of them.
+The entirity of the house's floor , except for the kitchen, was covered in these drawings.
+Kyton walked over them with no remorse.
+He made sure that there was nothing rotting, but that is as far as it got.
+The plumbing was leaky and some windows were broken.
+Kyton went to one of the rooms and sat on a chair facing a dusty table.
+The drawers on the table had not been opened for years.
+Kyton wanted it to stay that way.
+He already knew the contents of it- a few old diaries and case files, decades old.
+They belonged to a foolish detective who was now deceased.
+Kyton already knew what it meant to be a detective, even before he became one.
+Eveb then, why did he decide to be a detective ?
+He was unsure of his decisions, but it was too late for that now.
+He kicked a few sheets that were near his feet.
+Those drawings traumatized him.
+Yet why did he keep drawing them ?
+Why was he asking so many questions today ?
+Maybe it was his judges.
+Maube he should get some sleep.
+He made it to another room and sat on a bed.
+This was his room.
+" 0 787 (fontified t) 787 857 (fontified t) 857 2357 (fontified t) 2357 2375 (fontified t) 2375 2922 (fontified t) 2922 2936 (fontified t) 2936 4228 (fontified t) 4228 4279 (fontified t) 4279 5366 (fontified t) 5366 5409 (fontified t) 5409 6357 (fontified t) 6357 6396 (fontified t) 6396 7406 (fontified t) 7406 7522 (fontified t) 7522 8510 (fontified t) 8510 8601 (fontified t) 8601 9547 (fontified t)) . 714) (undo-tree-id0 . -9547) (undo-tree-id1 . -9547) (undo-tree-id2 . -9547) (undo-tree-id3 . -9547) (undo-tree-id4 . -9547) (undo-tree-id5 . -1289) (undo-tree-id6 . -9547) (undo-tree-id7 . -9546) (t 26617 23541 392420 954000)) ((714 . 10261)) (26628 11758 269376 216000) 0 nil])
+([nil nil ((#("That's how it was every time he sat in his office. But it was early morning. He could not go home now.
+If he did , he would not get any clients. Not that he ever did, but there wouldn't be a chance at all if he went home.
+What did he do to deserve this ?
+Who was to blame for him being like this ?
+Maybe himself ? But he had bankrupted himself by becoming a psychologist to fix himself, and that didn't work.
+Now he could claim to be doubly unemployed- both as a private investigator and as a psychologist.
+He wasn't getting clients from either profession.
+And he was almost a middle aged man now- he had turned thirty five a few months prior.
+No significant other. No stable source of income. Bad mental health. A broken home.
+The hallmark of a failure. He didn't even have distant family members he could talk to.
+All of them were dead. His parents. His first relatives.
+And he never bothered starting one of his own.
+Not that he could.
+He himself did not know which words were his and which were from the judges in his head.
+When would he be free of this torment ?
+" 0 437 (fontified t) 437 507 (fontified t) 507 1068 (fontified t)) . 715) (undo-tree-id25 . -1028) (undo-tree-id26 . -1028) (undo-tree-id27 . -1028) (undo-tree-id28 . -1067) 1743) nil (26628 11807 630542 405000) 0 nil])
+nil
+([nil nil ((#("
+" 0 1 (fontified t)) . 715) (undo-tree-id24 . 1)) nil (26628 11807 630540 281000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t)) . 715) (undo-tree-id23 . 1)) nil (26628 11807 630539 706000) 0 nil])
+([nil nil ((#("Perhaps he should read something. Maybe that would help.
+He had not yet cancelled the newspapers to his office.
+Perhaps he should do it soon. There is nothing more than propoganda in it anyway.
+But he took the paper anyway.
+Glancing over the articles, he sighed.
+So much focus on murders ? Maybe that caught the people's attention ?
+He decided to read one of them to distract himself.
+" 0 56 (fontified t) 56 57 (fontified t) 57 80 (fontified t) 80 112 (fontified t) 112 385 (fontified t)) . 715) (undo-tree-id19 . -333) (undo-tree-id20 . -333) (undo-tree-id21 . -333) (undo-tree-id22 . -384) 1048) nil (26628 11807 630538 782000) 0 nil])
+([nil nil ((#("So many of them.
+It was as if the papers were being held at gunpoint to write about murders.
+He proceeded to flick to the next page.
+\"Is Tao coming back ?\"
+That was the only heading on that page.
+And Kyton could guess why.
+He decided to stop reading.
+There was no peace he would recieve from reading further.
+He had been poor for a good part of his life, and he was not much better off now.
+In fact, the expenses of maintaining the house were eating up the little earnings he got from the occasional clients.
+He had no time to worry about other people.
+Even more so if the people who were dying were mostly poor people.
+Or people who could not fight back.
+It was as if someone was deliberately picking on the weak.
+Killing them, to be exact.
+
+Kyton sighed.
+He did not want to think about this anymore.
+He knew of a drunkard who would worry about such things and led himself to ruin.
+Kyton did not want to end up like that, but judging by the way things were going, it looked like he would end up like that anyway.
+His entire profession was wrong.
+This was a city which needed neither detectives nor psychologists.
+The average person couldn't care less about a stranger dying in their backyard, and the burden of just being alive prevented people from caring about their mental state.
+They did not want to solve mysteries. They did not want anyone to listen to them. Just being alive was hard enough here.
+By all logical means , Kyton should have called it a loss and left for someplace else.
+He still had a home. It was worth something.
+He could still find a career elsewhere.
+But he did not want to leave this place.
+This was where his memoies were.
+This was where his past haunted him.
+And he couldn't imagine living without being haunted by that very past.
+Even today, in his head , he could not make out which voices were his and which were from his past.
+This panel of judges were his eternal trial, his peace and penance.
+
+But some days, they did get hard to handle, and today seemed to be one of those days.
+The people's mental state , huh ?
+Even if he did get clients, would he be any good ?
+He did learn forensics and law, but that did not make him intelligent.
+And psychology was like astrology which had the privilege to be taught in universities.
+Needless to say, Kyton was not proud of either of his professions.
+But then again , what option did he have ?
+He had experienced first hand what it felt like to be left on the streets, and the recent news reports seemed to suggest that it was getting worse.
+No, here he was again, overthinking things. All he had to do was get up and go home.
+He tried to get up from his chair. The muscles in his legs were refusing to get up.
+They were just as unmotivated as him.
+But he had to get up.
+He tried to push himself against the chair until his feet actually felt something.
+Good. There was some feeling there atleast.
+He tried shaking his legs. Maybe they had gone limp from sitting for too long ?
+But lately 'too long' was becoming something like 'five minutes' .
+Perhaps he should sit less ?
+He slapped both his cheeks.
+No more overthinking. He had to go home.
+No clients were coming.
+
+He cleared his table and picked up his bag.
+Perhaps he should get a rucksack instead ?
+He made sure that there was nothing left in the office and locked it.
+He hoped he would make it home alive.
+And maybe that he would get a client tomorrow.
+The cases in the news did interest him.
+But he wouldn't get payed for investigating those.
+What he needed now was work. Not just for money, but to prove himself.
+The judges were not as troublesome if he could prove himself a good detective.
+
+Slowly, he started to drag his legs down the streets.
+The streets were dusty as usual.
+Kyton preferred to keep his head low.
+He would have to meet less people that way.
+But it was work hour now.
+There wouldn't be anyone out on the streets anyway, except for the people who lived or worked on the streets.
+Not everyone had the luxury of leaving work anytime they wanted.
+Maybe he would be a bit richer if he too did not take such luxuries.
+Should he look for some other work ?
+
+Kyton sighed again. That was the only reaction he could give to his life.
+The city seemed to echo Kyton's sighs.
+The buildings. The shops. The police station. The parks. The road. The alleys. 
+All of them had this lifeless feel, the smell of blood and abandonment, something that should be kept away from.
+The city had always been like this.
+Gangs, murderers , theives, mafias.
+The products of a country whose economy wall falling off faster than the world economy did during the war more than three decades ago.
+The government never bothered to do anything to stop the fall, and many polititians even fled to other countries.
+Kyton couldn't remember a time when it was peaceful.
+He could vaguely remember his father talking about a time before the war when it was peaceful.
+Why was he remembering him now ?
+He was probably lying.
+The city was probably worse off before the war.
+Maybe he just wanted to sow hope.
+That's what he did.
+Mislead young people.
+Kyton didn't want to be like him.
+
+He hated how far his home was from his office.
+He did not own a vehicle, and did not want to be in one either.
+He preferred to walk.
+He walked for about hour throught the hot weather, kicking up dust and scraps of paper that were lying on the road.
+He turned a corner and proceeding to enter a small street, and halted at the third house. 
+He stared at the metal plate in front of the house.
+\"Kyton Nixot - Private Investigator and Psycholosgist\"
+He didn't know why he stared at the sign everyday.
+It was strange. For the last ten years , he had been seeing that sign, but it felt like it didn't belong there.
+He still expected a different sign, one that he had seen in childhood.
+He doesn't even see that in his dreams. Not that he had any dreams.
+Kyton shook his head.
+He opened the rusty
+Kyton shook his head.
+He opened the rusty gate.
+The house did have a good garden at one point in time, when his mother would maintain it.
+Ever since his parents died , it was unmaintained.
+All that was left was grass and weeds which he no longer bothered to clear.
+
+The door was just as rusty.
+He had to put some effort in opening the lock.
+The inside of the house was as unkept as it could get.
+The floor was full of drawings. Hundreds of them.
+The entirity of the house's floor , except for the kitchen, was covered in these drawings.
+Kyton walked over them with no remorse.
+He made sure that there was nothing rotting, but that is as far as it got.
+The plumbing was leaky and some windows were broken.
+Kyton went to one of the rooms and sat on a chair facing a dusty table.
+The drawers on the table had not been opened for years.
+Kyton wanted it to stay that way.
+He already knew the contents of it- a few old diaries and case files, decades old.
+They belonged to a foolish detective who was now deceased.
+Kyton already knew what it meant to be a detective, even before he became one.
+Eveb then, why did he decide to be a detective ?
+He was unsure of his decisions, but it was too late for that now.
+He kicked a few sheets that were near his feet.
+Those drawings traumatized him.
+Yet why did he keep drawing them ?
+Why was he asking so many questions today ?
+Maybe it was his judges.
+Maube he should get some sleep.
+He made it to another room and sat on a bed.
+This was his room.
+" 0 178 (fontified t) 178 196 (fontified t) 196 739 (fontified t) 739 740 (fontified t) 740 741 (fontified t) 741 742 (fontified t) 742 743 (fontified t) 743 757 (fontified t) 757 797 (fontified t) 797 798 (fontified t) 798 802 (fontified t) 802 1126 (fontified t) 1126 1127 (fontified t) 1127 1284 (fontified t) 1284 2049 (fontified t) 2049 2100 (fontified t) 2100 2784 (fontified t) 2784 2829 (fontified t) 2829 3187 (fontified t) 3187 3230 (fontified t) 3230 4178 (fontified t) 4178 4217 (fontified t) 4217 4329 (fontified t) 4329 4410 (fontified t) 4410 5227 (fontified t) 5227 5343 (fontified t) 5343 5910 (fontified t) 5910 5933 (fontified t) 5933 6331 (fontified t) 6331 6422 (fontified t) 6422 7368 (fontified t)) . 1089) (undo-tree-id8 . -7368) (undo-tree-id9 . -7368) (undo-tree-id10 . -7368) (undo-tree-id11 . -7368) (undo-tree-id12 . -7368) (undo-tree-id13 . -7367) (undo-tree-id14 . -3547) (undo-tree-id15 . -2602) (undo-tree-id16 . -1284) (undo-tree-id17 . -133) (undo-tree-id18 . -7368)) nil (26628 11807 630535 381000) 0 nil])
+([nil nil ((760 . 763) (#("g" 0 1 (fontified t)) . -760) (undo-tree-id32 . -1) (undo-tree-id33 . -1) (undo-tree-id34 . -1) (#("e" 0 1 (fontified t)) . -761) (undo-tree-id35 . -1) (undo-tree-id36 . -1) (undo-tree-id37 . -1) 762 (744 . 762) (740 . 744) (#(" " 0 1 (fontified t)) . -740) (undo-tree-id38 . -1) (undo-tree-id39 . -1) (undo-tree-id40 . -1) 741 (739 . 741) (718 . 739) (#("w" 0 1 (fontified t)) . -718) (undo-tree-id41 . -1) (undo-tree-id42 . -1) (undo-tree-id43 . -1) 719 (716 . 719) (#("l" 0 1 (fontified t)) . -716) (undo-tree-id44 . -1) (undo-tree-id45 . -1) (undo-tree-id46 . -1) (undo-tree-id47 . -1) (undo-tree-id48 . -1) (undo-tree-id49 . -1) (undo-tree-id50 . -1) (#(" " 0 1 (fontified t)) . -717) (undo-tree-id51 . -1) (undo-tree-id52 . -1) (undo-tree-id53 . -1) 718 (717 . 718) (715 . 715) (715 . 717) (714 . 715) (#("Q" 0 1 (fontified t)) . -714) (undo-tree-id54 . -1) (#("A" 0 1 (fontified t)) . -715) (undo-tree-id55 . -1) 716 (714 . 716) (#("T" 0 1 (fontified t)) . -714) (undo-tree-id56 . -1) (#("h" 0 1 (fontified t)) . -715) (undo-tree-id57 . -1) (#("e" 0 1 (fontified t)) . -716) (undo-tree-id58 . -1) (#(" " 0 1 (fontified t)) . -717) (undo-tree-id59 . -1) 718 (714 . 718) (#("E" 0 1 (fontified t)) . -714) (undo-tree-id60 . -1) (undo-tree-id61 . -1) (undo-tree-id62 . -1) (#("v" 0 1 (fontified t)) . -715) (undo-tree-id63 . -1) (undo-tree-id64 . -1) (undo-tree-id65 . -1) (#("e" 0 1 (fontified t)) . -716) (undo-tree-id66 . -1) (undo-tree-id67 . -1) (undo-tree-id68 . -1) (#("n" 0 1 (fontified t)) . -717) (undo-tree-id69 . -1) (undo-tree-id70 . -1) (undo-tree-id71 . -1) (#(" " 0 1 (fontified t)) . -718) (undo-tree-id72 . -1) (undo-tree-id73 . -1) (undo-tree-id74 . -1) 719 (#("t" 0 1 (fontified t)) . -719) (undo-tree-id75 . -1) (undo-tree-id76 . -1) (undo-tree-id77 . -1) (#("h" 0 1 (fontified t)) . -720) (undo-tree-id78 . -1) (undo-tree-id79 . -1) (undo-tree-id80 . -1) (#("e" 0 1 (fontified t)) . -721) (undo-tree-id81 . -1) (undo-tree-id82 . -1) (undo-tree-id83 . -1) (#(" " 0 1 (fontified t)) . -722) (undo-tree-id84 . -1) (undo-tree-id85 . -1) (undo-tree-id86 . -1) (#("l" 0 1 (fontified t)) . -723) (undo-tree-id87 . -1) (undo-tree-id88 . -1) (undo-tree-id89 . -1) (#("i" 0 1 (fontified t)) . -724) (undo-tree-id90 . -1) (undo-tree-id91 . -1) (undo-tree-id92 . -1) (#("v" 0 1 (fontified t)) . -725) (undo-tree-id93 . -1) (undo-tree-id94 . -1) (undo-tree-id95 . -1) 726 (#("e" 0 1 (fontified t)) . -726) (undo-tree-id96 . -1) (undo-tree-id97 . -1) (undo-tree-id98 . -1) (#("s" 0 1 (fontified t)) . -727) (undo-tree-id99 . -1) (undo-tree-id100 . -1) (#(" " 0 1 (fontified t)) . -728) (undo-tree-id101 . -1) (undo-tree-id102 . -1) (#("o" 0 1 (fontified t)) . -729) (undo-tree-id103 . -1) (undo-tree-id104 . -1) (#("f" 0 1 (fontified t)) . -730) (undo-tree-id105 . -1) (undo-tree-id106 . -1) (#(" " 0 1 (fontified t)) . -731) (undo-tree-id107 . -1) (undo-tree-id108 . -1) (#("o" 0 1 (fontified t)) . -732) (undo-tree-id109 . -1) (undo-tree-id110 . -1) (#("t" 0 1 (fontified t)) . -733) (undo-tree-id111 . -1) (undo-tree-id112 . -1) (#("h" 0 1 (fontified t)) . -734) (undo-tree-id113 . -1) (undo-tree-id114 . -1) (#("e" 0 1 (fontified t)) . -735) (undo-tree-id115 . -1) (undo-tree-id116 . -1) (#("r" 0 1 (fontified t)) . -736) (undo-tree-id117 . -1) (undo-tree-id118 . -1) (#(" " 0 1 (fontified t)) . -737) (undo-tree-id119 . -1) (undo-tree-id120 . -1) (#("p" 0 1 (fontified t)) . -738) (undo-tree-id121 . -1) (undo-tree-id122 . -1) (#("e" 0 1 (fontified t)) . -739) (undo-tree-id123 . -1) (undo-tree-id124 . -1) (#("o" 0 1 (fontified t)) . -740) (undo-tree-id125 . -1) (undo-tree-id126 . -1) (#("p" 0 1 (fontified t)) . -741) (undo-tree-id127 . -1) (undo-tree-id128 . -1) (#("l" 0 1 (fontified t)) . -742) (undo-tree-id129 . -1) (undo-tree-id130 . -1) (#("e" 0 1 (fontified t)) . -743) (undo-tree-id131 . -1) (undo-tree-id132 . -1) (#(" " 0 1 (fontified t)) . -744) (undo-tree-id133 . -1) (undo-tree-id134 . -1) (#("d" 0 1 (fontified t)) . -745) (undo-tree-id135 . -1) (undo-tree-id136 . -1) (#("i" 0 1 (fontified t)) . -746) (undo-tree-id137 . -1) (undo-tree-id138 . -1) 747 (#("d" 0 1 (fontified t)) . -747) (undo-tree-id139 . -1) (undo-tree-id140 . -1) (#("n" 0 1 (fontified t)) . -748) (undo-tree-id141 . -1) (undo-tree-id142 . -1) (#("'" 0 1 (fontified t)) . -749) (undo-tree-id143 . -1) (undo-tree-id144 . -1) (#("t" 0 1 (fontified t)) . -750) (undo-tree-id145 . -1) (undo-tree-id146 . -1) (#(" " 0 1 (fontified t)) . -751) (undo-tree-id147 . -1) (undo-tree-id148 . -1) (#("s" 0 1 (fontified t)) . -752) (undo-tree-id149 . -1) (undo-tree-id150 . -1) (#("e" 0 1 (fontified t)) . -753) (undo-tree-id151 . -1) (undo-tree-id152 . -1) (#("e" 0 1 (fontified t)) . -754) (undo-tree-id153 . -1) (undo-tree-id154 . -1) (#("m" 0 1 (fontified t)) . -755) (undo-tree-id155 . -1) (undo-tree-id156 . -1) (#(" " 0 1 (fontified t)) . -756) (undo-tree-id157 . -1) (undo-tree-id158 . -1) (#("t" 0 1 (fontified t)) . -757) (undo-tree-id159 . -1) (undo-tree-id160 . -1) (#("o" 0 1 (fontified t)) . -758) (undo-tree-id161 . -1) (undo-tree-id162 . -1) (#(" " 0 1 (fontified t)) . -759) (undo-tree-id163 . -1) (undo-tree-id164 . -1) (#("g" 0 1 (fontified t)) . -760) (undo-tree-id165 . -1) (undo-tree-id166 . -1) (#("o" 0 1 (fontified t)) . -761) (undo-tree-id167 . -1) (undo-tree-id168 . -1) (#("i" 0 1 (fontified t)) . -762) (undo-tree-id169 . -1) (undo-tree-id170 . -1) (#("n" 0 1 (fontified t)) . -763) (undo-tree-id171 . -1) (undo-tree-id172 . -1) (#("g" 0 1 (fontified t)) . -764) (undo-tree-id173 . -1) (undo-tree-id174 . -1) (#(" " 0 1 (fontified t)) . -765) (undo-tree-id175 . -1) (undo-tree-id176 . -1) (#("w" 0 1 (fontified t)) . -766) (undo-tree-id177 . -1) (undo-tree-id178 . -1) (#("e" 0 1 (fontified t)) . -767) (undo-tree-id179 . -1) (undo-tree-id180 . -1) 768 (766 . 768) (745 . 766) (#("f" 0 1 (fontified t)) . -745) (undo-tree-id181 . -1) (undo-tree-id182 . -1) (#("i" 0 1 (fontified t)) . -746) (undo-tree-id183 . -1) (undo-tree-id184 . -1) (#("f" 0 1 (fontified t)) . -747) (undo-tree-id185 . -1) (undo-tree-id186 . -1) (#("n" 0 1 (fontified t)) . -748) (undo-tree-id187 . -1) (undo-tree-id188 . -1) 749 (745 . 749) (738 . 745) (727 . 738) (717 . 717) (717 . 727) (#(" " 0 1 (fontified t)) . -717) (undo-tree-id189 . -1) 718 (714 . 718) (#("I" 0 1 (fontified t)) . -714) (undo-tree-id190 . -1) 715 (714 . 715) (#("
+" 0 1 (fontified t)) . -714) (undo-tree-id191 . -1) 715 (t 26628 11807 628843 342000)) nil (26628 11869 882348 703000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t)) . -924) (undo-tree-id192 . -1) (undo-tree-id193 . -1) (undo-tree-id194 . -1) (undo-tree-id195 . -1) (undo-tree-id196 . -1) (undo-tree-id197 . -1) (#("K" 0 1 (fontified t)) . -925) (undo-tree-id198 . -1) (undo-tree-id199 . -1) (undo-tree-id200 . -1) (undo-tree-id201 . -1) (undo-tree-id202 . -1) (#("y" 0 1 (fontified t)) . -926) (undo-tree-id203 . -1) (undo-tree-id204 . -1) (undo-tree-id205 . -1) (undo-tree-id206 . -1) (undo-tree-id207 . -1) (#("t" 0 1 (fontified t)) . -927) (undo-tree-id208 . -1) (undo-tree-id209 . -1) (undo-tree-id210 . -1) (undo-tree-id211 . -1) (undo-tree-id212 . -1) (#("o" 0 1 (fontified t)) . -928) (undo-tree-id213 . -1) (undo-tree-id214 . -1) (undo-tree-id215 . -1) (undo-tree-id216 . -1) (undo-tree-id217 . -1) (#("n" 0 1 (fontified t)) . -929) (undo-tree-id218 . -1) (undo-tree-id219 . -1) (undo-tree-id220 . -1) (undo-tree-id221 . -1) (undo-tree-id222 . -1) (#(" " 0 1 (fontified t)) . -930) (undo-tree-id223 . -1) (undo-tree-id224 . -1) (undo-tree-id225 . -1) (undo-tree-id226 . -1) (undo-tree-id227 . -1) (#("k" 0 1 (fontified t)) . -931) (undo-tree-id228 . -1) (undo-tree-id229 . -1) (undo-tree-id230 . -1) (undo-tree-id231 . -1) (undo-tree-id232 . -1) (#("e" 0 1 (fontified t)) . -932) (undo-tree-id233 . -1) (undo-tree-id234 . -1) (undo-tree-id235 . -1) (undo-tree-id236 . -1) (undo-tree-id237 . -1) (#("p" 0 1 (fontified t)) . -933) (undo-tree-id238 . -1) (undo-tree-id239 . -1) (undo-tree-id240 . -1) (undo-tree-id241 . -1) (undo-tree-id242 . -1) 934 (#("t" 0 1 (fontified t)) . -934) (undo-tree-id243 . -1) (undo-tree-id244 . -1) (undo-tree-id245 . -1) (undo-tree-id246 . -1) (undo-tree-id247 . -1) (#(" " 0 1 (fontified t)) . -935) (undo-tree-id248 . -1) (undo-tree-id249 . -1) (undo-tree-id250 . -1) (undo-tree-id251 . -1) (undo-tree-id252 . -1) (#("r" 0 1 (fontified t)) . -936) (undo-tree-id253 . -1) (undo-tree-id254 . -1) (undo-tree-id255 . -1) (undo-tree-id256 . -1) (undo-tree-id257 . -1) (#("e" 0 1 (fontified t)) . -937) (undo-tree-id258 . -1) (undo-tree-id259 . -1) (undo-tree-id260 . -1) (undo-tree-id261 . -1) (undo-tree-id262 . -1) (#("a" 0 1 (fontified t)) . -938) (undo-tree-id263 . -1) (undo-tree-id264 . -1) (undo-tree-id265 . -1) (undo-tree-id266 . -1) (undo-tree-id267 . -1) (#("d" 0 1 (fontified t)) . -939) (undo-tree-id268 . -1) (undo-tree-id269 . -1) (undo-tree-id270 . -1) (undo-tree-id271 . -1) (undo-tree-id272 . -1) (#("i" 0 1 (fontified t)) . -940) (undo-tree-id273 . -1) (undo-tree-id274 . -1) (undo-tree-id275 . -1) (undo-tree-id276 . -1) (undo-tree-id277 . -1) (#("n" 0 1 (fontified t)) . -941) (undo-tree-id278 . -1) (undo-tree-id279 . -1) (undo-tree-id280 . -1) (undo-tree-id281 . -1) (undo-tree-id282 . -1) (#("g" 0 1 (fontified t)) . -942) (undo-tree-id283 . -1) (undo-tree-id284 . -1) (undo-tree-id285 . -1) (undo-tree-id286 . -1) (undo-tree-id287 . -1) (#("." 0 1 (fontified t)) . -943) (undo-tree-id288 . -1) (undo-tree-id289 . -1) (undo-tree-id290 . -1) (undo-tree-id291 . -1) 944 (t 26628 11869 882940 28000)) nil (26628 11875 96386 453000) 0 nil])
+([nil nil ((1163 . 1165) (1158 . 1163) (1157 . 1158) (1137 . 1137) (1137 . 1157) (#("f" 0 1 (fontified t)) . -1137) (undo-tree-id0 . -1) (undo-tree-id1 . -1) 1138 (1137 . 1138) (#("g" 0 1 (fontified t)) . -1137) (undo-tree-id2 . -1) (undo-tree-id3 . -1) 1138 (1134 . 1138) (1132 . 1132) (1132 . 1134) (#("a" 0 1 (fontified t)) . -1132) (undo-tree-id4 . -1) (undo-tree-id5 . -1) (undo-tree-id6 . -1) (#("e" 0 1 (fontified t)) . -1133) (undo-tree-id7 . -1) (undo-tree-id8 . -1) (undo-tree-id9 . -1) 1134 (1116 . 1116) (1116 . 1134) (#("H" 0 1 (fontified t)) . -1116) (undo-tree-id10 . -1) 1117 (1116 . 1117) (#("
+" 0 1 (fontified t)) . -1116) (undo-tree-id11 . -1) 1117 (t 26628 11875 98794 936000)) nil (26630 7018 555565 752000) 0 nil])
+([nil nil ((1165 . 1166)) nil (26630 7018 555545 750000) 0 nil])
+([nil nil ((1195 . 1206) (1190 . 1190) (1190 . 1195) (1188 . 1190) (1170 . 1170) (1170 . 1188) (1167 . 1167) (1167 . 1170) (#("L" 0 1 (fontified t)) . -1167) (undo-tree-id12 . -1) (undo-tree-id13 . -1) (undo-tree-id14 . -1) (undo-tree-id15 . -1) (undo-tree-id16 . -1) (undo-tree-id17 . -1) (undo-tree-id18 . -1) (undo-tree-id19 . -1) (undo-tree-id20 . -1) (#("o" 0 1 (fontified t)) . -1168) (undo-tree-id21 . -1) (undo-tree-id22 . -1) (undo-tree-id23 . -1) (undo-tree-id24 . -1) (undo-tree-id25 . -1) (undo-tree-id26 . -1) (undo-tree-id27 . -1) (undo-tree-id28 . -1) (undo-tree-id29 . -1) (#("o" 0 1 (fontified t)) . -1169) (undo-tree-id30 . -1) (undo-tree-id31 . -1) (undo-tree-id32 . -1) (undo-tree-id33 . -1) (undo-tree-id34 . -1) (undo-tree-id35 . -1) (undo-tree-id36 . -1) (undo-tree-id37 . -1) (undo-tree-id38 . -1) (#("k" 0 1 (fontified t)) . -1170) (undo-tree-id39 . -1) (undo-tree-id40 . -1) (undo-tree-id41 . -1) (undo-tree-id42 . -1) (undo-tree-id43 . -1) (undo-tree-id44 . -1) (undo-tree-id45 . -1) (#("i" 0 1 (fontified t)) . -1171) (undo-tree-id46 . -1) (undo-tree-id47 . -1) (undo-tree-id48 . -1) (undo-tree-id49 . -1) (undo-tree-id50 . -1) (#("n" 0 1 (fontified t)) . -1172) (undo-tree-id51 . -1) (undo-tree-id52 . -1) (undo-tree-id53 . -1) (undo-tree-id54 . -1) (undo-tree-id55 . -1) (#("g" 0 1 (fontified t)) . -1173) (undo-tree-id56 . -1) (undo-tree-id57 . -1) (undo-tree-id58 . -1) (undo-tree-id59 . -1) (undo-tree-id60 . -1) (#(" " 0 1 (fontified t)) . -1174) (undo-tree-id61 . -1) (undo-tree-id62 . -1) (#("a" 0 1 (fontified t)) . -1175) (undo-tree-id63 . -1) (undo-tree-id64 . -1) 1176 (1170 . 1176) (1167 . 1167) (1167 . 1170) (#("H" 0 1 (fontified t)) . -1167) (undo-tree-id65 . -1) (undo-tree-id66 . -1) (#("e" 0 1 (fontified t)) . -1168) (undo-tree-id67 . -1) (undo-tree-id68 . -1) (#(" " 0 1 (fontified t)) . -1169) (undo-tree-id69 . -1) (undo-tree-id70 . -1) (#("s" 0 1 (fontified t)) . -1170) (undo-tree-id71 . -1) (undo-tree-id72 . -1) (#("t" 0 1 (fontified t)) . -1171) (undo-tree-id73 . -1) (undo-tree-id74 . -1) (#("a" 0 1 (fontified t)) . -1172) (undo-tree-id75 . -1) (undo-tree-id76 . -1) (#("r" 0 1 (fontified t)) . -1173) (undo-tree-id77 . -1) (undo-tree-id78 . -1) (#("e" 0 1 (fontified t)) . -1174) (undo-tree-id79 . -1) (undo-tree-id80 . -1) (#("d" 0 1 (fontified t)) . -1175) (undo-tree-id81 . -1) (undo-tree-id82 . -1) (#(" " 0 1 (fontified t)) . -1176) (undo-tree-id83 . -1) (undo-tree-id84 . -1) (#("a" 0 1 (fontified t)) . -1177) (undo-tree-id85 . -1) (undo-tree-id86 . -1) (#("t" 0 1 (fontified t)) . -1178) (undo-tree-id87 . -1) (undo-tree-id88 . -1) (#(" " 0 1 (fontified t)) . -1179) (undo-tree-id89 . -1) (undo-tree-id90 . -1) (#("t" 0 1 (fontified t)) . -1180) (undo-tree-id91 . -1) (undo-tree-id92 . -1) (#("h" 0 1 (fontified t)) . -1181) (undo-tree-id93 . -1) (undo-tree-id94 . -1) (#("e" 0 1 (fontified t)) . -1182) (undo-tree-id95 . -1) (undo-tree-id96 . -1) (#(" " 0 1 (fontified t)) . -1183) (undo-tree-id97 . -1) 1184 (1183 . 1184) (#(" " 0 1 (fontified t)) . -1183) (undo-tree-id98 . -1) (undo-tree-id99 . -1) 1184 (#("d" 0 1 (fontified t)) . -1184) (undo-tree-id100 . -1) 1185 (1184 . 1185) (#("f" 0 1 (fontified t)) . -1184) (undo-tree-id101 . -1) (undo-tree-id102 . -1) (#("o" 0 1 (fontified t)) . -1185) (undo-tree-id103 . -1) (undo-tree-id104 . -1) (#("o" 0 1 (fontified t)) . -1186) (undo-tree-id105 . -1) (undo-tree-id106 . -1) 1187 (1177 . 1177) (1177 . 1187) (#("t" 0 1 (fontified t)) . -1177) (undo-tree-id107 . -1) 1178 (1174 . 1178) (#("d" 0 1 (fontified t)) . -1174) (undo-tree-id108 . -1) (undo-tree-id109 . -1) (#("e" 0 1 (fontified t)) . -1175) (undo-tree-id110 . -1) (undo-tree-id111 . -1) 1176 (1174 . 1176) (#("r" 0 1 (fontified t)) . -1174) (undo-tree-id112 . -1) (undo-tree-id113 . -1) 1175 (1174 . 1175) (1167 . 1167) (1167 . 1174) (1166 . 1167) (1165 . 1166) (t 26630 7018 555632 183000) 1164) nil (26630 7149 910868 479000) 0 nil])
+([nil nil ((1264 . 1280) (1260 . 1264) (#("o" 0 1 (fontified t)) . -1260) (undo-tree-id116 . -1) (undo-tree-id117 . -1) (#("m" 0 1 (fontified t)) . -1261) (undo-tree-id118 . -1) (undo-tree-id119 . -1) (#(" " 0 1 (fontified t)) . -1262) (undo-tree-id120 . -1) (undo-tree-id121 . -1) 1263 (1256 . 1263) (1235 . 1256) (#("l" 0 1 (fontified t)) . -1235) (undo-tree-id122 . -1) (undo-tree-id123 . -1) (#("e" 0 1 (fontified t)) . -1236) (undo-tree-id124 . -1) (undo-tree-id125 . -1) (#(" " 0 1 (fontified t)) . -1237) (undo-tree-id126 . -1) (undo-tree-id127 . -1) 1238 (1235 . 1238) (1222 . 1222) (1222 . 1235) (#("d" 0 1 (fontified t)) . -1222) (undo-tree-id128 . -1) (undo-tree-id129 . -1) 1223 (1211 . 1223) (#("u" 0 1 (fontified t)) . -1211) (undo-tree-id130 . -1) (undo-tree-id131 . -1) (#("y" 0 1 (fontified t)) . -1212) (undo-tree-id132 . -1) (undo-tree-id133 . -1) 1213 (1211 . 1213) (1207 . 1207) (1207 . 1211) (1206 . 1207) (t 26630 7149 910806 561000)) nil (26630 7294 640622 119000) 0 nil])
+([nil nil ((1280 . 1281) 1279) nil (26630 7294 640615 84000) 0 nil])
+([nil nil ((#("a" 0 1 (fontified t)) . 1272) (undo-tree-id114 . -1) (undo-tree-id115 . -1)) nil (26630 7294 640614 497000) 0 nil])
+([nil nil ((1271 . 1271) (1271 . 1272)) nil (26630 7294 640604 3000) 0 nil])
+([nil nil ((1289 . 1300) (1281 . 1281) (1281 . 1289) (1280 . 1281) 1269) nil (26630 7294 640600 421000) 0 nil])
+([nil nil ((1346 . 1360) (#("s" 0 1 (fontified t)) . -1346) (undo-tree-id134 . -1) (undo-tree-id135 . -1) (#("a" 0 1 (fontified t)) . -1347) (undo-tree-id136 . -1) (undo-tree-id137 . -1) 1348 (1346 . 1348) (#("n" 0 1 (fontified t)) . -1346) (undo-tree-id138 . -1) (undo-tree-id139 . -1) (#("a" 0 1 (fontified t)) . -1347) (undo-tree-id140 . -1) (undo-tree-id141 . -1) 1348 (1347 . 1348) (1345 . 1347) (#("m" 0 1 (fontified t)) . -1345) (undo-tree-id142 . -1) (undo-tree-id143 . -1) (#("e" 0 1 (fontified t)) . -1346) (undo-tree-id144 . -1) (undo-tree-id145 . -1) (#("n" 0 1 (fontified t)) . -1347) (undo-tree-id146 . -1) (undo-tree-id147 . -1) (#("t" 0 1 (fontified t)) . -1348) (undo-tree-id148 . -1) (undo-tree-id149 . -1) (#("a" 0 1 (fontified t)) . -1349) (undo-tree-id150 . -1) (undo-tree-id151 . -1) (#("l" 0 1 (fontified t)) . -1350) (undo-tree-id152 . -1) (undo-tree-id153 . -1) (#("l" 0 1 (fontified t)) . -1351) (undo-tree-id154 . -1) (undo-tree-id155 . -1) (#("y" 0 1 (fontified t)) . -1352) (undo-tree-id156 . -1) (undo-tree-id157 . -1) (#(" " 0 1 (fontified t)) . -1353) (undo-tree-id158 . -1) (undo-tree-id159 . -1) 1354 (1352 . 1354) (#("u" 0 1 (fontified t)) . -1352) (undo-tree-id160 . -1) (undo-tree-id161 . -1) 1353 (1345 . 1353) (1343 . 1345) (#(" " 0 1 (fontified t)) . -1343) (undo-tree-id162 . -1) (undo-tree-id163 . -1) 1344 (1341 . 1344) (1323 . 1341) (1320 . 1320) (1320 . 1323) (#("q" 0 1 (fontified t)) . -1320) (undo-tree-id164 . -1) (undo-tree-id165 . -1) (undo-tree-id166 . -1) (undo-tree-id167 . -1) (undo-tree-id168 . -1) (undo-tree-id169 . -1) (undo-tree-id170 . -1) (#("u" 0 1 (fontified t)) . -1321) (undo-tree-id171 . -1) (undo-tree-id172 . -1) (undo-tree-id173 . -1) (undo-tree-id174 . -1) (undo-tree-id175 . -1) (undo-tree-id176 . -1) (undo-tree-id177 . -1) (#("e" 0 1 (fontified t)) . -1322) (undo-tree-id178 . -1) (undo-tree-id179 . -1) (undo-tree-id180 . -1) (undo-tree-id181 . -1) (undo-tree-id182 . -1) (undo-tree-id183 . -1) (undo-tree-id184 . -1) (#("s" 0 1 (fontified t)) . -1323) (undo-tree-id185 . -1) (undo-tree-id186 . -1) (undo-tree-id187 . -1) (undo-tree-id188 . -1) (undo-tree-id189 . -1) (#("t" 0 1 (fontified t)) . -1324) (undo-tree-id190 . -1) (undo-tree-id191 . -1) (undo-tree-id192 . -1) (#("i" 0 1 (fontified t)) . -1325) (undo-tree-id193 . -1) (undo-tree-id194 . -1) (undo-tree-id195 . -1) (#("o" 0 1 (fontified t)) . -1326) (undo-tree-id196 . -1) (undo-tree-id197 . -1) (undo-tree-id198 . -1) (#("n" 0 1 (fontified t)) . -1327) (undo-tree-id199 . -1) (undo-tree-id200 . -1) (undo-tree-id201 . -1) (#(" " 0 1 (fontified t)) . -1328) (undo-tree-id202 . -1) (undo-tree-id203 . -1) (undo-tree-id204 . -1) (#("a" 0 1 (fontified t)) . -1329) (undo-tree-id205 . -1) (undo-tree-id206 . -1) (undo-tree-id207 . -1) (#(" " 0 1 (fontified t)) . -1330) (undo-tree-id208 . -1) (undo-tree-id209 . -1) (undo-tree-id210 . -1) 1331 (1323 . 1331) (1320 . 1320) (1320 . 1323) (1301 . 1320) (#("T" 0 1 (fontified t)) . -1301) (undo-tree-id211 . -1) (undo-tree-id212 . -1) (#("h" 0 1 (fontified t)) . -1302) (undo-tree-id213 . -1) (undo-tree-id214 . -1) (#("e" 0 1 (fontified t)) . -1303) (undo-tree-id215 . -1) (undo-tree-id216 . -1) (#("y" 0 1 (fontified t)) . -1304) (undo-tree-id217 . -1) (undo-tree-id218 . -1) (#(" " 0 1 (fontified t)) . -1305) (undo-tree-id219 . -1) (undo-tree-id220 . -1) (#("w" 0 1 (fontified t)) . -1306) (undo-tree-id221 . -1) (undo-tree-id222 . -1) 1307 (#("e" 0 1 (fontified t)) . -1307) (undo-tree-id223 . -1) (undo-tree-id224 . -1) (#("r" 0 1 (fontified t)) . -1308) (undo-tree-id225 . -1) (undo-tree-id226 . -1) (#("e" 0 1 (fontified t)) . -1309) (undo-tree-id227 . -1) (undo-tree-id228 . -1) (#(" " 0 1 (fontified t)) . -1310) (undo-tree-id229 . -1) (undo-tree-id230 . -1) (#("t" 0 1 (fontified t)) . -1311) (undo-tree-id231 . -1) (undo-tree-id232 . -1) (#("a" 0 1 (fontified t)) . -1312) (undo-tree-id233 . -1) (undo-tree-id234 . -1) (#("l" 0 1 (fontified t)) . -1313) (undo-tree-id235 . -1) (undo-tree-id236 . -1) (#("k" 0 1 (fontified t)) . -1314) (undo-tree-id237 . -1) (undo-tree-id238 . -1) (#("i" 0 1 (fontified t)) . -1315) (undo-tree-id239 . -1) (undo-tree-id240 . -1) (#("n" 0 1 (fontified t)) . -1316) (undo-tree-id241 . -1) (undo-tree-id242 . -1) (#("g" 0 1 (fontified t)) . -1317) (undo-tree-id243 . -1) (undo-tree-id244 . -1) (#(" " 0 1 (fontified t)) . -1318) (undo-tree-id245 . -1) 1319 (1318 . 1319) (#(" " 0 1 (fontified t)) . -1318) (undo-tree-id246 . -1) 1319 (1315 . 1319) (1311 . 1311) (1311 . 1315) (1300 . 1311) (#(" " 0 1 (fontified t)) . -1300) (undo-tree-id247 . -1) (undo-tree-id248 . -1) (#("A" 0 1 (fontified t)) . -1301) (undo-tree-id249 . -1) (undo-tree-id250 . -1) (#(" " 0 1 (fontified t)) . -1302) (undo-tree-id251 . -1) (undo-tree-id252 . -1) (#("y" 0 1 (fontified t)) . -1303) (undo-tree-id253 . -1) (undo-tree-id254 . -1) (#("o" 0 1 (fontified t)) . -1304) (undo-tree-id255 . -1) (undo-tree-id256 . -1) (#("u" 0 1 (fontified t)) . -1305) (undo-tree-id257 . -1) (undo-tree-id258 . -1) 1306 (1300 . 1300) (1300 . 1306) (t 26630 7294 641899 177000)) nil (26630 7353 299607 766000) 0 nil])
+([nil nil ((1323 . 1328) (1322 . 1322) (1322 . 1323) (#("a" 0 1 (fontified t)) . -1322) (undo-tree-id259 . -1) (undo-tree-id260 . -1) 1323 (1320 . 1320) (1320 . 1323) (#("i" 0 1 (fontified t)) . -1320) (undo-tree-id261 . -1) (#("n" 0 1 (fontified t)) . -1321) (undo-tree-id262 . -1) (#("q" 0 1 (fontified t)) . -1322) (undo-tree-id263 . -1) (#("u" 0 1 (fontified t)) . -1323) (undo-tree-id264 . -1) (#("i" 0 1 (fontified t)) . -1324) (undo-tree-id265 . -1) (#("r" 0 1 (fontified t)) . -1325) (undo-tree-id266 . -1) (#("e" 0 1 (fontified t)) . -1326) (undo-tree-id267 . -1) (#(" " 0 1 (fontified t)) . -1327) (undo-tree-id268 . -1) (#("a" 0 1 (fontified t)) . -1328) (undo-tree-id269 . -1) (#("b" 0 1 (fontified t)) . -1329) (undo-tree-id270 . -1) (#("o" 0 1 (fontified t)) . -1330) (undo-tree-id271 . -1) (#("u" 0 1 (fontified t)) . -1331) (undo-tree-id272 . -1) (#("t" 0 1 (fontified t)) . -1332) (undo-tree-id273 . -1) 1333 (t 26630 7353 297531 878000)) nil (26630 7369 175571 146000) 0 nil])
+([nil nil ((1350 . 1354) (1347 . 1350)) nil (26630 7369 175552 263000) 0 nil])
+([nil nil ((1425 . 1428) (#("," 0 1 (fontified t)) . -1425) (undo-tree-id274 . -1) (undo-tree-id275 . -1) (undo-tree-id276 . -1) (undo-tree-id277 . -1) (undo-tree-id278 . -1) (undo-tree-id279 . -1) (undo-tree-id280 . -1) 1426 (1425 . 1426) (1423 . 1423) (1423 . 1425) (1418 . 1423) (1397 . 1418) (1376 . 1397) (#("A" 0 1 (fontified t)) . -1376) (undo-tree-id281 . -1) (undo-tree-id282 . -1) (undo-tree-id283 . -1) (undo-tree-id284 . -1) (undo-tree-id285 . -1) (undo-tree-id286 . -1) (undo-tree-id287 . -1) (undo-tree-id288 . -1) (undo-tree-id289 . -1) (undo-tree-id290 . -1) (#("t" 0 1 (fontified t)) . -1377) (undo-tree-id291 . -1) (undo-tree-id292 . -1) (undo-tree-id293 . -1) (undo-tree-id294 . -1) (undo-tree-id295 . -1) (undo-tree-id296 . -1) (undo-tree-id297 . -1) (undo-tree-id298 . -1) (undo-tree-id299 . -1) (undo-tree-id300 . -1) 1378 (#(" " 0 1 (fontified t)) . -1378) (undo-tree-id301 . -1) (undo-tree-id302 . -1) (undo-tree-id303 . -1) (undo-tree-id304 . -1) (undo-tree-id305 . -1) (undo-tree-id306 . -1) (undo-tree-id307 . -1) (undo-tree-id308 . -1) (undo-tree-id309 . -1) (undo-tree-id310 . -1) (#("l" 0 1 (fontified t)) . -1379) (undo-tree-id311 . -1) (undo-tree-id312 . -1) (undo-tree-id313 . -1) (undo-tree-id314 . -1) (undo-tree-id315 . -1) (undo-tree-id316 . -1) (undo-tree-id317 . -1) (#("e" 0 1 (fontified t)) . -1380) (undo-tree-id318 . -1) (undo-tree-id319 . -1) (undo-tree-id320 . -1) (undo-tree-id321 . -1) (undo-tree-id322 . -1) (undo-tree-id323 . -1) (undo-tree-id324 . -1) (#("a" 0 1 (fontified t)) . -1381) (undo-tree-id325 . -1) (undo-tree-id326 . -1) (undo-tree-id327 . -1) (undo-tree-id328 . -1) (undo-tree-id329 . -1) 1382 (1374 . 1374) (1374 . 1382) (1369 . 1369) (1369 . 1374) (#(" " 0 1 (fontified t)) . -1369) (undo-tree-id330 . -1) (undo-tree-id331 . -1) (#("y" 0 1 (fontified t)) . -1370) (undo-tree-id332 . -1) (undo-tree-id333 . -1) 1371 (1363 . 1371) (1362 . 1363) (t 26630 7369 173432 492000) 1353) nil (26630 7390 256463 71000) 0 nil])
+([nil nil ((1469 . 1478) (#(" " 0 1 (fontified t)) . -1469) (undo-tree-id334 . -1) (undo-tree-id335 . -1) (undo-tree-id336 . -1) 1470 (1466 . 1470) (#("f" 0 1 (fontified t)) . -1466) (undo-tree-id337 . -1) (undo-tree-id338 . -1) (undo-tree-id339 . -1) (#("o" 0 1 (fontified t)) . -1467) (undo-tree-id340 . -1) (undo-tree-id341 . -1) (undo-tree-id342 . -1) (#("r" 0 1 (fontified t)) . -1468) (undo-tree-id343 . -1) (undo-tree-id344 . -1) (undo-tree-id345 . -1) (#(" " 0 1 (fontified t)) . -1469) (undo-tree-id346 . -1) (undo-tree-id347 . -1) (undo-tree-id348 . -1) 1470 (1466 . 1470) (#("." 0 1 (fontified t)) . -1466) (undo-tree-id349 . -1) (undo-tree-id350 . -1) (undo-tree-id351 . -1) 1467 (1450 . 1467) (1441 . 1450) (1429 . 1429) (1429 . 1441) (1428 . 1429) (#("
+" 0 1 (fontified t)) . -1428) (undo-tree-id352 . -1) (undo-tree-id353 . -1) (undo-tree-id354 . -1) (undo-tree-id355 . -1) (undo-tree-id356 . -1) 1429 (1428 . 1429) (t 26630 7390 253300 547000) 1427) nil (26630 7416 791346 580000) 0 nil])
+([nil nil ((1501 . 1502) (1498 . 1498) (1498 . 1501) (1491 . 1491) (1491 . 1498) (1489 . 1491) (1486 . 1486) (1486 . 1489) (1479 . 1479) (1479 . 1486) (1478 . 1479) (t 26630 7416 793134 467000) 1477) nil (26630 7424 956842 487000) 0 nil])
+([nil nil ((1534 . 1540) (1527 . 1527) (1527 . 1534) (#("r" 0 1 (fontified t)) . -1527) (undo-tree-id357 . -1) (undo-tree-id358 . -1) (#(" " 0 1 (fontified t)) . -1528) (undo-tree-id359 . -1) (undo-tree-id360 . -1) 1529 (1520 . 1529) (1519 . 1519) (1519 . 1520) (1515 . 1519) (#("m" 0 1 (fontified t)) . -1515) (undo-tree-id361 . -1) (undo-tree-id362 . -1) 1516 (1506 . 1506) (1506 . 1516) (#("k" 0 1 (fontified t)) . -1506) (undo-tree-id363 . -1) (undo-tree-id364 . -1) (#("e" 0 1 (fontified t)) . -1507) (undo-tree-id365 . -1) (undo-tree-id366 . -1) (#("p" 0 1 (fontified t)) . -1508) (undo-tree-id367 . -1) (undo-tree-id368 . -1) (#("t" 0 1 (fontified t)) . -1509) (undo-tree-id369 . -1) (undo-tree-id370 . -1) (#(" " 0 1 (fontified t)) . -1510) (undo-tree-id371 . -1) 1511 (1509 . 1511) (1502 . 1502) (1502 . 1509) (t 26630 7424 961083 358000)) nil (26630 7451 985345 388000) 0 nil])
+([nil nil ((1545 . 1547) (1542 . 1545) (1541 . 1542) (t 26630 7451 988914 262000) 1541) nil (26630 7633 399157 225000) 0 nil])
+([nil nil ((#("
+" 0 1 (fontified t)) . -1547) (undo-tree-id372 . 1) (undo-tree-id373 . -1) (undo-tree-id374 . -1) (undo-tree-id375 . -1) (undo-tree-id376 . -1) (undo-tree-id377 . -1) (undo-tree-id378 . -1) (undo-tree-id379 . -1) (undo-tree-id380 . -1) 1548) nil (26630 7633 399153 890000) 0 nil])
+([nil nil ((781 . 782) (780 . 780) (780 . 781) (768 . 768) (768 . 780) (#("h" 0 1 (fontified t)) . -768) (undo-tree-id0 . -1) (#("a" 0 1 (fontified t)) . -769) (undo-tree-id1 . -1) (#("t" 0 1 (fontified t)) . -770) (undo-tree-id2 . -1) (#(" " 0 1 (fontified t)) . -771) (undo-tree-id3 . -1) 772 (764 . 772) (763 . 764) (t 26630 7633 399779 837000) 714) nil (26630 8526 750160 656000) 0 nil])
+([nil current ((1501 . 1507) (#("e" 0 1 (fontified t)) . -1501) (undo-tree-id4 . -1) (undo-tree-id5 . -1) (undo-tree-id6 . -1) (#("n" 0 1 (fontified t)) . -1502) (undo-tree-id7 . -1) (undo-tree-id8 . -1) (undo-tree-id9 . -1) (#("j" 0 1 (fontified t)) . -1503) (undo-tree-id10 . -1) (undo-tree-id11 . -1) (undo-tree-id12 . -1) (#("o" 0 1 (fontified t)) . -1504) (undo-tree-id13 . -1) (undo-tree-id14 . -1) (undo-tree-id15 . -1) (#("y" 0 1 (fontified t)) . -1505) (undo-tree-id16 . -1) (undo-tree-id17 . -1) (undo-tree-id18 . -1) (#("e" 0 1 (fontified t)) . -1506) (undo-tree-id19 . -1) (undo-tree-id20 . -1) (undo-tree-id21 . -1) (#("d" 0 1 (fontified t)) . -1507) (undo-tree-id22 . -1) (undo-tree-id23 . -1) (undo-tree-id24 . -1) (#(" " 0 1 (fontified t)) . -1508) (undo-tree-id25 . -1) (undo-tree-id26 . -1) 1509 (t 26630 8526 749934 514000)) nil (26630 8564 277477 641000) 0 nil])
 nil
