@@ -37,15 +37,16 @@ Who the hell are they anyway ? Entitled people ? I just met them like , five min
 I have had the unfortunate privilege of meeting a lot of people like this.
 I don't know , it's almost as if these kinds of people _want_ to be offended.
 I'm just chill man. Just saying.
+
 I don't know what is going on in your life or what your relation is , but why threaten me out of nowhere ? That's creepy.
-Actually , I'd sort of like to go to jail.
-Atleast I'd be fed there. My job prospects are horrible after graduation, that too _if_ I manage to graduate.
+Actually q I'd sort of like to go to jail.Atleast I'd be fed there. My job prospects are horrible after graduation, that too _if_ I manage to graduate.
 Maybe I should speak to these kinds of people more ?
 That would be nice, right ? Just go talk to someone and you get taken to a place where you get free food for the next six months.
 But my brain has some weird issue.
 Everytime I walk away from these kinds of situations, I feel a lasting burn in my chest area.
 I have no fucking clue why , but it does happen and that feeling stays for a long time.
 Maybe I need medication ? Is that a normal human response ?
+
 Now that I think about it , one of these events was when my downward spiral started.
 I had this exact same feeling during first year of college due to some people and I had that burning sensation for almost a month.
 I'm not making this up- it was physically unbearable pain.
@@ -60,9 +61,12 @@ The pain was unbearable man.
 This is genuinely where my life started falling apart.
 I did face subsequent bouts of this, but none was harder than the first.
 Maybe it's a medical condition ?
+
 I don't know.
+
 All I know is that it hurts.
 And it hurts more than any other pain I've experienced.
 And I've experienced a lot of pain. Physical pain.
 On a regular basis.
 But by far, this hurts most.
+

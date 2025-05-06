@@ -2,6 +2,7 @@
 		color: #ffffff;
 		background-color: #181a1b;
 		font-size : 2vh;
+		 font-family: Nunito, sans-serif;
 	}
 
 
@@ -112,6 +113,8 @@
 		padding: 16px;
 		background-color : #292a29 ;
 		border-radius: 15px;
+		font-family: Nunito, sans-serif
+
 	}
 
 	

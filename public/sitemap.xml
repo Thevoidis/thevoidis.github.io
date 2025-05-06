@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/webnovels/dear-kafka/</loc>
-    <lastmod>2025-04-08T13:32:30+05:30</lastmod>
+    <loc>http://localhost:1313/blogs/</loc>
+    <lastmod>2025-05-07T02:34:45+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blogs/my-greatest-weakness--maybe-/</loc>
+    <lastmod>2025-05-07T02:34:45+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-07T02:34:45+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/webnovels/dear-kafka/</loc>
     <lastmod>2025-04-08T13:32:30+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/webnovels/</loc>
     <lastmod>2025-04-08T13:32:30+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/about-the-tao-teh-ching/</loc>
-    <lastmod>2025-03-14T21:15:17+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blogs/</loc>
     <lastmod>2025-03-14T21:15:17+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/why-am-i-so-interested-/</loc>
