@@ -6,42 +6,56 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 May 2025 02:34:45 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test HardWraps</title>
+      <link>http://localhost:1313/test/</link>
+      <pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/test/</guid>
+      <description>&lt;p&gt;This is line one.&#xA;This is line two.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Forword and Prologue</title>
+      <link>http://localhost:1313/webnovels/dear-kafka/ch-0000/</link>
+      <pubDate>Wed, 07 May 2025 04:27:37 +0530</pubDate>
+      <guid>http://localhost:1313/webnovels/dear-kafka/ch-0000/</guid>
+      <description>&lt;h1 id=&#34;forword&#34;&gt;Forword&lt;/h1&gt;&#xA;&lt;p&gt;So I&amp;rsquo;ve decided to write a story.&#xA;Yes , a story, I get it. Very unlike me.&#xA;But I have actually written a lot of stories in school.&#xA;Most of them got lost, and those that are left are better left untold.&#xA;But I realized something about them.&#xA;I hate the whole &amp;lsquo;make it an art&amp;rsquo; thing.&#xA;I do not like decorating a story with words that don&amp;rsquo;t belong there.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My greatest weakness ? Maybe ?</title>
       <link>http://localhost:1313/blogs/my-greatest-weakness--maybe-/</link>
       <pubDate>Wed, 07 May 2025 02:34:45 +0530</pubDate>
       <guid>http://localhost:1313/blogs/my-greatest-weakness--maybe-/</guid>
-      <description>Ok this is wierd. I am the most broken person among those I&amp;rsquo;ve seen. Atleast among fellow science students anyway. So of course I&amp;rsquo;m an emotional mess. But, but there is some strange thing I like to do - bully people. By bully I don&amp;rsquo;t mean actually bully people, but more like tease them. And some people do get offended. I&amp;rsquo;m sort of wary of that. But that&amp;rsquo;s alright. It&amp;rsquo;s expected of people to get offended.</description>
+      <description>&lt;p&gt;Ok this is wierd.&#xA;I am the most broken person among those I&amp;rsquo;ve seen.&#xA;Atleast among fellow science students anyway.&#xA;So of course I&amp;rsquo;m an emotional mess.&#xA;But, but there is some strange thing I like to do - bully people.&#xA;By bully I don&amp;rsquo;t mean actually bully people, but more like tease them.&#xA;And some people do get offended. I&amp;rsquo;m sort of wary of that.&#xA;But that&amp;rsquo;s alright. It&amp;rsquo;s expected of people to get offended.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About the Tao Teh Ching</title>
       <link>http://localhost:1313/blogs/about-the-tao-teh-ching/</link>
       <pubDate>Fri, 14 Mar 2025 21:15:17 +0530</pubDate>
       <guid>http://localhost:1313/blogs/about-the-tao-teh-ching/</guid>
-      <description>So I&amp;rsquo;ve read around five different translations of the Tao Teh Ching. One particular one, I&amp;rsquo;ve read around twenty times. I think that it is quite a nice book. It states too many things that are quite relevant, but it&amp;rsquo;s so damn cryptic that half the time I feel that I&amp;rsquo;m the one making up the meanings in the book. Actually , now that I think about it , that might be the case.</description>
+      <description>&lt;p&gt;So I&amp;rsquo;ve read around five different translations of the Tao Teh Ching. One particular one, I&amp;rsquo;ve read around twenty times.&#xA;I think that it is quite a nice book. It states too many things that are quite relevant, but it&amp;rsquo;s so damn cryptic that half the time I feel that I&amp;rsquo;m the one making up the meanings in the book.&#xA;Actually , now that I think about it , that might be the case.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why Am I So Interested ?</title>
       <link>http://localhost:1313/blogs/why-am-i-so-interested-/</link>
       <pubDate>Tue, 04 Mar 2025 20:46:06 +0530</pubDate>
       <guid>http://localhost:1313/blogs/why-am-i-so-interested-/</guid>
-      <description>I created this site initially to pretend that I am an arts student. But surprisingly enough, I am spending a whole lot of time trying to add more stuff to this site. And not just in terms of html. I am actually adding and planning more content.&#xA;After I was done writing the first story here , &amp;ldquo;The River That Carries The Sky&amp;rdquo; , I am already working on the next story &amp;ldquo;Dear Kafka&amp;rdquo;, not to mention the amount of songs I am generating and editing to put in here.</description>
+      <description>&lt;p&gt;I created this site initially to pretend that I am an arts student.&#xA;But surprisingly enough, I am spending a whole lot of time trying to add more stuff to this site.&#xA;And not just in terms of html. I am actually adding and planning more content.&lt;/p&gt;&#xA;&lt;p&gt;After I was done writing the first story here , &amp;ldquo;The River That Carries The Sky&amp;rdquo; , I am already working on the next story &amp;ldquo;Dear Kafka&amp;rdquo;,&#xA;not to mention the amount of songs I am generating and editing to put in here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Tracking People on the Web</title>
       <link>http://localhost:1313/blogs/on-tracking-people-on-the-web/</link>
       <pubDate>Sun, 02 Mar 2025 02:57:31 +0530</pubDate>
       <guid>http://localhost:1313/blogs/on-tracking-people-on-the-web/</guid>
-      <description>I like to write stories. But sometimes, I am curious as to how many people actually read them. So for a brief moment, I thought- &amp;ldquo;how about I find out how many people read my stories ?&amp;rdquo; But to do so, I had to create some js tracker on my site (maybe github provides one by default, I don&amp;rsquo;t know), but wouldn&amp;rsquo;t that be stalking ? Why is it my business to know how many people visited my site.</description>
+      <description>&lt;p&gt;I like to write stories.&#xA;But sometimes, I am curious as to how many people actually read them.&#xA;So for a brief moment, I thought- &amp;ldquo;how about I find out how many people read my stories ?&amp;rdquo;&#xA;But to do so, I had to create some js tracker on my site (maybe github provides one by default, I don&amp;rsquo;t know),&#xA;but wouldn&amp;rsquo;t that be stalking ? Why is it my business to know how many people visited my site.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Reason for Creating Another Blog</title>
       <link>http://localhost:1313/blogs/the-reason-for-creating-another-blog/</link>
       <pubDate>Thu, 27 Feb 2025 17:23:05 +0530</pubDate>
       <guid>http://localhost:1313/blogs/the-reason-for-creating-another-blog/</guid>
-      <description>Just to get this out of the picture. I already have another site&#xA;However, that one was meant to be a personal portfolio of sorts. But now I realize that I have no use of a personal portfolio. It&amp;rsquo;s not like I&amp;rsquo;m going to get a job anyway, so why bother with one. I don&amp;rsquo;t think I&amp;rsquo;ll live for long, so I decided to do whatever I liked until I died.</description>
+      <description>&lt;p&gt;Just to get this out of the picture. I already have another &lt;a href=&#34;https://devanand-pa.github.io&#34;&gt;site&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;However, that one was meant to be a personal portfolio of sorts. But now I realize that I have no use of a personal portfolio.&#xA;It&amp;rsquo;s not like I&amp;rsquo;m going to get a job anyway, so why bother with one. I don&amp;rsquo;t think I&amp;rsquo;ll live for long, so I decided to do whatever I liked until I died.&#xA;I tried browsing the internet and found out that it was not interesting. Just to be sure, I never had an instagram account or anything, and the only time I had a facebook account was nearly a decade ago, which I used to play some browser games once a month or so.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

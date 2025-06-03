@@ -10,3 +10,8 @@ favicon = "/favicon.ico"
     weight = 1
     [languages.en.params]
       reading_speed = 180
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+
