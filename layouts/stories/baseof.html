@@ -38,10 +38,11 @@
             {{ end }}
 
             <tr>
-                <th style="font-weight: normal;width:60%;"><h3>{{ replaceRE "([a-z])([A-Z])" "${1} ${2}" $storyName }}</h1>{{ $description }}</th>
+                <th style="font-weight: normal;width:60%;"><h3>{{ replaceRE "[-_]" " " $storyName }}</h1>{{ $description }}</th>
                 <th>
                     {{ if $htmlFile }}
-                        <a href="/{{ $htmlFile }}">[html]</a>
+                                                    <a href="/{{ lower (replaceRE "[ -]" "" $folderPath) }}">[html]</a>
+
                     {{ else }}
                         No HTML
                     {{ end }}
