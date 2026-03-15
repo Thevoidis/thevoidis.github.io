@@ -12,14 +12,14 @@
       <link>http://localhost:1313/stories/acontractcalledmorning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/stories/acontractcalledmorning/</guid>
-      <description>hi</description>
+      <description>&lt;p&gt;hi&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
       <link>http://localhost:1313/stories/theriverthatcarriesthesky/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/stories/theriverthatcarriesthesky/</guid>
-      <description>Prologue There are rivers that carve mountains, shaping the land over centuries. And then there are rivers that carry the sky&amp;mdash;holding reflections of the heavens upon their surface, never grasping, never keeping, only flowing onward.&#xA;I have lived like such a river.&#xA;Once, in a childhood half-forgotten, I reached for the sky. I spoke with an angel who whispered of wisdom hidden in the rustling leaves and the hush of the wind.</description>
+      <description>&lt;h2 id=&#34;prologue&#34;&gt;Prologue&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;There are rivers that carve mountains, shaping the land over&#xA;centuries. And then there are rivers that carry the sky&amp;mdash;holding&#xA;reflections of the heavens upon their surface, never grasping, never&#xA;keeping, only flowing onward.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I have lived like such a river.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Once, in a childhood half-forgotten, I reached for the sky. I spoke&#xA;with an angel who whispered of wisdom hidden in the rustling leaves&#xA;and the hush of the wind. But like all rivers, I kept moving, leaving&#xA;those memories behind.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

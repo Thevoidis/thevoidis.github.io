@@ -1,22 +1,22 @@
 {{ define "main" }}
   <title>{{ .Title }}</title>
   <h1>{{ .Title }}</h1>
-
-<h3>{{ .Content }}</h3>
-  {{ range sort .Pages "File.Path" }}
-
-		<div class="bloginfo">
-	<a class="bloglink" href="{{ .Permalink }}">
-		<div class="blog_select_div">
-				<h2>{{ .Title }}</h2>
-
-			</div>
-	</a>
-  <br>	
-  {{ .Summary }}
-  <br>	
-		
-		</div>
-<br>
-  {{ end }}
+No webnovels available
+<!-- <h3>{{ .Content }}</h3> -->
+<!--   {{ range sort .Pages "File.Path" }} -->
+<!---->
+<!-- 		<div class="bloginfo"> -->
+<!-- 	<a class="bloglink" href="{{ .Permalink }}"> -->
+<!-- 		<div class="blog_select_div"> -->
+<!-- 				<h2>{{ .Title }}</h2> -->
+<!---->
+<!-- 			</div> -->
+<!-- 	</a> -->
+<!--   <br>	 -->
+<!--   {{ .Summary }} -->
+<!--   <br>	 -->
+<!-- 		 -->
+<!-- 		</div> -->
+<!-- <br> -->
+<!--   {{ end }} -->
 {{ end }}
