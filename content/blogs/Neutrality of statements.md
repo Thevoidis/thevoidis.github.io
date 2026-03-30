@@ -1,6 +1,7 @@
 ---
 title : Neutrality of statements
 date : 2026-03-14T14:55:45+05:30
+tags : ['internet']
 ---
 
 I have come to realize that most things that humans say amounts to nothing.

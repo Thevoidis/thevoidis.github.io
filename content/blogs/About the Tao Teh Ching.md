@@ -1,6 +1,7 @@
 +++
 title = 'About the Tao Teh Ching'
 date = 2025-03-14T21:15:17+05:30
+tags = ['philosophy']
 +++
 
 So I've read around five different translations of the Tao Teh Ching. One particular one, I've read around twenty times.
