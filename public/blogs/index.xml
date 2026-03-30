@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Mar 2026 14:55:45 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 12:02:52 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jobs again</title>
+      <link>http://localhost:1313/blogs/jobs-again/</link>
+      <pubDate>Mon, 30 Mar 2026 12:02:52 +0530</pubDate>
+      <guid>http://localhost:1313/blogs/jobs-again/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a long time now since I started looking for jobs.&#xA;It doesn&amp;rsquo;t feel like I&amp;rsquo;ll get one anytime soon either.&#xA;This life sucks, really. Having no money is one thing, but being degraded for not having a job is another.&#xA;It&amp;rsquo;s not like I&amp;rsquo;m actively trying to sabotage my chances at a job. It&amp;rsquo;s that I almost never get one.&#xA;When I tell my parents that one of my friends got a temporary underpaying job (which they probably got after a few dozen rejections while also being more qualified than me), they have the balls to point to that very example and says &amp;ldquo;See, everyone is taking care of their future. You are the only one who will be left behind.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Neutrality of statements</title>
       <link>http://localhost:1313/blogs/neutrality-of-statements/</link>
