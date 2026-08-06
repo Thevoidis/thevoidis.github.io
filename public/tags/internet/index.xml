@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Internet on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/internet/</link>
+    <link>https://example.org/tags/internet/</link>
     <description>Recent content in Internet on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Mar 2026 14:55:45 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/internet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/tags/internet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neutrality of statements</title>
-      <link>http://localhost:1313/blogs/neutrality-of-statements/</link>
+      <link>https://example.org/blogs/neutrality-of-statements/</link>
       <pubDate>Sat, 14 Mar 2026 14:55:45 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/neutrality-of-statements/</guid>
+      <guid>https://example.org/blogs/neutrality-of-statements/</guid>
       <description>&lt;p&gt;I have come to realize that most things that humans say amounts to nothing.&#xA;Even statements that are objectively true need not &amp;ldquo;add&amp;rdquo; anything.&#xA;Let&amp;rsquo;s say you&amp;rsquo;re having a conversation. If someone says &amp;ldquo;You can see the sun during the day.&amp;rdquo; It doesn&amp;rsquo;t add anything to the conversation.&#xA;If you&amp;rsquo;re having a debate about economic systems, saying &amp;ldquo;You&amp;rsquo;re a communist !&amp;rdquo; has nothing to do with the conversation (whether it be true or not).&#xA;If someone tries to defame some famous person, maybe a fan of that famous person can say &amp;ldquo;but he earns more than you.&amp;rdquo; (which does not add anything to the conversation, but might still offend the defamer for some reason). The defamer can also respond with something like &amp;ldquo;You&amp;rsquo;re the kind of person to flex other people&amp;rsquo;s money.&amp;rdquo; ( Which also adds nothing to the conversation and can offend the fan for some reason.)&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Tracking People on the Web</title>
-      <link>http://localhost:1313/blogs/on-tracking-people-on-the-web/</link>
+      <link>https://example.org/blogs/on-tracking-people-on-the-web/</link>
       <pubDate>Sun, 02 Mar 2025 02:57:31 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/on-tracking-people-on-the-web/</guid>
+      <guid>https://example.org/blogs/on-tracking-people-on-the-web/</guid>
       <description>&lt;p&gt;I like to write stories.&#xA;But sometimes, I am curious as to how many people actually read them.&#xA;So for a brief moment, I thought- &amp;ldquo;how about I find out how many people read my stories ?&amp;rdquo;&#xA;But to do so, I had to create some js tracker on my site (maybe github provides one by default, I don&amp;rsquo;t know),&#xA;but wouldn&amp;rsquo;t that be stalking ? Why is it my business to know how many people visited my site.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Reason for Creating Another Blog</title>
-      <link>http://localhost:1313/blogs/the-reason-for-creating-another-blog/</link>
+      <link>https://example.org/blogs/the-reason-for-creating-another-blog/</link>
       <pubDate>Thu, 27 Feb 2025 17:23:05 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/the-reason-for-creating-another-blog/</guid>
+      <guid>https://example.org/blogs/the-reason-for-creating-another-blog/</guid>
       <description>&lt;p&gt;Just to get this out of the picture. I already have another &lt;a href=&#34;https://devanand-pa.github.io&#34;&gt;site&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;However, that one was meant to be a personal portfolio of sorts. But now I realize that I have no use of a personal portfolio.&#xA;It&amp;rsquo;s not like I&amp;rsquo;m going to get a job anyway, so why bother with one. I don&amp;rsquo;t think I&amp;rsquo;ll live for long, so I decided to do whatever I liked until I died.&#xA;I tried browsing the internet and found out that it was not interesting. Just to be sure, I never had an instagram account or anything, and the only time I had a facebook account was nearly a decade ago, which I used to play some browser games once a month or so.&lt;/p&gt;</description>
     </item>
   </channel>
