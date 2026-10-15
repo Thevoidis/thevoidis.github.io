@@ -1,0 +1,91 @@
+{{ define "main" }}
+{{- /* The search index is generated here at build time and searched entirely
+       client-side (static/js/search.js + flexsearch). No backend, no
+       third-party search service, nothing leaves the browser.
+
+       Indexed: essays, stories, songs, web novels and their *published*
+       chapters. Drafts are never indexed. */ -}}
+{{- $docs := slice -}}
+
+{{- range where site.RegularPages "Section" "blogs" -}}
+  {{- $tags := slice -}}
+  {{- range .GetTerms "tags" }}{{ $tags = $tags | append .LinkTitle }}{{ end -}}
+  {{- $sub := .Date.Format "2 Jan 2006" -}}
+  {{- with $tags }}{{ $sub = printf "%s · %s" $sub (delimit . ", ") }}{{ end -}}
+  {{- $docs = $docs | append (dict
+        "title" .Title
+        "url" .RelPermalink
+        "kind" "essay"
+        "sub" $sub
+        "tags" (delimit $tags " ")
+        "text" (.Summary | plainify | truncate 280)) -}}
+{{- end -}}
+
+{{- range partial "lib/stories" . -}}
+  {{- if or .html .pdf .md -}}
+    {{- $url := printf "/%s" .md | relURL -}}
+    {{- with .html }}{{ $url = printf "/%s" . | relURL }}{{ end -}}
+    {{- $docs = $docs | append (dict
+          "title" .name
+          "url" $url
+          "kind" "story"
+          "sub" "story"
+          "tags" ""
+          "text" .description) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range partial "lib/songs" . -}}
+  {{- $docs = $docs | append (dict
+        "title" .name
+        "url" ("/songs/" | relURL)
+        "kind" "song"
+        "sub" "song"
+        "tags" ""
+        "text" .description) -}}
+{{- end -}}
+
+{{- with site.GetPage "/webnovels" -}}
+  {{- range .Sections -}}
+    {{- $novel := . -}}
+    {{- $docs = $docs | append (dict
+          "title" .Title
+          "url" .RelPermalink
+          "kind" "novel"
+          "sub" "web novel"
+          "tags" ""
+          "text" (.Summary | plainify | truncate 200)) -}}
+    {{- range .RegularPages -}}
+      {{- $docs = $docs | append (dict
+            "title" (printf "%s — %s" $novel.Title .Title)
+            "url" .RelPermalink
+            "kind" "chapter"
+            "sub" $novel.Title
+            "tags" ""
+            "text" (.Summary | plainify | truncate 220)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $json := $docs | jsonify -}}
+{{- /* escape "</" so a summary can never close the script element early */ -}}
+{{- $json = strings.Replace $json "</" "<\\/" -1 -}}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Search</span>
+    <h1>Search the library</h1>
+    <p>Essays, stories, songs and chapters — the index is built when the site is
+    published and searched entirely in your browser. Nothing leaves your device.</p>
+  </div>
+
+  <form class="search-form" action="{{ "/search/" | relURL }}" method="get" role="search">
+    <input id="q" name="q" type="search" placeholder="Try &ldquo;meaning&rdquo;, &ldquo;river&rdquo;, &ldquo;tracking&rdquo;&hellip;" autocomplete="off" spellcheck="false" autofocus>
+  </form>
+  <p id="result-count" class="search-count" role="status" aria-live="polite"></p>
+  <ul id="results" class="search-results"></ul>
+</div>
+
+<script id="search-data" type="application/json">{{ $json | safeJS }}</script>
+<script src="{{ "/js/flexsearch.min.js" | relURL }}" defer></script>
+<script src="{{ "/js/search.js" | relURL }}" defer></script>
+{{ end }}
