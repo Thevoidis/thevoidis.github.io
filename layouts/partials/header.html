@@ -56,6 +56,10 @@
         </li>
 
         <li class="nav-item">
+          <a class="nav-link{{ if eq .RelPermalink "/search/" }} is-active{{ end }}" href="{{ "/search/" | relURL }}">Search</a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" href="{{ "index.xml" | relURL }}" title="RSS feed">RSS</a>
         </li>
       </ul>

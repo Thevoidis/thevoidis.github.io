@@ -1,7 +1,7 @@
 ---
 title : The Mind's Theatre
 date : 2026-04-04T19:54:37+05:30
-tags : ['Philosophy','Life']
+tags : ['philosophy','life']
 ---
 
 Humans are interesting creatures. They believe in so many things. They believe they have to do so many things.

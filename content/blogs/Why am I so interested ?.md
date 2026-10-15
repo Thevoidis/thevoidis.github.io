@@ -1,6 +1,7 @@
 +++
 title = 'Why Am I So Interested ?'
 date = 2025-03-04T20:46:06+05:30
+tags = ['writing','life']
 +++
 
 I created this site initially to pretend that I am an arts student.

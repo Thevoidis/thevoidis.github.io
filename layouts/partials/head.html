@@ -50,10 +50,12 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* fonts */}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito:wght@400;600;700;800&display=swap">
+{{- /* fonts — self-hosted (static/fonts, latin + latin-ext subsets), zero
+       third-party requests. Preload the two above-the-fold fonts: body text
+       (Nunito 400) and display (Fraunces 400/600 share one variable file). */ -}}
+<link rel="preload" href="{{ "/fonts/nunito-normal-400-latin-798ec6.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "/fonts/fraunces-normal-400-latin-39ce20.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ "/fonts/fonts.css" | relURL }}">
 
 {{- /* stylesheet (hashed for cache busting) */}}
 {{- $css := resources.Get "style.css" | minify | fingerprint "sha256" }}

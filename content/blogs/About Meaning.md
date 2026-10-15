@@ -1,6 +1,7 @@
 ---
 title : About Meaning
 date : 2026-08-06T12:30:42+05:30
+tags : ['philosophy','life']
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title : My greatest weakness ? Maybe ?
 date : 2025-05-07T02:34:45+05:30
+tags : ['life']
 ---
 
 Ok this is wierd.

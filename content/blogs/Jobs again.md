@@ -1,7 +1,7 @@
 ---
 date : 2026-03-30T12:02:52+05:30
 title : Jobs again
-tags : ['Economy']
+tags : ['economy']
 ---
 
 It's been a long time now since I started looking for jobs.
