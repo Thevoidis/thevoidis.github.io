@@ -1,20 +1,25 @@
-<head>
-<title> {{ .Title }}</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.png">
-{{ partial "header.html" . }}
-    <br>
-<a href="/index.html"><img class="logo" src="/favicon.png"></a>
-</head>
+{{ define "main" }}
+<div class="wrap">
+  <article class="reading">
+    <header class="article-head">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ "/" | relURL }}">Home</a>
+        <span class="sep">/</span>
+        <a href="{{ "/songs/" | relURL }}">Songs</a>
+        <span class="sep">/</span>
+        <span>{{ .Title }}</span>
+      </nav>
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        {{- if not .Date.IsZero }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <span class="dot">·</span>
+        {{- end }}
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+    </header>
 
-<link rel='stylesheet' href='/style.css'>
-
-<body>
-<h1>{{ .Title }}</h1>
-<h3>Date : {{ .Date.Format "Monday 2 January 2006 03:04 PM" }} IST</h3>
-    <br>
-<div class='blog_context'>
-
-
-    {{ .Content }}
+    <div class="prose">{{ .Content }}</div>
+  </article>
 </div>
-    </body>
+{{ end }}

@@ -1,26 +1,111 @@
-<a href="/index.html"><img class="logo" src="/favicon.png"></a>
-<header>
-        <div class="dropdown">
-		<button class="dropbtn">Literature and related</button>
-		<div class="dropdown-content">
-			<a href="/stories">Stories</a>
-			<a href="/webnovels">Web Novels</a>
-			<a href="/songs">Songs</a>
-			<!-- <a href="#">Link 2</a> -->
-			<!-- <a href="#">Link 3</a> -->
-		</div>
-	</div>
+{{- /* Site header: brand, nav, dropdowns. Works without JS (hover) and with it
+       (click / keyboard / touch). */ -}}
+{{- $songs := partialCached "lib/songs" . "songs" -}}
+{{- $stories := partialCached "lib/stories" . "stories" -}}
+{{- $posts := where site.RegularPages "Section" "blogs" -}}
+{{- $novels := slice -}}
+{{- with site.GetPage "/webnovels" }}{{ $novels = .Sections }}{{ end -}}
+{{- $tags := site.Taxonomies.tags.ByCount -}}
+{{- $section := .Section -}}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} — home">
+      <span class="brand-mark"><img src="{{ site.Params.logo | default "/favicon.png" | relURL }}" alt="" width="30" height="30" decoding="async"></span>
+      <span class="brand-text">
+        <span class="brand-name">{{ site.Title }}</span>
+        {{ with site.Params.tagline }}<span class="brand-tag">{{ . }}</span>{{ end }}
+      </span>
+    </a>
 
-	<div class="dropdown">
-		<button class="dropbtn">Blogs</button>
-		<div class="dropdown-content">
-			<a href="/blogs">All Blogs List</a>
-			{{ range .Site.Taxonomies.tags }}
-            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
-        {{ end }}
-		</div>
-	</div>
+    <button class="nav-burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
 
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link{{ if eq $section "blogs" }} is-active{{ end }}" href="{{ "/blogs/" | relURL }}">Blog{{ with $posts }} <span class="nav-count">{{ len . }}</span>{{ end }}</a>
+        </li>
 
+        <li class="nav-item has-panel">
+          <button class="nav-link nav-toggle{{ if in (slice "stories" "songs" "webnovels") $section }} is-active{{ end }}" type="button" aria-expanded="false">
+            Library
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-panel">
+            <div class="nav-group-label">Literature</div>
+            <a href="{{ "/stories/" | relURL }}">Stories <span class="nav-count">{{ len $stories }}</span></a>
+            <a href="{{ "/webnovels/" | relURL }}">Web novels <span class="nav-count">{{ len $novels }}</span></a>
+            <a href="{{ "/songs/" | relURL }}">Songs <span class="nav-count">{{ len $songs }}</span></a>
+          </div>
+        </li>
+
+        <li class="nav-item has-panel">
+          <button class="nav-link nav-toggle{{ if in (slice "taxonomy" "term") .Kind }} is-active{{ end }}" type="button" aria-expanded="false">
+            Topics
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-panel">
+            <a href="{{ "/tags/" | relURL }}">All topics</a>
+            {{ with $tags }}<div class="nav-group-label">Used in posts</div>{{ end }}
+            {{ range $tags }}
+              <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="nav-count">{{ .Count }}</span></a>
+            {{ end }}
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ "index.xml" | relURL }}" title="RSS feed">RSS</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
+<script>
+(function () {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var burger = header.querySelector('.nav-burger');
+  var items = Array.prototype.slice.call(header.querySelectorAll('.nav-item.has-panel'));
+
+  function closeAll(except) {
+    items.forEach(function (item) {
+      if (item === except) return;
+      item.classList.remove('is-open');
+      var b = item.querySelector('.nav-toggle');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  if (burger) {
+    burger.addEventListener('click', function () {
+      var open = header.classList.toggle('nav-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open) closeAll(null);
+    });
+  }
+
+  items.forEach(function (item) {
+    var btn = item.querySelector('.nav-toggle');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var open = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      closeAll(item);
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!header.contains(e.target)) closeAll(null);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    closeAll(null);
+    header.classList.remove('nav-open');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+  });
+})();
+</script>

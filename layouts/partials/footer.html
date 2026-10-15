@@ -1,0 +1,27 @@
+{{- $posts := where site.RegularPages "Section" "blogs" -}}
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="{{ site.Params.logo | default "/favicon.png" | relURL }}" alt="" width="28" height="28" loading="lazy">
+        <span>{{ site.Title }}</span>
+      </div>
+      <p>
+        Everything here is released under the
+        <a href="{{ site.Params.licenseURL | default "https://creativecommons.org/publicdomain/zero/1.0/" }}">{{ site.Params.license | default "CC0 1.0 Universal" }}</a>
+        license — copy it, remix it, sell it, no permission needed.
+      </p>
+      <p>Written and made by {{ site.Params.author | default site.Title }}. Built with Hugo, no trackers anywhere.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="{{ "/" | relURL }}">Home</a>
+      <a href="{{ "/blogs/" | relURL }}">Blog{{ with $posts }} ({{ len . }}){{ end }}</a>
+      <a href="{{ "/stories/" | relURL }}">Stories</a>
+      <a href="{{ "/songs/" | relURL }}">Songs</a>
+      <a href="{{ "/webnovels/" | relURL }}">Web novels</a>
+      <a href="{{ "/tags/" | relURL }}">Topics</a>
+      <a href="{{ "index.xml" | relURL }}">RSS</a>
+      {{ with site.Params.repo }}<a href="{{ . }}" rel="noopener">Source</a>{{ end }}
+    </nav>
+  </div>
+</footer>

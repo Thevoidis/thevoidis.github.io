@@ -1,14 +1,24 @@
 {
-  "name": "My Web App",
-  "short_name": "WebApp",
-  "start_url": "/index.html",
+  "name": "thevoidis",
+  "short_name": "thevoidis",
+  "description": "Essays, stories, songs and web novels — all public domain.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "background_color": "#0e110f",
+  "theme_color": "#0e110f",
   "icons": [
     {
       "src": "/thevoidis_favicon.webp",
-      "sizes": "192x192",
-      "type": "image/webp"
+      "sizes": "128x128",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
-

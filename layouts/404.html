@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "blogs" }}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">404</span>
+    <h1>This page isn't in the library.</h1>
+    <p>Wrong link, moved file, or a novel chapter that was never published. Here is what does exist:</p>
+  </div>
+  <div class="hero-actions" style="margin-top:.4rem">
+    <a class="btn btn-primary" href="{{ "/" | relURL }}">Home</a>
+    <a class="btn btn-ghost" href="{{ "/blogs/" | relURL }}">Blog</a>
+    <a class="btn btn-ghost" href="{{ "/stories/" | relURL }}">Stories</a>
+    <a class="btn btn-ghost" href="{{ "/songs/" | relURL }}">Songs</a>
+    <a class="btn btn-ghost" href="{{ "/webnovels/" | relURL }}">Web novels</a>
+    <a class="btn btn-ghost" href="{{ "/tags/" | relURL }}">Topics</a>
+  </div>
+</div>
+
+{{ with first 3 $posts }}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>Newest writing</h2>
+      <a class="more" href="{{ "/blogs/" | relURL }}">All posts →</a>
+    </div>
+    <div class="cards split">
+      {{ range . }}{{ partial "blog-card" . }}{{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
+{{ end }}

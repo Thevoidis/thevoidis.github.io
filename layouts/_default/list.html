@@ -1,0 +1,31 @@
+{{- /* Fallback list template for any section that has no template of its own. */ -}}
+{{ define "main" }}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">{{ .Section | default "Index" }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}{{ . }}{{ end }}
+  </div>
+
+  {{ $pages := .Pages }}
+  {{ with $pages }}
+    <div class="cards split">
+      {{ range . }}
+        <a class="card" href="{{ .RelPermalink }}">
+          <span class="card-arrow" aria-hidden="true">→</span>
+          <div class="meta">
+            {{- if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>{{ end -}}
+          </div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary | plainify | htmlUnescape | truncate 180 }}</p>
+        </a>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="empty">
+      <strong>Nothing here yet</strong>
+      This section will fill up as things get published.
+    </div>
+  {{ end }}
+</div>
+{{ end }}

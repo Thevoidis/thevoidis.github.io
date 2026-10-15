@@ -1,12 +1,263 @@
-<html>
-	<head>
-		<title>
-			Thevoidis Blog
-		</title>
-	</head>
-	<link rel="icon" type="image/x-icon" href="/favicon.png">
-	<link rel="stylesheet" href="/style.css">
-	<body>
-{{ partial "header.html" . }}
-	</body>
-</html>
+{{ define "main" }}
+{{- /* ────────────────────────────────────────────────────────────────────────
+     Everything on this page is derived from content/ and static/ at build
+     time, so publishing a new post / story folder / song folder / chapter is
+     all it takes for the home page to update itself.
+
+     Sources:
+       posts   → content/blogs/*.md               (site.RegularPages)
+       stories → static/stories/<folder>/         (partials/lib/stories)
+       songs   → static/songs/<folder>/           (partials/lib/songs)
+       novels  → content/webnovels/<novel>/       (child sections)
+       topics  → tags in post front matter        (site.Taxonomies.tags)
+     ────────────────────────────────────────────────────────────────────── */ -}}
+{{- $posts := where site.RegularPages "Section" "blogs" -}}
+{{- $chapters := where site.RegularPages "Section" "webnovels" -}}
+{{- $stories := partialCached "lib/stories" . "stories" -}}
+{{- $songs := partialCached "lib/songs" . "songs" -}}
+{{- $topics := site.Taxonomies.tags.ByCount -}}
+{{- $webnovels := site.GetPage "/webnovels" -}}
+{{- $novels := slice -}}
+{{- with $webnovels }}{{ $novels = .Sections }}{{ end -}}
+{{- $maxTopic := 1 -}}
+{{- range $topics }}{{ if gt .Count $maxTopic }}{{ $maxTopic = .Count }}{{ end }}{{ end -}}
+
+{{- $words := 0 -}}
+{{- $minutes := 0 -}}
+{{- range $posts -}}
+  {{- $words = add $words .WordCount -}}
+  {{- $minutes = add $minutes .ReadingTime -}}
+{{- end -}}
+
+{{- /* ── hero ───────────────────────────────────────────────────────────── */ -}}
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">{{ site.Title }}</span>
+    <h1>Things I <em>write</em>, things I <em>make up</em>, things I <em>record</em>.</h1>
+    <p class="hero-lede">{{ site.Params.intro }}</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ "/blogs/" | relURL }}">Read the blog</a>
+      <a class="btn btn-ghost" href="{{ "/stories/" | relURL }}">Stories</a>
+      <a class="btn btn-ghost" href="{{ "/songs/" | relURL }}">Songs</a>
+      <a class="btn btn-ghost" href="{{ "/webnovels/" | relURL }}">Web novels</a>
+    </div>
+
+    <ul class="stats">
+      <li class="stat"><b>{{ len $posts }}</b><span>essays</span></li>
+      <li class="stat"><b>{{ $words }}</b><span>words written</span></li>
+      <li class="stat"><b>{{ $minutes }}</b><span>minutes of reading</span></li>
+      <li class="stat"><b>{{ len $stories }}</b><span>stories</span></li>
+      <li class="stat"><b>{{ len $songs }}</b><span>songs</span></li>
+      <li class="stat"><b>{{ len $novels }}</b><span>web novels</span></li>
+      <li class="stat"><b>{{ len $topics }}</b><span>topics</span></li>
+    </ul>
+  </div>
+</section>
+
+{{- /* ── latest writing ─────────────────────────────────────────────────── */ -}}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>Latest writing</h2>
+      <a class="more" href="{{ "/blogs/" | relURL }}">All {{ len $posts }} posts →</a>
+    </div>
+    {{ with first 4 $posts }}
+      <div class="cards split pairs">
+        {{ range . }}{{ partial "blog-card" . }}{{ end }}
+      </div>
+    {{ else }}
+      <div class="empty"><strong>Nothing published yet</strong>Write a post in <code>content/blogs/</code> and it lands here.</div>
+    {{ end }}
+
+    {{ with $posts.GroupByDate "2006" }}
+    <div class="tags" style="margin-top:1.2rem;align-items:center">
+      <span class="meta" style="font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.7rem">Archive</span>
+      {{ range . }}
+        <a class="chip" href="{{ "/blogs/" | relURL }}#{{ .Key }}">{{ .Key }} <span class="count">{{ len .Pages }}</span></a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+</div>
+
+{{- /* ── the library: stories + songs ───────────────────────────────────── */ -}}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>The library</h2>
+      <a class="more" href="{{ "/stories/" | relURL }}">Stories</a>
+    </div>
+
+    {{ if or $stories $songs }}
+    <div class="grid-2">
+      <div>
+        <div class="section-head" style="margin-bottom:.7rem">
+          <h3 style="font-family:var(--sans);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0">Stories</h3>
+        </div>
+        {{ with $stories }}
+          <ul class="lib">
+            {{ range . }}
+            <li class="lib-item no-thumb">
+              <div class="lib-body">
+                <h3>{{ .name }}</h3>
+                {{ with .description }}<p>{{ . }}</p>{{ end }}
+                <div class="lib-links">
+                  {{ if .html }}<a class="pill-link" href="/{{ .html }}">read online</a>{{ end }}
+                  {{ if .pdf }}<a class="pill-link" href="/{{ .pdf }}">pdf</a>{{ end }}
+                  {{ if .md }}<a class="pill-link" href="/{{ .md }}">markdown</a>{{ end }}
+                </div>
+              </div>
+            </li>
+            {{ end }}
+          </ul>
+        {{ else }}
+          <div class="empty">No stories yet.</div>
+        {{ end }}
+      </div>
+
+      <div>
+        <div class="section-head" style="margin-bottom:.7rem">
+          <h3 style="font-family:var(--sans);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0">Songs</h3>
+        </div>
+        {{ with $songs }}
+          <ul class="lib">
+            {{ range . }}
+            <li class="lib-item">
+              {{ with .poster }}<img class="thumb" src="/{{ . }}" alt="" width="78" height="78" loading="lazy" decoding="async">{{ end }}
+              <div class="lib-body">
+                <h3>{{ .name }}</h3>
+                {{ with .description }}<p>{{ . }}</p>{{ end }}
+                {{ with .audio }}
+                <div class="media-embed">
+                  <audio controls preload="none">
+                    <source src="/{{ . }}" type="audio/mpeg">
+                    Your browser cannot play this audio — <a href="/{{ . }}">download the mp3</a>.
+                  </audio>
+                </div>
+                {{ end }}
+              </div>
+            </li>
+            {{ end }}
+          </ul>
+          <div class="lib-links" style="margin-top:.8rem">
+            <a class="pill-link" href="{{ "/songs/" | relURL }}">All songs, with videos →</a>
+          </div>
+        {{ else }}
+          <div class="empty">No songs yet.</div>
+        {{ end }}
+      </div>
+    </div>
+    {{ else }}
+      <div class="empty"><strong>The library is empty</strong>Folders in <code>static/stories/</code> and <code>static/songs/</code> turn into the tables on those pages.</div>
+    {{ end }}
+  </section>
+</div>
+
+{{- /* ── web novels ─────────────────────────────────────────────────────── */ -}}
+{{ with $novels }}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>Web novels</h2>
+      <a class="more" href="{{ "/webnovels/" | relURL }}">All novels →</a>
+    </div>
+    <div class="novel-grid">
+      {{ range . }}
+        {{ $ch := .RegularPages }}
+        <article class="novel-card">
+          <div class="meta">
+            {{ if $ch }}
+              <span>{{ len $ch }} {{ cond (eq (len $ch) 1) "chapter" "chapters" }}</span>
+            {{ else }}
+              <span>In progress</span>
+            {{ end }}
+          </div>
+          <h3><a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none">{{ .Title }}</a></h3>
+          {{ with .Content }}
+            <div class="prose" style="font-size:.95rem">{{ . }}</div>
+          {{ else }}
+            <p class="lead" style="color:var(--muted)">No description yet.</p>
+          {{ end }}
+          {{ with $ch }}
+            <ul class="chapter-list" style="margin-top:.6rem">
+              {{ range first 3 (sort . "File.Path" | collections.Reverse) }}
+                <li>
+                  <a href="{{ .RelPermalink }}">
+                    <span>{{ .Title }}</span>
+                    <span class="num">{{ .ReadingTime }} min</span>
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+          <div class="lib-links">
+            <a class="pill-link" href="{{ .RelPermalink }}">Open novel →</a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
+
+{{- /* ── topics ─────────────────────────────────────────────────────────── */ -}}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>Browse by topic</h2>
+      <a class="more" href="{{ "/tags/" | relURL }}">All topics →</a>
+    </div>
+    {{ with $topics }}
+      <div class="tag-cloud">
+        {{ range . }}
+          {{ $size := add 0.85 (mul 0.55 (div (float .Count) (float $maxTopic))) }}
+          <a href="{{ .Page.RelPermalink }}" style="font-size:{{ printf "%.2f" $size }}rem">
+            {{ .Page.LinkTitle }} <span>{{ .Count }}</span>
+          </a>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="empty">
+        <strong>Nothing tagged yet</strong>
+        Add <code>tags = ['philosophy']</code> to a post and the topic shows up here.
+      </div>
+    {{ end }}
+  </section>
+</div>
+
+{{- /* ── about strip ────────────────────────────────────────────────────── */ -}}
+<div class="wrap">
+  <section class="section">
+    <div class="grid-2">
+      <div>
+        <h2 style="font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:0 0 .5rem">What this is</h2>
+        <p style="color:var(--text-dim);margin:0">
+          A personal site with no feed, no comments and no analytics. The
+          <a href="{{ "/index.xml" | relURL }}">RSS feed</a> is the only way this page talks to anyone.
+          Everything here — {{ len $posts }} essays, {{ len $stories }} stories, {{ len $songs }} songs,
+          {{ len $novels }} web novels — is <a href="{{ site.Params.licenseURL | default "https://creativecommons.org/publicdomain/zero/1.0/" }}">{{ site.Params.license | default "CC0" }}</a>:
+          take it, remix it, no permission needed.
+        </p>
+      </div>
+      <div>
+        <h2 style="font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:0 0 .5rem">Start anywhere</h2>
+        {{ with $posts }}
+          {{ $oldest := index (sort $posts "Date") 0 }}
+          <ul class="chapter-list">
+            <li><a href="{{ $oldest.RelPermalink }}"><span>The first post — {{ $oldest.Title }}</span><span class="num">{{ $oldest.Date.Format "Jan 2006" }}</span></a></li>
+          </ul>
+        {{ end }}
+        <ul class="chapter-list">
+          {{ range first 3 $topics }}
+            <li><a href="{{ .Page.RelPermalink }}"><span>Everything about {{ .Page.LinkTitle }}</span><span class="num">{{ .Count }}</span></a></li>
+          {{ end }}
+        </ul>
+        {{ with site.Params.repo }}
+          <div class="lib-links"><a class="pill-link" href="{{ . }}" rel="noopener">Source on GitHub →</a></div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

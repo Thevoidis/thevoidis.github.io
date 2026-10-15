@@ -1,11 +1,31 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{ range .Pages }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-{{ end }}
+{{ $songs := partialCached "lib/songs" . "songs" }}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Songs</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ len $songs }} {{ cond (eq (len $songs) 1) "track" "tracks" }}, with the video versions and their subtitles where available.</p>
+  </div>
 
+  <div class="notice">
+    <p>
+      All of these are under the
+      <a href="{{ site.Params.licenseURL | default "https://creativecommons.org/publicdomain/zero/1.0/" }}">{{ site.Params.license | default "CC0 1.0 Universal" }}</a>
+      license. Many are made with diffusion models and/or synthesis software, whose terms require them to be royalty-free — which is convenient, because that was the idea anyway.
+    </p>
+  </div>
+
+  {{ with $songs }}
+    {{ partial "tables/songs" . }}
+  {{ else }}
+    <div class="empty">
+      <strong>No songs yet</strong>
+      Drop a folder into <code>static/songs/</code> and this table fills itself in.
+    </div>
+  {{ end }}
+
+  {{ with .Content }}
+  <div class="prose" style="margin-top:2.4rem">{{ . }}</div>
+  {{ end }}
+</div>
+{{ end }}

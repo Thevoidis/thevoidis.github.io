@@ -1,19 +1,62 @@
-<head>
-<title> {{ .Title }}</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.png">
-{{ partial "header.html" . }}
-    <br>
-</head>
+{{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "blogs" }}
+<div class="wrap">
+  <article class="reading">
+    <header class="article-head">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ "/" | relURL }}">Home</a>
+        <span class="sep">/</span>
+        <a href="{{ "/blogs/" | relURL }}">Blog</a>
+        <span class="sep">/</span>
+        <span>{{ .Title }}</span>
+      </nav>
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        {{- if not .Date.IsZero }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <span class="dot">·</span>
+        {{- end }}
+        <span>{{ .ReadingTime }} min read</span>
+        <span class="dot">·</span>
+        <span>{{ .WordCount }} words</span>
+      </div>
+      {{ with .GetTerms "tags" }}
+      <div class="tags">
+        {{ range . }}<a class="chip" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+      </div>
+      {{ end }}
+    </header>
 
-<link rel='stylesheet' href='/style.css'>
+    {{ $toc := .TableOfContents }}
+    {{ if findRE "<li" $toc }}
+    <details class="toc">
+      <summary>On this page</summary>
+      {{ $toc }}
+    </details>
+    {{ end }}
 
-<body>
-<h1>{{ .Title }}</h1>
-<h3>Date : {{ .Date.Format "Monday 2 January 2006 03:04 PM" }} IST</h3>
-    <br>
-<div class='blog_context'>
+    <div class="prose">{{ .Content }}</div>
 
-
-    {{ .Content }}
+    {{ partial "post-nav" (dict "pages" $posts.ByDate "here" .) }}
+  </article>
 </div>
-    </body>
+
+{{ $related := where ($posts.Related .) "RelPermalink" "ne" .RelPermalink }}
+{{ if not $related }}
+  {{ $related = first 4 (where $posts.ByDate.Reverse "RelPermalink" "ne" .RelPermalink) }}
+{{ end }}
+{{ $related = first 3 $related }}
+{{ with $related }}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>Keep reading</h2>
+      <a class="more" href="{{ "/blogs/" | relURL }}">All posts →</a>
+    </div>
+    <div class="cards split">
+      {{ range . }}{{ partial "blog-card" . }}{{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
+{{ end }}

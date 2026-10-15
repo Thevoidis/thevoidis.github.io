@@ -1,14 +1,32 @@
 {{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "blogs" }}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Blog</span>
     <h1>{{ .Title }}</h1>
-    <ul>
-        {{ range .Pages }}
-            <li>
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                <p>{{ .Summary }}</p>
-            </li>
-        {{ else }}
-            <p>No posts found.</p>
-        {{ end }}
-    </ul>
-{{ end }}
+    <p>
+      {{ len $posts }} posts, newest first.
+      <a href="{{ "index.xml" | relURL }}">RSS</a> if you would rather not keep checking back.
+    </p>
+    {{ with site.Taxonomies.tags }}
+    <div class="tags" style="margin-top:.9rem">
+      {{ range .ByCount }}
+        <a class="chip" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }} <span class="count">{{ .Count }}</span></a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
 
+  {{ range $posts.GroupByDate "2006" }}
+    <div class="year-label" id="{{ .Key }}">{{ .Key }} · {{ len .Pages }} {{ cond (eq (len .Pages) 1) "post" "posts" }}</div>
+    <div class="cards split">
+      {{ range .Pages }}{{ partial "blog-card" . }}{{ end }}
+    </div>
+  {{ else }}
+    <div class="empty">
+      <strong>No posts yet</strong>
+      Write something in <code>content/blogs/</code> and it will appear here.
+    </div>
+  {{ end }}
+</div>
+{{ end }}

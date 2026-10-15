@@ -1,0 +1,49 @@
+{{- /* Songs table, generated from static/songs/. Context is unused. */ -}}
+{{- $songs := partialCached "lib/songs" . "songs" -}}
+<div class="table-wrap">
+  <div class="table-scroll">
+    <table class="data">
+      <thead>
+        <tr>
+          <th scope="col">Song</th>
+          <th scope="col">Listen</th>
+          <th scope="col">Watch</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $songs }}
+        {{ $song := . }}
+        <tr>
+          <th class="name" scope="row">
+            {{ .name }}
+            {{ with .description }}<div class="desc">{{ . }}</div>{{ end }}
+          </th>
+          <td>
+            {{ with .audio }}
+              <audio controls preload="none">
+                <source src="/{{ . }}" type="audio/mpeg">
+                Your browser cannot play this audio.
+              </audio>
+              <div class="lib-links"><a class="pill-link" href="/{{ . }}" download>mp3</a></div>
+            {{ else }}
+              <span class="desc">no audio yet</span>
+            {{ end }}
+          </td>
+          <td>
+            {{ with .video }}
+              {{ $type := cond (hasSuffix . ".webm") "video/webm" "video/mp4" }}
+              <video controls preload="none" width="360" height="200"{{ with $song.poster }} poster="/{{ . }}"{{ end }}>
+                <source src="/{{ . }}" type="{{ $type }}">
+                {{ with $song.subtitles }}<track kind="subtitles" src="/{{ . }}" srclang="en" label="English" default>{{ end }}
+                Your browser cannot play this video.
+              </video>
+            {{ else }}
+              <span class="desc">no video yet</span>
+            {{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</div>

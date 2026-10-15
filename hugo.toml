@@ -1,4 +1,42 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+# ─────────────────────────────────────────────────────────────────────────────
+# Site configuration
+#
+# hugo.toml is the ONLY config Hugo reads. The config.toml that used to sit
+# next to it was ignored completely (Hugo prefers hugo.toml), so its settings —
+# `[languages.en] contentDir = 'content/en'`, reading_speed, hardWraps, favicon
+# — never applied. Everything worth keeping has been folded in here.
+# ─────────────────────────────────────────────────────────────────────────────
 
+baseURL = 'https://thevoidis.github.io/'
+languageCode = 'en-us'
+title = 'thevoidis'
+
+# Deliberately no [languages.*] block: the content is not split by language, and
+# a stray contentDir pointing at a non-existent folder hides every page.
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[params]
+  tagline     = 'stories, songs & slow thoughts'
+  description = 'A personal library — essays, short stories, AI-made songs and web novels, all released into the public domain.'
+  author      = 'thevoidis'
+  logo        = '/favicon.png'
+  license     = 'CC0 1.0 Universal'
+  licenseURL  = 'https://creativecommons.org/publicdomain/zero/1.0/'
+  repo        = 'https://github.com/thevoidis/thevoidis.github.io'
+  intro       = "This is where I keep everything I make: the things I think about, the things I make up, and the things I record. No trackers, no comments, no accounts."
+
+[markup]
+  [markup.goldmark.renderer]
+    # hardWraps is kept OFF to match today's live rendering: turning it on
+    # re-flows every existing essay (single newlines become <br>).
+    hardWraps = false
+
+[related]
+  threshold = 20
+  includeNewer = true
+  [[related.indices]]
+    name = 'tags'
+    weight = 100

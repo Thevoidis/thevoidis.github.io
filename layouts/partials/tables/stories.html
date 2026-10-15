@@ -1,0 +1,30 @@
+{{- /* Stories table, generated from static/stories/. Context is unused. */ -}}
+{{- $stories := partialCached "lib/stories" . "stories" -}}
+<div class="table-wrap">
+  <div class="table-scroll">
+    <table class="data">
+      <thead>
+        <tr>
+          <th scope="col">Story</th>
+          <th scope="col">Read it</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $stories }}
+        <tr>
+          <th class="name" scope="row">
+            {{ .name }}
+            {{ with .description }}<div class="desc">{{ . }}</div>{{ end }}
+          </th>
+          <td class="formats">
+            {{ if .html }}<a class="pill-link" href="/{{ .html }}">read online</a>{{ end }}
+            {{ if .pdf }}<a class="pill-link" href="/{{ .pdf }}">pdf</a>{{ end }}
+            {{ if .md }}<a class="pill-link" href="/{{ .md }}">markdown</a>{{ end }}
+            {{ if and (not .html) (not .pdf) (not .md) }}<span class="desc">no files yet</span>{{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</div>

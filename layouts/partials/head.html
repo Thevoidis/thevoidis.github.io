@@ -1,0 +1,60 @@
+{{- /* <head> for every page. Context: the page. */ -}}
+{{- $title := site.Title -}}
+{{- with site.Params.tagline }}{{ $title = printf "%s — %s" site.Title . }}{{ end -}}
+{{- if not .IsHome -}}
+  {{- $title = printf "%s · %s" .Title site.Title -}}
+{{- end -}}
+{{- $desc := .Description -}}
+{{- if not $desc -}}
+  {{- if .IsHome -}}
+    {{- $desc = site.Params.description -}}
+  {{- else -}}
+    {{- $desc = .Summary | plainify | truncate 180 -}}
+  {{- end -}}
+{{- end -}}
+{{- $icon := site.Params.logo | default "/favicon.png" -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="theme-color" content="#0e110f">
+<meta name="color-scheme" content="dark">
+{{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* icons + manifest */}}
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}" sizes="any">
+<link rel="icon" type="image/png" href="{{ "/favicon.png" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "/favicon.png" | relURL }}">
+<link rel="manifest" href="{{ "/manifest.json" | relURL }}">
+
+{{- /* social */}}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with $icon }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- end }}
+{{- if .IsPage }}{{ with .Date }}{{ if not .IsZero }}
+<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}{{ end }}{{ end }}
+{{- with site.Params.author }}<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ if $.IsHome }}{{ site.Title }}{{ else }}{{ $.Title }}{{ end }}">{{ end }}
+
+{{- /* feeds */}}
+{{- range .OutputFormats -}}
+  {{- if eq .MediaType.SubType "rss" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Title }}">
+  {{- end -}}
+{{- end -}}
+
+{{- /* fonts */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito:wght@400;600;700;800&display=swap">
+
+{{- /* stylesheet (hashed for cache busting) */}}
+{{- $css := resources.Get "style.css" | minify | fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

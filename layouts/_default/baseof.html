@@ -1,15 +1,16 @@
-<html>
-	<head>
-		<title>
-			Thevoidis Blog
-		</title>
-	</head>
-	<link rel="icon" type="image/x-icon" href="/favicon.png">
-	<link rel="stylesheet" href="/style.css">
-	<body>
-{{ partial "header.html" . }}
-		    <main>
-        {{ block "main" . }}{{ end }}
-    </main>
-	</body>
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body class="kind-{{ .Kind }}">
+  {{- if .IsPage }}
+  <div class="read-progress" aria-hidden="true"></div>
+  {{- end }}
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+</body>
 </html>

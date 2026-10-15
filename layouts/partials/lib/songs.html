@@ -1,0 +1,57 @@
+{{- /*
+  Reads static/songs/ and returns a slice of dicts:
+    name, dir, rel, description, audio, video, subtitles, poster
+
+  For each media kind it prefers the take whose file name matches the folder
+  name, so "Wisdom's Lullaby/" pairs "Wisdom's Lullaby.mp3" with
+  "Wisdom's Lullaby.webm" instead of silently mixing in the "(feat. …)" take.
+*/ -}}
+{{- $songs := slice -}}
+{{- $root := "static/songs" -}}
+{{- with (readDir $root) -}}
+  {{- range . -}}
+    {{- if .IsDir -}}
+      {{- $dir := .Name -}}
+      {{- $rel := printf "songs/%s" $dir -}}
+      {{- $description := "" -}}
+      {{- $audio := "" -}}
+      {{- $video := "" -}}
+      {{- $subs := "" -}}
+      {{- $poster := "" -}}
+      {{- $aScore := 9 -}}
+      {{- $vScore := 9 -}}
+      {{- $sScore := 9 -}}
+      {{- range (readDir (printf "%s/%s" $root $dir)) -}}
+        {{- $n := .Name -}}
+        {{- $base := replaceRE `\.[^.]+$` "" $n -}}
+        {{- $score := 2 -}}
+        {{- if eq (lower $base) (lower $dir) -}}
+          {{- $score = 0 -}}
+        {{- else if eq (lower (replaceRE `\s*\(.*\)$` "" $base)) (lower $dir) -}}
+          {{- $score = 1 -}}
+        {{- end -}}
+        {{- if findRE `\.mp3$` $n -}}
+          {{- if lt $score $aScore -}}{{- $aScore = $score -}}{{- $audio = printf "%s/%s" $rel $n -}}{{- end -}}
+        {{- else if findRE `\.(webm|mp4|mkv)$` $n -}}
+          {{- if lt $score $vScore -}}{{- $vScore = $score -}}{{- $video = printf "%s/%s" $rel $n -}}{{- end -}}
+        {{- else if findRE `\.(vtt|srt)$` $n -}}
+          {{- if lt $score $sScore -}}{{- $sScore = $score -}}{{- $subs = printf "%s/%s" $rel $n -}}{{- end -}}
+        {{- else if eq $n "1.png" -}}
+          {{- $poster = printf "%s/%s" $rel $n -}}
+        {{- else if eq $n "description.txt" -}}
+          {{- $description = trim (readFile (printf "%s/%s/%s" $root $dir $n)) " \n\r\t" -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $songs = $songs | append (dict
+            "name" $dir
+            "dir" $dir
+            "rel" $rel
+            "description" $description
+            "audio" $audio
+            "video" $video
+            "subtitles" $subs
+            "poster" $poster) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $songs -}}

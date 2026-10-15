@@ -1,10 +1,55 @@
-
 {{ define "main" }}
-  <title>{{ .Parent.Title }} - {{ .Title }}</title>
-  <h1>{{ .Parent.Title }} - {{ .Title }}</h1>
+{{ $parent := .Parent }}
+{{ $chapters := slice }}
+{{ with $parent }}{{ $chapters = sort .RegularPages "File.Path" }}{{ end }}
+<div class="wrap">
+  <article class="reading">
+    <header class="article-head">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ "/" | relURL }}">Home</a>
+        <span class="sep">/</span>
+        <a href="{{ "/webnovels/" | relURL }}">Web novels</a>
+        {{ with $parent }}
+        <span class="sep">/</span>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ end }}
+        <span class="sep">/</span>
+        <span>{{ .Title }}</span>
+      </nav>
+      <h1>{{ .Title }}</h1>
+      <div class="article-meta">
+        {{ with $parent }}<span>{{ .Title }}</span><span class="dot">·</span>{{ end }}
+        <span>{{ .ReadingTime }} min read</span>
+        <span class="dot">·</span>
+        <span>{{ .WordCount }} words</span>
+      </div>
+    </header>
 
-<div class="bloginfo">
+    <div class="prose">{{ .Content }}</div>
 
-    {{ .Content }}
+    {{ with $chapters }}{{ partial "post-nav" (dict "pages" . "here" $) }}{{ end }}
+  </article>
 </div>
+
+{{ with $chapters }}
+{{ $chapters := . }}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>All chapters</h2>
+      {{ with $parent }}<a class="more" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    </div>
+    <ul class="chapter-list">
+      {{ range $chapters }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <span>{{ .Title }}{{ if eq .RelPermalink $.RelPermalink }} <span class="pill-link" style="margin-left:.4rem">you are here</span>{{ end }}</span>
+            <span class="num">{{ .ReadingTime }} min</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+</div>
+{{ end }}
 {{ end }}

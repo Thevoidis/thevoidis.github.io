@@ -1,8 +1,45 @@
+{{- /* Taxonomy index (/tags/, /categories/). */ -}}
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    <ul>
-        {{ range .Data.Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-    </ul>
+{{ $terms := .Data.Terms.ByCount }}
+{{ $max := 1 }}
+{{ range $terms }}{{ if gt .Count $max }}{{ $max = .Count }}{{ end }}{{ end }}
+{{ $isTags := eq .Data.Singular "tag" }}
+{{ $heading := cond $isTags "Topics" .Title }}
+{{ $noun := cond $isTags "topic" "category" }}
+{{ $nounPlural := cond $isTags "topics" "categories" }}
+{{ $tagged := len (where site.RegularPages (printf "Params.%s" .Data.Plural) "!=" nil) }}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Index</span>
+    <h1>{{ $heading }}</h1>
+    {{ if $terms }}
+      <p>
+        {{ len $terms }} {{ cond (eq (len $terms) 1) $noun $nounPlural }}
+        {{ if $tagged }}across {{ $tagged }} {{ cond (eq $tagged 1) "post" "posts" }}{{ end }}.
+        Bigger chips mean more posts.
+      </p>
+    {{ else }}
+      <p>Nothing has been filed under a {{ $noun }} yet.</p>
     {{ end }}
+  </div>
+
+  {{ with $terms }}
+  <div class="tag-cloud">
+    {{ range . }}
+      {{ $size := add 0.85 (mul 0.55 (div (float .Count) (float $max))) }}
+      <a href="{{ .Page.RelPermalink }}" style="font-size:{{ printf "%.2f" $size }}rem">
+        {{ .Page.LinkTitle }} <span>{{ .Count }}</span>
+      </a>
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="empty">
+    <strong>No {{ $nounPlural }} yet</strong>
+    Add <code>{{ .Data.Plural }}</code> to a post's front matter and it will show up here.
+  </div>
+  {{ end }}
+  {{ with .Content }}
+  <div class="prose" style="margin-top:2rem">{{ . }}</div>
+  {{ end }}
+</div>
+{{ end }}

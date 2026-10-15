@@ -1,11 +1,31 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <ul>
-    {{ range .Pages }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
-{{ end }}
+{{ $stories := partialCached "lib/stories" . "stories" }}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Stories</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ len $stories }} {{ cond (eq (len $stories) 1) "story" "stories" }}, each in whatever formats exist — read online, download the PDF, or take the markdown and rebuild it however you like.</p>
+  </div>
 
+  <div class="notice">
+    <p>
+      Everything here is under the
+      <a href="{{ site.Params.licenseURL | default "https://creativecommons.org/publicdomain/zero/1.0/" }}">{{ site.Params.license | default "CC0 1.0 Universal" }}</a>
+      license. If you don't know what that means: copy, modify, distribute and perform these works, even commercially, without asking permission.
+    </p>
+  </div>
+
+  {{ with $stories }}
+    {{ partial "tables/stories" . }}
+  {{ else }}
+    <div class="empty">
+      <strong>No stories yet</strong>
+      Drop a folder into <code>static/stories/</code> and this table fills itself in.
+    </div>
+  {{ end }}
+
+  {{ with .Content }}
+  <div class="prose" style="margin-top:2.4rem">{{ . }}</div>
+  {{ end }}
+</div>
+{{ end }}

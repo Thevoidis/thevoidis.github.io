@@ -1,0 +1,38 @@
+{{- /*
+  Reads static/stories/ and returns a slice of dicts:
+    name, dir, rel, description, html, pdf, md
+  One source of truth for the stories table, the home page and any counters —
+  drop a new folder into static/stories/ and every one of them updates.
+*/ -}}
+{{- $stories := slice -}}
+{{- $root := "static/stories" -}}
+{{- with (readDir $root) -}}
+  {{- range . -}}
+    {{- if .IsDir -}}
+      {{- $dir := .Name -}}
+      {{- $rel := printf "stories/%s" $dir -}}
+      {{- $description := "" -}}
+      {{- $html := "" -}}
+      {{- $pdf := "" -}}
+      {{- $md := "" -}}
+      {{- range (readDir (printf "%s/%s" $root $dir)) -}}
+        {{- $n := .Name -}}
+        {{- if findRE `\.html$` $n -}}{{- $html = printf "%s/%s" $rel $n -}}{{- end -}}
+        {{- if findRE `\.pdf$` $n -}}{{- $pdf = printf "%s/%s" $rel $n -}}{{- end -}}
+        {{- if findRE `\.md$` $n -}}{{- $md = printf "%s/%s" $rel $n -}}{{- end -}}
+        {{- if eq $n "description.txt" -}}
+          {{- $description = trim (readFile (printf "%s/%s/%s" $root $dir $n)) " \n\r\t" -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $stories = $stories | append (dict
+            "name" (replaceRE "[-_]" " " $dir)
+            "dir" $dir
+            "rel" $rel
+            "description" $description
+            "html" $html
+            "pdf" $pdf
+            "md" $md) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $stories -}}

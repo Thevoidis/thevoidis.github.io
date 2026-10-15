@@ -1,18 +1,29 @@
+{{- /* Single topic page (/tags/philosophy/). */ -}}
 {{ define "main" }}
-    <h1>Blogs tagged: {{ .Title }}</h1>
-        {{ range .RegularPages }}
-		<div class="bloginfo">
-	<a class="bloglink" href="{{ .RelPermalink }}">
-		<div class="blog_select_div">
-				<h2>{{ .Title }}</h2>
-					        <h3> Approximate Reading Time : {{ .ReadingTime }} minutes </h3>
-			</div>
-	</a>
-	<h3>Summary</h3>				
-					{{ .Summary }}
-		</div>
-	<br>
+{{ $pages := .Pages.ByDate.Reverse }}
+<div class="wrap">
+  <div class="page-head">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="{{ "/" | relURL }}">Home</a>
+      <span class="sep">/</span>
+      <a href="{{ "/tags/" | relURL }}">Topics</a>
+      <span class="sep">/</span>
+      <span>{{ .Title }}</span>
+    </nav>
+    <span class="eyebrow">{{ len $pages }} {{ cond (eq (len $pages) 1) "post" "posts" }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </div>
 
+  {{ with $pages }}
+    <div class="cards split">
+      {{ range . }}{{ partial "blog-card" . }}{{ end }}
+    </div>
+  {{ else }}
+    <div class="empty">
+      <strong>Nothing tagged “{{ $.Title }}” yet</strong>
+      This page will fill up on its own as soon as a post carries that tag.
+    </div>
+  {{ end }}
+</div>
 {{ end }}
-{{ end }}
-

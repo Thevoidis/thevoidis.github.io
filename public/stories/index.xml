@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>stories on My New Hugo Site</title>
-    <link>https://example.org/stories/</link>
-    <description>Recent content in stories on My New Hugo Site</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://example.org/stories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://example.org/stories/acontractcalledmorning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/stories/acontractcalledmorning/</guid>
-      <description>&lt;p&gt;hi&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://example.org/stories/theriverthatcarriesthesky/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/stories/theriverthatcarriesthesky/</guid>
-      <description>&lt;h2 id=&#34;prologue&#34;&gt;Prologue&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;There are rivers that carve mountains, shaping the land over&#xA;centuries. And then there are rivers that carry the sky&amp;mdash;holding&#xA;reflections of the heavens upon their surface, never grasping, never&#xA;keeping, only flowing onward.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I have lived like such a river.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Once, in a childhood half-forgotten, I reached for the sky. I spoke&#xA;with an angel who whispered of wisdom hidden in the rustling leaves&#xA;and the hush of the wind. But like all rivers, I kept moving, leaving&#xA;those memories behind.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>stories on thevoidis</title>
+		<link>http://localhost:1313/stories/</link>
+		<description>Recent content in stories on thevoidis</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/stories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title></title>
+				<link>http://localhost:1313/stories/acontractcalledmorning/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/stories/acontractcalledmorning/</guid>
+				<description>&lt;p&gt;hi&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title></title>
+				<link>http://localhost:1313/stories/theriverthatcarriesthesky/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/stories/theriverthatcarriesthesky/</guid>
+				<description>&lt;h2 id=&#34;prologue&#34;&gt;Prologue&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;There are rivers that carve mountains, shaping the land over&#xA;centuries. And then there are rivers that carry the sky&amp;mdash;holding&#xA;reflections of the heavens upon their surface, never grasping, never&#xA;keeping, only flowing onward.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;I have lived like such a river.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Once, in a childhood half-forgotten, I reached for the sky. I spoke&#xA;with an angel who whispered of wisdom hidden in the rustling leaves&#xA;and the hush of the wind. But like all rivers, I kept moving, leaving&#xA;those memories behind.&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+	</channel>
 </rss>

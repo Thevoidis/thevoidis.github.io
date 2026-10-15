@@ -1,3 +1,4 @@
-<div class="blog_select_div">
-    {{ .Inner }}
+{{- /* Callout box: {{< box >}} … {{< /box >}} */ -}}
+<div class="notice">
+  <p>{{ .Inner | markdownify }}</p>
 </div>
