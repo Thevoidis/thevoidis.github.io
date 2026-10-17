@@ -25,9 +25,24 @@
         <span class="dot">·</span>
         <span>{{ .WordCount }} words</span>
       </div>
+      {{- /* The same story as raw files — the reading page above is derived
+             from the markdown at build time (content/stories/_content.gotmpl). */ -}}
+      {{ $p := . }}
+      {{ with or $p.Params.pdf $p.Params.md }}
+      <div class="lib-links" style="margin-top:.9rem">
+        {{ with $p.Params.pdf }}<a class="pill-link" href="{{ printf "/%s" . | relURL }}">pdf</a>{{ end }}
+        {{ with $p.Params.md }}<a class="pill-link" href="{{ printf "/%s" . | relURL }}">markdown</a>{{ end }}
+      </div>
+      {{ end }}
     </header>
 
     {{ $toc := .TableOfContents }}
+    {{- /* The source markdown carries an empty "###" heading; drop its empty
+           TOC entry — including the outer <li>/<ul> it leaves behind — and
+           merge the adjacent lists the mid-document <h1> produces.
+           replaceRE returns a plain string, so mark it safe again. */ -}}
+    {{ $toc = replaceRE `(?s)<li>\s*(<ul>\s*(<li>\s*</li>\s*)*</ul>\s*)?</li>` "" $toc }}
+    {{ $toc = replaceRE `</ul>\s*<ul>` "" $toc | safeHTML }}
     {{ if findRE "<li" $toc }}
     <details class="toc">
       <summary>On this page</summary>

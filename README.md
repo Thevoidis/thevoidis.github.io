@@ -42,10 +42,16 @@ Body text...
 - `draft : true` hides it from the live site (show it locally with `hugo server -D`).
 
 ### Stories
-Drop a folder into `static/stories/<Story Name>/` containing any of:
-`<Story Name>.html` (read online), `<Story Name>.pdf`, `<Story Name>.md`
-(downloadable source) and a `description.txt`. The stories table fills
-itself in.
+Drop a folder into `static/stories/<Story Name>/` containing:
+`<Story Name>.md` (the source of truth), optionally `<Story Name>.pdf`
+and a `description.txt`. The stories table fills itself in, and Hugo
+builds a themed reading page at `/stories/<story-name>/` from the
+markdown at build time (`content/stories/_content.gotmpl` + 
+`layouts/stories/single.html`) — there is no hand-made `.html` to keep
+in sync. The raw `.md`/`.pdf` stay served as downloads.
+
+(A `.html` file in the folder is no longer used; the reading page is
+always derived from the markdown, so it keeps the site's theme.)
 
 (Alternative: a single `content/stories/<slug>.md` file also renders a
 story page, but the static-folder approach is the one in use.)

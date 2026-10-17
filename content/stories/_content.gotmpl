@@ -1,0 +1,43 @@
+{{- /* ─────────────────────────────────────────────────────────────────────────
+  Story pages, derived from the downloadable markdown.
+
+  static/stories/<Name>/<Name>.md is the single source of truth. For every
+  folder there that contains an .md, this adapter adds a normal Hugo page at
+  /stories/<name>/ which layouts/stories/single.html renders with the site's
+  theme (fonts, reading width, TOC, header/footer). The raw .md and .pdf stay
+  in static/ untouched, so they keep working as downloads.
+
+  Publishing a story = drop the folder in; nothing else to wire up.
+  (A .html file in the folder is no longer needed — this adapter replaced it.)
+───────────────────────────────────────────────────────────────────────────── */ -}}
+{{- $root := "static/stories" -}}
+{{- range readDir $root -}}
+  {{- if .IsDir -}}
+    {{- $dir := .Name -}}
+    {{- $mdFile := "" -}}
+    {{- $pdfFile := "" -}}
+    {{- $description := "" -}}
+    {{- range readDir (printf "%s/%s" $root $dir) -}}
+      {{- if findRE `\.md$` .Name -}}{{- $mdFile = .Name -}}{{- end -}}
+      {{- if findRE `\.pdf$` .Name -}}{{- $pdfFile = .Name -}}{{- end -}}
+      {{- if eq .Name "description.txt" -}}
+        {{- $description = trim (readFile (printf "%s/%s/description.txt" $root $dir)) " \n\r\t" -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $mdFile -}}
+      {{- $content := dict
+            "mediaType" "text/markdown"
+            "value" (readFile (printf "%s/%s/%s" $root $dir .)) -}}
+      {{- $params := dict
+            "md" (printf "stories/%s/%s" $dir .)
+            "pdf" (cond (ne $pdfFile "") (printf "stories/%s/%s" $dir $pdfFile) "") -}}
+      {{- $.AddPage (dict
+            "kind" "page"
+            "path" $dir
+            "title" $dir
+            "content" $content
+            "description" $description
+            "params" $params) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

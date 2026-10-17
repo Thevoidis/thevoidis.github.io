@@ -103,7 +103,8 @@
                 <h3>{{ .name }}</h3>
                 {{ with .description }}<p>{{ . }}</p>{{ end }}
                 <div class="lib-links">
-                  {{ if .html }}<a class="pill-link" href="/{{ .html }}">read online</a>{{ end }}
+                  {{ if .url }}<a class="pill-link" href="{{ .url }}">read online</a>
+                  {{ else if .html }}<a class="pill-link" href="/{{ .html }}">read online</a>{{ end }}
                   {{ if .pdf }}<a class="pill-link" href="/{{ .pdf }}">pdf</a>{{ end }}
                   {{ if .md }}<a class="pill-link" href="/{{ .md }}">markdown</a>{{ end }}
                 </div>

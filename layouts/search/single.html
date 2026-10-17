@@ -22,16 +22,18 @@
 {{- end -}}
 
 {{- range partial "lib/stories" . -}}
-  {{- if or .html .pdf .md -}}
+  {{- if or .url .html .pdf .md -}}
     {{- $url := printf "/%s" .md | relURL -}}
-    {{- with .html }}{{ $url = printf "/%s" . | relURL }}{{ end -}}
+    {{- with .url }}{{ $url = . }}{{ end -}}
+    {{- $text := .description -}}
+    {{- with .page }}{{ $text = .Summary | plainify | truncate 280 }}{{ end -}}
     {{- $docs = $docs | append (dict
           "title" .name
           "url" $url
           "kind" "story"
           "sub" "story"
           "tags" ""
-          "text" .description) -}}
+          "text" $text) -}}
   {{- end -}}
 {{- end -}}
 

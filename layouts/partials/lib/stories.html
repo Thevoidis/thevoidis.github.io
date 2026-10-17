@@ -1,6 +1,8 @@
 {{- /*
   Reads static/stories/ and returns a slice of dicts:
-    name, dir, rel, description, html, pdf, md
+    name, dir, rel, description, url, page, html, pdf, md
+  `url`/`page` are the themed reading page Hugo generates from the folder's
+  markdown (content/stories/_content.gotmpl) — set only when an .md exists.
   One source of truth for the stories table, the home page and any counters —
   drop a new folder into static/stories/ and every one of them updates.
 */ -}}
@@ -24,11 +26,26 @@
           {{- $description = trim (readFile (printf "%s/%s/%s" $root $dir $n)) " \n\r\t" -}}
         {{- end -}}
       {{- end -}}
+      {{- /* Themed reading page: Hugo derives it from the folder's markdown
+             (content/stories/_content.gotmpl), so it exists only when an .md
+             does. GetPage is the authority; the urlized guess is the fallback. */ -}}
+      {{- $url := "" -}}
+      {{- $page := "" -}}
+      {{- if ne $md "" -}}
+        {{- with site.GetPage (printf "/stories/%s" (urlize $dir)) -}}
+          {{- $page = . -}}
+          {{- $url = .RelPermalink -}}
+        {{- else -}}
+          {{- $url = printf "/stories/%s/" (urlize $dir) | relURL -}}
+        {{- end -}}
+      {{- end -}}
       {{- $stories = $stories | append (dict
             "name" (replaceRE "[-_]" " " $dir)
             "dir" $dir
             "rel" $rel
             "description" $description
+            "url" $url
+            "page" $page
             "html" $html
             "pdf" $pdf
             "md" $md) -}}
