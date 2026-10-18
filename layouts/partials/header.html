@@ -5,6 +5,7 @@
 {{- $posts := where site.RegularPages "Section" "blogs" -}}
 {{- $novels := slice -}}
 {{- with site.GetPage "/webnovels" }}{{ $novels = .Sections }}{{ end -}}
+{{- $comics := partialCached "lib/comics" . "comics" -}}
 {{- $tags := site.Taxonomies.tags.ByCount -}}
 {{- $section := .Section -}}
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,7 +30,7 @@
         </li>
 
         <li class="nav-item has-panel">
-          <button class="nav-link nav-toggle{{ if in (slice "stories" "songs" "webnovels") $section }} is-active{{ end }}" type="button" aria-expanded="false">
+          <button class="nav-link nav-toggle{{ if in (slice "stories" "songs" "webnovels" "comics") $section }} is-active{{ end }}" type="button" aria-expanded="false">
             Library
             <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           </button>
@@ -38,6 +39,7 @@
             <a href="{{ "/stories/" | relURL }}">Stories <span class="nav-count">{{ len $stories }}</span></a>
             <a href="{{ "/webnovels/" | relURL }}">Web novels <span class="nav-count">{{ len $novels }}</span></a>
             <a href="{{ "/songs/" | relURL }}">Songs <span class="nav-count">{{ len $songs }}</span></a>
+            <a href="{{ "/comics/" | relURL }}">Comics <span class="nav-count">{{ len $comics }}</span></a>
           </div>
         </li>
 

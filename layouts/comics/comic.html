@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{- /* Single comic page: embeds Thevoidis Comic Viewer (static/comic-viewer/)
+       in an iframe pointed at this comic's directory under static/comics/.
+       Layout selected via `layout: "comic"` in the page front matter. */ -}}
+{{- $comics := partialCached "lib/comics" . "comics" -}}
+{{- $comic := dict -}}
+{{- $slug := .File.ContentBaseName | lower -}}
+{{- range $comics -}}
+  {{- if eq (lower (.dir | urlize)) $slug -}}{{- $comic = . -}}{{- end -}}
+{{- end -}}
+{{- $src := printf "/comic-viewer/?comic=/comics/%s/&theme=dark" ($comic.dir | default "" | urlquery) -}}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow"><a href="{{ "/comics/" | relURL }}" style="color:inherit;text-decoration:none">Comics</a></span>
+    <h1>{{ .Title }}</h1>
+    {{ with $comic }}
+      <p>{{ .pages }} {{ cond (eq .pages 1) "page" "pages" }}{{ with .author }} · {{ . }}{{ end }}{{ if eq .direction "rtl" }} · right-to-left{{ end }}</p>
+    {{ end }}
+  </div>
+
+  {{ with .Content }}
+  <div class="prose" style="margin-bottom:1.6rem">{{ . }}</div>
+  {{ end }}
+
+  {{ if $comic }}
+  <div class="comic-frame">
+    <iframe src="{{ $src }}" title="{{ .Title }} — comic reader" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p class="comic-hint">
+    Keyboard: <kbd>←</kbd>/<kbd>→</kbd> pages · <kbd>1</kbd> single · <kbd>2</kbd> double ·
+    <kbd>3</kbd> scroll · <kbd>+</kbd>/<kbd>-</kbd> zoom · <kbd>T</kbd> thumbnails · <kbd>F</kbd> fullscreen.
+    Reader by <a href="https://github.com/Thevoidis/Thevoidis-Comic-Viewer">Comic Viewer</a>.
+    <a class="pill-link" href="{{ $src }}" target="_blank" rel="noopener">Open full screen ↗</a>
+  </p>
+  {{ else }}
+  <div class="empty">
+    <strong>Comic not found</strong>
+    Expected a folder with a <code>manifest.json</code> under <code>static/comics/</code>.
+  </div>
+  {{ end }}
+</div>
+{{ end }}

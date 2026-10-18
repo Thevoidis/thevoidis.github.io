@@ -994,6 +994,34 @@ table.data td.formats { white-space: nowrap; }
 .chapter-list a:hover { color: var(--accent); }
 .chapter-list .num { color: var(--muted); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
 
+/* ------------------------------------------------------------- 12b. comics */
+.comic-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #030712;
+}
+.comic-frame iframe {
+  display: block;
+  width: 100%;
+  height: min(85vh, 900px);
+  border: 0;
+}
+.comic-hint {
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.comic-hint kbd {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 0.75rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--text-dim);
+}
+
 /* ------------------------------------------------------------ 13. states */
 .empty {
   padding: 1.8rem 1.4rem;

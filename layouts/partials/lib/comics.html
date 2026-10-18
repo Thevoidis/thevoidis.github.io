@@ -1,0 +1,36 @@
+{{- /*
+  Reads static/comics/ and returns a slice of dicts:
+    name, dir, rel, url, title, author, description, direction, pages (count)
+  A folder counts as a comic when it contains a manifest.json in the Comic
+  Viewer format (see https://github.com/Thevoidis/Thevoidis-Comic-Viewer):
+    { "title", "author", "description", "direction", "cover", "pages": [...] }
+  Drop a new folder with a manifest.json into static/comics/ and the comics
+  page fills itself in — one source of truth for the list and any counters.
+*/ -}}
+{{- $comics := slice -}}
+{{- $root := "static/comics" -}}
+{{- with (readDir $root) -}}
+  {{- range . -}}
+    {{- if .IsDir -}}
+      {{- $dir := .Name -}}
+      {{- $manifestPath := printf "%s/%s/manifest.json" $root $dir -}}
+      {{- if fileExists $manifestPath -}}
+        {{- $m := dict -}}
+        {{- with readFile $manifestPath | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
+        {{- $pages := default slice ($m.pages) -}}
+        {{- $title := default (replaceRE "[-_]" " " $dir) ($m.title) -}}
+        {{- $comics = $comics | append (dict
+              "name" $title
+              "dir" $dir
+              "rel" (printf "comics/%s" $dir)
+              "url" (printf "/comic-viewer/?comic=/comics/%s/" ($dir | urlquery))
+              "title" $title
+              "author" (default "" ($m.author))
+              "description" (default "" ($m.description))
+              "direction" (default "ltr" ($m.direction))
+              "pages" (len $pages)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $comics -}}
