@@ -19,6 +19,7 @@
 {{- $webnovels := site.GetPage "/webnovels" -}}
 {{- $novels := slice -}}
 {{- with $webnovels }}{{ $novels = .Sections }}{{ end -}}
+{{- $comics := partialCached "lib/comics" . "comics" -}}
 {{- $maxTopic := 1 -}}
 {{- range $topics }}{{ if gt .Count $maxTopic }}{{ $maxTopic = .Count }}{{ end }}{{ end -}}
 
@@ -41,6 +42,7 @@
       <a class="btn btn-ghost" href="{{ "/stories/" | relURL }}">Stories</a>
       <a class="btn btn-ghost" href="{{ "/songs/" | relURL }}">Songs</a>
       <a class="btn btn-ghost" href="{{ "/webnovels/" | relURL }}">Web novels</a>
+      <a class="btn btn-ghost" href="{{ "/comics/" | relURL }}">Comics</a>
     </div>
 
     <ul class="stats">
@@ -50,6 +52,7 @@
       <li class="stat"><b>{{ len $stories }}</b><span>stories</span></li>
       <li class="stat"><b>{{ len $songs }}</b><span>songs</span></li>
       <li class="stat"><b>{{ len $novels }}</b><span>web novels</span></li>
+      <li class="stat"><b>{{ len $comics }}</b><span>comics</span></li>
       <li class="stat"><b>{{ len $topics }}</b><span>topics</span></li>
     </ul>
   </div>
@@ -194,6 +197,30 @@
           {{ end }}
           <div class="lib-links">
             <a class="pill-link" href="{{ .RelPermalink }}">Open novel →</a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
+
+{{- /* ── comics ─────────────────────────────────────────────────────────── */ -}}
+{{ with $comics }}
+<div class="wrap">
+  <section class="section">
+    <div class="section-head">
+      <h2>Comics</h2>
+      <a class="more" href="{{ "/comics/" | relURL }}">All comics →</a>
+    </div>
+    <div class="novel-grid">
+      {{ range . }}
+        <article class="novel-card">
+          <div class="meta"><span>{{ .pages }} {{ cond (eq .pages 1) "page" "pages" }}</span></div>
+          <h3><a href="{{ printf "/comics/%s/" (.dir | urlize) | relURL }}" style="color:inherit;text-decoration:none">{{ .title }}</a></h3>
+          {{ with .description }}<p class="lead" style="color:var(--muted)">{{ . }}</p>{{ end }}
+          <div class="lib-links">
+            <a class="pill-link" href="{{ printf "/comics/%s/" (.dir | urlize) | relURL }}">Read →</a>
           </div>
         </article>
       {{ end }}

@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{- /* Comics list page — cards built from static/comics/<folder>/manifest.json
+       via partials/lib/comics.html. */ -}}
+{{- $comics := partialCached "lib/comics" . "comics" -}}
+<div class="wrap">
+  <div class="page-head">
+    <span class="eyebrow">Comics</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ len $comics }} {{ cond (eq (len $comics) 1) "comic" "comics" }}, read in the
+      <a href="https://github.com/Thevoidis/Thevoidis-Comic-Viewer">embeddable Comic Viewer</a> —
+      single page, double spread or continuous scroll, with zoom, thumbnails and keyboard navigation.</p>
+  </div>
+
+  {{ with .Content }}
+  <div class="prose" style="margin-bottom:2rem">{{ . }}</div>
+  {{ end }}
+
+  {{ with $comics }}
+  <div class="novel-grid">
+    {{ range . }}
+      <article class="novel-card">
+        <div class="meta">
+          <span>{{ .pages }} {{ cond (eq .pages 1) "page" "pages" }}</span>
+          {{ with .author }}<span>· {{ . }}</span>{{ end }}
+        </div>
+        <h3><a href="{{ printf "/comics/%s/" (.dir | urlize) | relURL }}" style="color:inherit;text-decoration:none">{{ .title }}</a></h3>
+        {{ with .description }}
+          <p class="lead" style="color:var(--muted)">{{ . }}</p>
+        {{ end }}
+        <div class="lib-links">
+          <a class="pill-link" href="{{ printf "/comics/%s/" (.dir | urlize) | relURL }}">Read →</a>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+  {{ else }}
+  <div class="empty">
+    <strong>No comics yet</strong>
+    Drop a folder with a <code>manifest.json</code> into <code>static/comics/</code> and it appears here.
+  </div>
+  {{ end }}
+</div>
+{{ end }}
