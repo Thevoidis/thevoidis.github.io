@@ -31,6 +31,12 @@ title = 'thevoidis'
   isHTML      = false
 
 [params]
+  # Comic reader. The viewer app is its own repository
+  # (github.com/Thevoidis/Thevoidis-Comic-Viewer), deployed as a GitHub Pages
+  # project site. Nothing is vendored in this repo — the comic pages iframe this
+  # URL and hand it a comic directory in `?comic=`. One place to bump when the
+  # viewer is rebuilt; see layouts/partials/lib/viewer-url.html.
+  viewerURL   = 'https://thevoidis.github.io/Thevoidis-Comic-Viewer/'
   tagline     = 'stories, songs & slow thoughts'
   description = 'A personal library — essays, short stories, AI-made songs and web novels, all released into the public domain.'
   author      = 'thevoidis'

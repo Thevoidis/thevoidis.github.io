@@ -5,7 +5,9 @@ all released into the public domain (CC0). Built with [Hugo](https://gohugo.io/)
 deployed to GitHub Pages by the workflow in `.github/workflows/hugo.yaml`.
 
 No trackers, no comments, no accounts. Fonts are self-hosted, so the site
-makes zero third-party requests.
+makes zero third-party requests. (The comic reader is a separate app, but it
+is served from this same host — see Comics below — so embedding it does not
+add a third-party request either.)
 
 ## Quick start
 
@@ -89,6 +91,15 @@ There is **no page list to maintain**. At build time Hugo rebuilds
 the embedded Comic Viewer always loads every image. Add or delete images
 freely; the reader page and the page count on `/comics/` follow. (The
 served `manifest.json` is generated — edit `comic.json`, not it.)
+
+The reader itself is **not part of this repository**. It lives in
+[github.com/Thevoidis/Thevoidis-Comic-Viewer](https://github.com/Thevoidis/Thevoidis-Comic-Viewer)
+and is deployed as its own GitHub Pages project at
+`https://thevoidis.github.io/Thevoidis-Comic-Viewer/`. Comic pages iframe
+that URL and pass a comic directory in `?comic=`; the embed URL is built once,
+in `layouts/partials/lib/viewer-url.html`, and its host is set by
+`viewerURL` in `hugo.toml`. To update the reader, rebuild and deploy that
+repository — nothing here changes.
 
 ## Search
 

@@ -1,0 +1,27 @@
+{{- /*
+  Builds the Comic Viewer embed URL for a single comic — the single source of
+  truth for the embed, used by both layouts/comics/comic.html (the iframe) and
+  partials/lib/comics.html (the card link). Change the viewer host in
+  hugo.toml's [params] viewerURL, never here.
+
+  Argument: the comic's folder name under static/comics/ (a string).
+  Returns:  the full URL to hand the viewer's <iframe src>.
+
+  The viewer is a separate deployment (github.com/Thevoidis/Thevoidis-Comic-Viewer),
+  so `comic` is emitted as an ABSOLUTE URL on purpose. The viewer builds every
+  page-image URL by string-concatenating the filename onto this value rather
+  than resolving against the manifest's own URL, so a relative value would be
+  resolved against the viewer's document URL — correct only while the viewer
+  happens to sit on the same host as the comics. Absolute keeps the embed
+  working wherever either side is published, and absURL follows baseURL, so
+  `hugo server` still reads the local build rather than production.
+
+  Two things the viewer does that are easy to get wrong here:
+    - `manifest` only replaces where manifest.json is FETCHED from; it does not
+      change how page filenames resolve. Passing `manifest` without `comic`
+      loads the metadata and then 404s on every page image.
+    - `theme` is parsed by the viewer and never applied.
+*/ -}}
+{{- $viewer := site.Params.viewerURL -}}
+{{- $comic := absURL (printf "/comics/%s/" .) -}}
+{{- return (printf "%s?comic=%s&theme=dark" $viewer ($comic | urlquery)) -}}

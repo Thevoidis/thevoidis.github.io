@@ -1,9 +1,11 @@
 {{ define "main" }}
-{{- /* Single comic page: embeds Thevoidis Comic Viewer (static/comic-viewer/)
-       in an iframe pointed at this comic's directory under static/comics/.
+{{- /* Single comic page: embeds Thevoidis Comic Viewer in an iframe pointed at
+       this comic's directory under static/comics/. The viewer itself lives in
+       its own repo and is deployed separately — see hugo.toml [params]
+       viewerURL and partials/lib/viewer-url.html, which builds the src.
        Layout selected via `layout: "comic"` in the page front matter. */ -}}
 {{- /* The comic folder comes from content/comics/_content.gotmpl, which
-       creates one page per static/comics/<folder>/manifest.json and stores
+       creates one page per static/comics/<folder>/comic.json and stores
        the raw folder name in params.comicDir. Fall back to matching this
        page's slug against the comics list for hand-written pages. */ -}}
 {{- $comic := dict -}}
@@ -18,19 +20,10 @@
     {{- if eq .dir $dir -}}{{- $comic = . -}}{{- end -}}
   {{- end -}}
 {{- end -}}
-{{- /* This page lives at /comics/<slug>/, so both halves of the embed are
-       built as root-relative paths through relURL, which also honours a
-       baseURL sub-path (GitHub Pages project sites):
-         /comic-viewer/   -> the reader, via <iframe src>
-         /comics/<dir>/   -> this comic's folder, as the `comic` parameter
-       The viewer resolves `comic` against its own document URL
-       (/comic-viewer/), and because the value is root-relative it lands on
-       /comics/<dir>/manifest.json; page images resolve the same way. This
-       matches the embed documented in the viewer's README and needs no
-       path patching inside the bundle. */ -}}
-{{- $viewerUrl := relURL "/comic-viewer/" -}}
-{{- $comicUrl := relURL (printf "/comics/%s/" ($comic.dir | default "none")) -}}
-{{- $src := printf "%s?comic=%s&theme=dark" $viewerUrl ($comicUrl | urlquery) -}}
+{{- /* `comic` is absolute on purpose: the viewer concatenates page filenames
+       onto it, so a relative value would resolve against the viewer's own
+       document URL instead of this site's. */ -}}
+{{- $src := partial "lib/viewer-url.html" ($dir | default "none") -}}
 <div class="wrap">
   <div class="page-head">
     <span class="eyebrow"><a href="{{ "/comics/" | relURL }}" style="color:inherit;text-decoration:none">Comics</a></span>

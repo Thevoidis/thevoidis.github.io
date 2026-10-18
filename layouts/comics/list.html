@@ -1,6 +1,7 @@
 {{ define "main" }}
-{{- /* Comics list page — cards built from static/comics/<folder>/manifest.json
-       via partials/lib/comics.html. */ -}}
+{{- /* Comics list page — cards built from static/comics/<folder>/comic.json
+       via partials/lib/comics.html. Cards link to the comic's Hugo page, which
+       embeds the viewer; the viewer is hosted separately (hugo.toml viewerURL). */ -}}
 {{- $comics := partialCached "lib/comics" . "comics" -}}
 <div class="wrap">
   <div class="page-head">

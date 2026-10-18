@@ -7,6 +7,10 @@
   partials/lib/comic-pages.html. Drop a new folder with a comic.json into
   static/comics/ and the comics page fills itself in — one source of truth for
   the list and any counters.
+
+  `url` is the standalone Comic Viewer embed for the comic, built by
+  partials/lib/viewer-url.html. The list and single pages link to the Hugo page
+  rather than to this, so it is only for direct-to-viewer links.
 */ -}}
 {{- $comics := slice -}}
 {{- $root := "static/comics" -}}
@@ -26,7 +30,7 @@
               "name" $title
               "dir" $dir
               "rel" (printf "comics/%s" $dir)
-              "url" (printf "%s?comic=%s" (relURL "/comic-viewer/") (relURL (printf "/comics/%s/" $dir) | urlquery))
+              "url" (partial "lib/viewer-url.html" $dir)
               "title" $title
               "author" (default "" ($m.author))
               "description" (default "" ($m.description))
