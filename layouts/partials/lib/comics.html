@@ -23,7 +23,7 @@
               "name" $title
               "dir" $dir
               "rel" (printf "comics/%s" $dir)
-              "url" (printf "/comic-viewer/?comic=/comics/%s/" ($dir | urlquery))
+              "url" (printf "%s?comic=%s" (relURL "/comic-viewer/") (relURL (printf "/comics/%s/" $dir) | urlquery))
               "title" $title
               "author" (default "" ($m.author))
               "description" (default "" ($m.description))
