@@ -69,6 +69,27 @@ is the one that gets paired.
 zero-padded numbering. A novel with no published chapters shows as
 "In progress".
 
+### Comics
+Drop a folder into `static/comics/<Comic Name>/` containing the page
+images (`.webp`/`.png`/`.jpg`) plus a small `comic.json` with the
+metadata:
+
+```json
+{
+  "title": "My Comic",
+  "author": "you",
+  "description": "One line about it.",
+  "direction": "ltr",
+  "cover": "ch0001.webp"
+}
+```
+
+There is **no page list to maintain**. At build time Hugo rebuilds
+`/comics/<slug>/manifest.json` from the images actually in the folder, so
+the embedded Comic Viewer always loads every image. Add or delete images
+freely; the reader page and the page count on `/comics/` follow. (The
+served `manifest.json` is generated — edit `comic.json`, not it.)
+
 ## Search
 
 The `/search/` page builds its index at build time (no backend, no

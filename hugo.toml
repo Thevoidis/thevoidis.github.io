@@ -18,6 +18,18 @@ title = 'thevoidis'
   tag = 'tags'
   category = 'categories'
 
+# Comic reader manifests. Comic pages declare this format alongside HTML, so
+# Hugo writes /comics/<dir>/manifest.json itself, filling in the `pages` array
+# from the images actually on disk (see layouts/comics/comic.manifest.json and
+# partials/lib/comic-pages.html). The small comic.json next to the images is
+# the editable source of title/author/description/cover; there is no page list
+# to keep in sync.
+[outputFormats.Manifest]
+  mediaType   = 'application/json'
+  baseName    = 'manifest'
+  isPlainText = true
+  isHTML      = false
+
 [params]
   tagline     = 'stories, songs & slow thoughts'
   description = 'A personal library — essays, short stories, AI-made songs and web novels, all released into the public domain.'

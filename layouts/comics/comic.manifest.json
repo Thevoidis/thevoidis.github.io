@@ -1,0 +1,28 @@
+{{- /*
+  /comics/<dir>/manifest.json — the Comic Viewer manifest, generated at build
+  time for every comic page (see the Manifest output format in hugo.toml).
+
+  Metadata (title, author, description, direction, cover) is read from
+  comic.json, the small file you edit by hand next to the images. The `pages`
+  array is built from the images actually present in static/comics/<dir>/, so
+  the reader can never show fewer pages than exist. Adding or deleting an image
+  is enough; nothing to update here.
+
+  This is the Comic Viewer manifest the reader fetches: hugo.toml registers the
+  Manifest output format and the page declares it, so there is exactly one
+  manifest.json at /comics/<dir>/ — this generated one.
+*/ -}}
+{{- $dir := .Params.comicDir -}}
+{{- $m := dict -}}
+{{- with readFile (printf "static/comics/%s/comic.json" $dir) | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
+{{- $pages := partial "lib/comic-pages.html" $dir -}}
+{{- $cover := $m.cover -}}
+{{- if and (not $cover) $pages -}}{{- $cover = index $pages 0 -}}{{- end -}}
+{{- dict
+      "title" (default (replaceRE "[-_]" " " $dir) $m.title)
+      "author" (default "" $m.author)
+      "description" (default "" $m.description)
+      "direction" (default "ltr" $m.direction)
+      "cover" $cover
+      "pages" $pages
+    | jsonify -}}

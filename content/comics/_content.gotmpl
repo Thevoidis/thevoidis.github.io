@@ -1,15 +1,17 @@
 {{- /* ─────────────────────────────────────────────────────────────────────────
-  Comic pages, derived from static/comics/<folder>/manifest.json.
+  Comic pages, derived from static/comics/<folder>/comic.json.
 
-  For every folder under static/comics/ that contains a manifest.json (the
-  format Thevoidis Comic Viewer expects: https://github.com/Thevoidis/
-  Thevoidis-Comic-Viewer), this adapter adds a Hugo page at /comics/<slug>/
-  rendered by layouts/comics/comic.html, which embeds the viewer in an iframe.
-  The manifest lives next to the images, so one source of truth drives both
-  the comics list and each reader page.
+  For every folder under static/comics/ that contains a comic.json (the
+  hand-edited metadata: title, author, description, direction, cover), this
+  adapter adds a Hugo page at /comics/<slug>/ rendered by
+  layouts/comics/comic.html, which embeds the viewer in an iframe. The page
+  also emits Manifest output, so Hugo writes /comics/<dir>/manifest.json with
+  its `pages` array rebuilt from the images in the folder — the Comic Viewer
+  manifest the reader actually fetches. One folder, one small metadata file,
+  and a complete manifest is produced: nothing else to wire up.
 
-  Images can be .webp / .png / .jpg — the browser renders whatever the
-  manifest lists; no conversion needed.
+  Images can be .webp / .png / .jpg — the generated manifest lists every image
+  found in the folder, so the reader always matches the directory contents.
 
   Publishing a comic = drop the folder in; nothing else to wire up.
 ───────────────────────────────────────────────────────────────────────────── */ -}}
@@ -17,15 +19,16 @@
 {{- range readDir $root -}}
   {{- if .IsDir -}}
     {{- $dir := .Name -}}
-    {{- $manifestPath := printf "%s/%s/manifest.json" $root $dir -}}
-    {{- if fileExists $manifestPath -}}
+    {{- $metaPath := printf "%s/%s/comic.json" $root $dir -}}
+    {{- if fileExists $metaPath -}}
       {{- $m := dict -}}
-      {{- with readFile $manifestPath | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
+      {{- with readFile $metaPath | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
       {{- with default $dir ($m.title) -}}
         {{- $.AddPage (dict
               "kind" "page"
               "path" $dir
               "layout" "comic"
+              "outputs" (slice "HTML" "Manifest")
               "title" .
               "description" (default "" ($m.description))
               "params" (dict "comicDir" $dir)) -}}

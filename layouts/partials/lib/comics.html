@@ -1,11 +1,12 @@
 {{- /*
   Reads static/comics/ and returns a slice of dicts:
     name, dir, rel, url, title, author, description, direction, pages (count)
-  A folder counts as a comic when it contains a manifest.json in the Comic
-  Viewer format (see https://github.com/Thevoidis/Thevoidis-Comic-Viewer):
-    { "title", "author", "description", "direction", "cover", "pages": [...] }
-  Drop a new folder with a manifest.json into static/comics/ and the comics
-  page fills itself in — one source of truth for the list and any counters.
+  A folder counts as a comic when it contains a comic.json holding the viewer
+  metadata (title, author, description, direction, cover) — the page list is
+  not read from it, it is counted from the images on disk via
+  partials/lib/comic-pages.html. Drop a new folder with a comic.json into
+  static/comics/ and the comics page fills itself in — one source of truth for
+  the list and any counters.
 */ -}}
 {{- $comics := slice -}}
 {{- $root := "static/comics" -}}
@@ -13,11 +14,13 @@
   {{- range . -}}
     {{- if .IsDir -}}
       {{- $dir := .Name -}}
-      {{- $manifestPath := printf "%s/%s/manifest.json" $root $dir -}}
-      {{- if fileExists $manifestPath -}}
+      {{- $metaPath := printf "%s/%s/comic.json" $root $dir -}}
+      {{- if fileExists $metaPath -}}
         {{- $m := dict -}}
-        {{- with readFile $manifestPath | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
-        {{- $pages := default slice ($m.pages) -}}
+        {{- with readFile $metaPath | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
+        {{- /* Count pages from the images on disk, not from a hand-kept list in
+               the manifest, so the card always matches what the viewer loads. */ -}}
+        {{- $pages := partial "lib/comic-pages.html" $dir -}}
         {{- $title := default (replaceRE "[-_]" " " $dir) ($m.title) -}}
         {{- $comics = $comics | append (dict
               "name" $title

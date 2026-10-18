@@ -1,0 +1,24 @@
+{{- /*
+  Lists the page images inside static/comics/<dir>/ in filename order.
+
+  This is the single source of truth for "how many pages does this comic have":
+  the generated manifest.json (layouts/comics/comic.manifest.json) and the
+  comics list/counters (partials/lib/comics.html) both call it, so the viewer
+  always loads exactly the images that are on disk — no hand-kept page list to
+  drift out of sync.
+
+  Argument: the comic's folder name under static/comics/ (a string).
+  Returns: a sorted slice of image file names relative to that folder.
+*/ -}}
+{{- $dir := . -}}
+{{- $pages := slice -}}
+{{- with readDir (printf "static/comics/%s" $dir) -}}
+  {{- range . -}}
+    {{- if not .IsDir -}}
+      {{- if in (slice ".webp" ".png" ".jpg" ".jpeg" ".gif" ".avif" ".svg") (lower (path.Ext .Name)) -}}
+        {{- $pages = $pages | append .Name -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (sort $pages) -}}
