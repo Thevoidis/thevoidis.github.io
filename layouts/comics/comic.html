@@ -2,13 +2,25 @@
 {{- /* Single comic page: embeds Thevoidis Comic Viewer (static/comic-viewer/)
        in an iframe pointed at this comic's directory under static/comics/.
        Layout selected via `layout: "comic"` in the page front matter. */ -}}
-{{- $comics := partialCached "lib/comics" . "comics" -}}
+{{- /* The comic folder comes from content/comics/_content.gotmpl, which
+       creates one page per static/comics/<folder>/manifest.json and stores
+       the raw folder name in params.comicDir. Fall back to matching this
+       page's slug against the comics list for hand-written pages. */ -}}
 {{- $comic := dict -}}
-{{- $slug := .File.ContentBaseName | lower -}}
-{{- range $comics -}}
-  {{- if eq (lower (.dir | urlize)) $slug -}}{{- $comic = . -}}{{- end -}}
+{{- $dir := .Params.comicDir -}}
+{{- if not $dir -}}
+  {{- $slug := replaceRE "-+" "-" (lower .File.ContentBaseName) -}}
+  {{- range partialCached "lib/comics" . "comics" -}}
+    {{- if eq (replaceRE "-+" "-" (lower (.dir | urlize))) $slug -}}{{- $comic = . -}}{{- $dir = .dir -}}{{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- range partialCached "lib/comics" . "comics" -}}
+    {{- if eq .dir $dir -}}{{- $comic = . -}}{{- end -}}
+  {{- end -}}
 {{- end -}}
-{{- $src := printf "/comic-viewer/?comic=/comics/%s/&theme=dark" ($comic.dir | default "" | urlquery) -}}
+{{- /* Relative URLs (resolved against this page at /comics/<slug>/) keep the
+       embed working under any baseURL, including GitHub Pages project paths. */ -}}
+{{- $src := printf "../comic-viewer/?comic=%s&theme=dark" (printf "../../comics/%s/" ($comic.dir | default "none" | urlquery)) -}}
 <div class="wrap">
   <div class="page-head">
     <span class="eyebrow"><a href="{{ "/comics/" | relURL }}" style="color:inherit;text-decoration:none">Comics</a></span>

@@ -1,0 +1,35 @@
+{{- /* ─────────────────────────────────────────────────────────────────────────
+  Comic pages, derived from static/comics/<folder>/manifest.json.
+
+  For every folder under static/comics/ that contains a manifest.json (the
+  format Thevoidis Comic Viewer expects: https://github.com/Thevoidis/
+  Thevoidis-Comic-Viewer), this adapter adds a Hugo page at /comics/<slug>/
+  rendered by layouts/comics/comic.html, which embeds the viewer in an iframe.
+  The manifest lives next to the images, so one source of truth drives both
+  the comics list and each reader page.
+
+  Images can be .webp / .png / .jpg — the browser renders whatever the
+  manifest lists; no conversion needed.
+
+  Publishing a comic = drop the folder in; nothing else to wire up.
+───────────────────────────────────────────────────────────────────────────── */ -}}
+{{- $root := "static/comics" -}}
+{{- range readDir $root -}}
+  {{- if .IsDir -}}
+    {{- $dir := .Name -}}
+    {{- $manifestPath := printf "%s/%s/manifest.json" $root $dir -}}
+    {{- if fileExists $manifestPath -}}
+      {{- $m := dict -}}
+      {{- with readFile $manifestPath | transform.Unmarshal -}}{{- $m = . -}}{{- end -}}
+      {{- with default $dir ($m.title) -}}
+        {{- $.AddPage (dict
+              "kind" "page"
+              "path" $dir
+              "layout" "comic"
+              "title" .
+              "description" (default "" ($m.description))
+              "params" (dict "comicDir" $dir)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
