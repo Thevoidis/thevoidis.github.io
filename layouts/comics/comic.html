@@ -18,9 +18,17 @@
     {{- if eq .dir $dir -}}{{- $comic = . -}}{{- end -}}
   {{- end -}}
 {{- end -}}
-{{- /* Relative URLs (resolved against this page at /comics/<slug>/) keep the
-       embed working under any baseURL, including GitHub Pages project paths. */ -}}
-{{- $src := printf "../comic-viewer/?comic=%s&theme=dark" (printf "../../comics/%s/" ($comic.dir | default "none" | urlquery)) -}}
+{{- /* Relative URLs keep the embed working under any baseURL, including
+       GitHub Pages project paths. From this page (/comics/<slug>/):
+         ../comic-viewer/     -> the reader at /comic-viewer/
+         ../comics/<dir>/     -> the comic folder at /comics/<dir>/
+       The viewer fetches <comic>/manifest.json relative to ITS OWN page
+       URL; it was patched (see static/comic-viewer/assets/index-*.js) to
+       treat "./"-prefixed values as iframe-relative instead of resolving
+       them against the site root like upstream does. */ -}}
+{{- $comicUrl := relURL (printf "/comics/%s/" ($comic.dir | default "none")) -}}
+{{- $comicRef := printf "./%s" (strings.TrimPrefix "/" $comicUrl) -}}
+{{- $src := printf "../comic-viewer/?comic=%s&theme=dark" ($comicRef | urlquery) -}}
 <div class="wrap">
   <div class="page-head">
     <span class="eyebrow"><a href="{{ "/comics/" | relURL }}" style="color:inherit;text-decoration:none">Comics</a></span>
