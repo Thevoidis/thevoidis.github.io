@@ -16,3 +16,22 @@ There was also a point where I was studying quantum mechanics and I was told tha
 Yes, "quirks". I find myself worrying excesssively about "quirks" and "deeper understanding" of things that were made just to worry about their "deeper understanding", like "God" and "meaning". I've already been wasting my life atleast thrice worrying excessively about these things that were made from day one with the sole purpose of making people overthink. Why would anyone worry about the "deeper meaning" of something that is completely made up ? Like I remember a quote from Frankl that goes "Those who have a 'why' to live can deal with almost any 'how'". Now, I guess that what he meant was that people need a "meaning" or an "anchor" for them to continue dealing with life. I think that is false. Like I said , people play video games all that time, even if the game's own lore and story have no "meaning", like say, minecraft. All you need is something to do, and you will do it, simply because you have something to do. And if that "something to do" is "worrying about the nature of abstract things", then you shall do it as well. All you need to do is decide what you need to do. You don't actually need a "why" or a "deeper reason". I am convinced that the "Look for a meaning" thing is just propoganda. Because I have observed that people who have never heard or bothered about "Looking dor a meaning" live happily, while a lot of people who "Look for a meaning to live" , just keep "Looking for a meaning to live", and even if they find one, they are devastated when it leaves, not because they lost something precious, but because they have lost their "ideological anchor" that they "looked for".
 
 In short, naturally, humans don't need anything of that. If it is needed, it will come naturally and you won't even know it. There is no point fussing over it.
+
+# Thu Oct 29 23:46:01 IST 2026
+
+This is just two months after what I wrote and I think I've found something much simpler that might be what people want.
+I think it's just a sense of permanence and having the ability to be just laid back.
+
+The best times in my life was when I was with the boys.For example, Back in high school, just when there were two months left for us to part, we created a kind of complicated game, just four of us. Not a video game, just something that started out as a way to spend time when the teachers weren't looking. The game grew in complexity until it was exactly what we wanted, and I wanted to play it forever.
+
+It was so much fun. But then after that, we basically disbanded and never met again. We didn't have phones back then either, or at least I didn't, so I don't even know where they are now.
+
+A similar situation happened in college. Since it was a five year course, I had more time with the boys, just chilling and doing whatever we wanted. We were playing video games, hacking into random stuff, watching movies together, it was so much fun. There was this sense of fake permanence. Yet even that was kind of lost.
+
+When we graduated, I felt that much of it was gone, and yet, the best time of those years was the last few months, simply because we had been perfecting what we wanted our lives there to be more and more, and if we had a few more years, then the end of those years would have been the best time.
+
+I think this is true wherever you go. Humans want this sense of permanence, to live out their lives carefree enjoying with others that they give a shit about. It is so simple, and yet it's what humans have been doing for thousands of years. We can't have that anymore. People now have jobs that they don't like, they can't own a house, and friends move away because they can't afford their own lives anymore.
+
+And not to mention the scam that is school. It gives you a taste of this but takes it away so freely, traumatizing you into believing that this kind of happiness is not possible in real life. That is why people craze after stupid things, because they cannot get what they truly want, which is just a bit of peace with the boys.
+
+Imagine not having to worry about what exam you have tomorrow or whether you can make ends meet this month or whether you have to move away because of rent. We cannot even have that basic amount of peace anymore. What is the use of thousands of years of progress if we can't even have what our ancestors got for free by default ?
